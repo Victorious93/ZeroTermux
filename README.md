@@ -18,7 +18,7 @@ https://github.com/hanxinhao000/ZeroTermux-X11-aar
 https://od.ixcmstudio.cn/repository/main/ZeroTermux/
 
 ## ZeroTermux Signature File (shares the same signature with Utermux)
-https://github.com/hanxinhao000/Termux-app-UpgradedVersion/tree/master/%E7%AD%BE%E5%90%8D%E6%96%87%E4%BB%B6
+Note: The signature files are located in a directory with Chinese characters. For international users, please contact the maintainers for access or check the releases page.
 
 ## Software Intent
 
