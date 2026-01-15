@@ -13,8 +13,6 @@ import com.termux.zerocore.utils.FileIOUtils;
 import java.io.File;
 import java.io.FileInputStream;
 
-// zt backgroundimage(bgi) 图片路径
-// zt bgi 图片路径
 public class ZTBackgroundImageConfig extends BaseOkJsonConfig {
     private static final String TAG = ZTBackgroundImageConfig.class.getSimpleName();
     private String mCommand;

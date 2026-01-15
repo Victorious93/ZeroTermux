@@ -46,7 +46,6 @@ public class QEMUClickConfig extends BaseMenuClickConfig implements MenuLeftPopu
     @Override
     public void onClick(View view, Context context) {
         ArrayList<MenuLeftPopuListWindow.MenuLeftPopuListData> menuLeftPopuListData1 = new ArrayList<>();
-        //官方
         MenuLeftPopuListWindow.MenuLeftPopuListData qemuData = new MenuLeftPopuListWindow.MenuLeftPopuListData(R.mipmap.qemu_ico_hai, UUtils.getString(R.string.海的QEMU), 5);
         menuLeftPopuListData1.add(qemuData);
 
@@ -136,7 +135,6 @@ public class QEMUClickConfig extends BaseMenuClickConfig implements MenuLeftPopu
                         public void onDenied(List<String> permissions, boolean never) {
                             if (never) {
                                 UUtils.showMsg(UUtils.getString(R.string.no_permission));
-                                // 如果是被永久拒绝就跳转到应用权限系统设置页面
                                 XXPermissions.startPermissionActivity(mContext, permissions);
                             } else {
                                 UUtils.showMsg(UUtils.getString(R.string.no_permission));
@@ -169,7 +167,6 @@ public class QEMUClickConfig extends BaseMenuClickConfig implements MenuLeftPopu
                         public void onDenied(List<String> permissions, boolean never) {
                             if (never) {
                                 UUtils.showMsg(UUtils.getString(R.string.no_permission));
-                                // 如果是被永久拒绝就跳转到应用权限系统设置页面
                                 XXPermissions.startPermissionActivity(mContext, permissions);
                             } else {
                                 UUtils.showMsg(UUtils.getString(R.string.no_permission));

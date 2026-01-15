@@ -91,12 +91,10 @@ class TimerExeService : Service(), LibSuManage.TimerListener {
             val action = intent.action
             if (action != null) {
                 when (action) {
-                    // 启动定时任务
                     TIMER_EXE_START -> {
                         LogUtils.e(TAG, "onStartCommand....TIMER_EXE_START")
                         startTimer()
                     }
-                    //关闭定时任务
                     TIMER_EXE_END -> {
                         LogUtils.e(TAG, "onStartCommand....TIMER_EXE_END")
                         //endTime()
@@ -138,7 +136,6 @@ class TimerExeService : Service(), LibSuManage.TimerListener {
             mLibSuManage?.shellCommandExec("shell_Android")
         }
     }
-    //开始计时
     private fun startTimerNum() {
         mLibSuManage?.stop()
         var time = 0L
@@ -149,7 +146,6 @@ class TimerExeService : Service(), LibSuManage.TimerListener {
         }
 
         mCountDownTimer = object : CountDownTimer(time, 1000) {
-            // 参数分别是总时长和间隔时长（这里是1秒）
             override fun onTick(millisUntilFinished: Long) {
                 val seconds = millisUntilFinished / 1000
                 val minutes = seconds / 60

@@ -29,7 +29,6 @@ public class ClipBoardUtil {
                 try {
                     if (mClipboardManager.hasPrimaryClip()
                         && mClipboardManager.getPrimaryClip().getItemCount() > 0) {
-                        // 获取复制、剪切的文本内容
                         CharSequence content =
                             mClipboardManager.getPrimaryClip().getItemAt(0).getText();
                         LogUtils.d(TAG, "registerClipEvents Clipboard text is:" + content);

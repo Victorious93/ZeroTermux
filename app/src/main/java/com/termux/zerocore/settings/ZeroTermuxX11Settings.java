@@ -29,9 +29,7 @@ import com.zp.z_file.util.ZFileUUtils;
 import java.io.File;
 
 public class ZeroTermuxX11Settings extends AppCompatActivity {
-    // 内部通道
     private CardView internal_passage;
-    // 外部通道
     private CardView external_channels;
     private TextView x11_settings_title;
     private TextView x11_settings_summary;
@@ -96,7 +94,6 @@ public class ZeroTermuxX11Settings extends AppCompatActivity {
         });
     }
 
-    //安装内部/外部通道文件
     private boolean installAisleFile(boolean isInternalPassage, RunnableBoolean runnable) {
         LoadingDialog loadingDialog = new LoadingDialog(this);
         loadingDialog.show();
@@ -114,7 +111,6 @@ public class ZeroTermuxX11Settings extends AppCompatActivity {
         }
         if (isInternalPassage) {
             UUtils.runOnThread(() -> {
-                // 安装APK pkg install x11-repo && pkg install termux-x11-nightly
                 try {
                     Os.chmod(aislePathAPKFile.getAbsolutePath(), 0777);
                 } catch (ErrnoException e) {
@@ -132,7 +128,6 @@ public class ZeroTermuxX11Settings extends AppCompatActivity {
                     UUtils.runOnUIThread(loadingDialog::dismiss);
                     return;
                 }
-                // 安装执行文件
                 if (!ZFileUUtils.writerFile("x11/termux-x11", aislePathAPKSh)) {
                     UUtils.runOnUIThread(() -> {
                         showInstallLog(getString(R.string.x11_environment_error_x11));
@@ -169,9 +164,7 @@ public class ZeroTermuxX11Settings extends AppCompatActivity {
                 e.printStackTrace();
             }
             UUtils.runOnThread(() -> {
-                // 安装APK
                 if (!aislePathAPKFile.exists()) {
-                    // 创建目录
                     boolean delete = aislePathAPKFile.delete();
                     if (!delete) {
                         showInstallLog(getString(R.string.x11_environment_error));

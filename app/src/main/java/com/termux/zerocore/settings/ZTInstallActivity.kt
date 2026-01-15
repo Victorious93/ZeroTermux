@@ -163,7 +163,6 @@ class ZTInstallActivity : AppCompatActivity(), View.OnClickListener {
                     ) {
                         if (never) {
                             UUtils.showMsg("无权限")
-                            // 如果是被永久拒绝就跳转到应用权限系统设置页面
                             XXPermissions.startPermissionActivity(this@ZTInstallActivity, permissions)
                         } else {
                             UUtils.showMsg("无权限")

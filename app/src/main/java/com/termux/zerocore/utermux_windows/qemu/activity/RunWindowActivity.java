@@ -101,7 +101,6 @@ public class RunWindowActivity extends AppCompatActivity implements TermuxData.I
         TermuxData.getInstall().setIsQemuSul(this);
     }
 
-    //判断qemu是否存在
     private void isQemuExe() {
 
         if(!mWinConfig.exists()) {
@@ -170,7 +169,6 @@ public class RunWindowActivity extends AppCompatActivity implements TermuxData.I
                 fileListDialog1.setOnOnDefClickListener(new FileListDialog.OnDefClickListener() {
                     @Override
                     public void onDefClickListener(String file) {
-                        //默认
                         fileListDialog1.dismiss();
 
                         EditTextDialog editTextDialog = new EditTextDialog(RunWindowActivity.this);
@@ -259,7 +257,6 @@ public class RunWindowActivity extends AppCompatActivity implements TermuxData.I
                             });
 
                             fileListDialog1.setOnOnDefClickListener(file1 -> {
-                                //默认
                                 fileListDialog1.dismiss();
                                 EditTextDialog editTextDialog = new EditTextDialog(RunWindowActivity.this);
                                 editTextDialog.setStringData(cmd[0]);
@@ -501,7 +498,6 @@ public class RunWindowActivity extends AppCompatActivity implements TermuxData.I
                 fileListDialog1.setOnOnDefClickListener(new FileListDialog.OnDefClickListener() {
                     @Override
                     public void onDefClickListener(String file) {
-                        //默认
                         fileListDialog1.dismiss();
 
                         EditTextDialog editTextDialog = new EditTextDialog(RunWindowActivity.this);
@@ -598,7 +594,6 @@ public class RunWindowActivity extends AppCompatActivity implements TermuxData.I
                 fileListDialog1.setOnOnDefClickListener(new FileListDialog.OnDefClickListener() {
                     @Override
                     public void onDefClickListener(String file) {
-                        //默认
                         fileListDialog1.dismiss();
 
                         EditTextDialog editTextDialog = new EditTextDialog(RunWindowActivity.this);
@@ -694,7 +689,6 @@ public class RunWindowActivity extends AppCompatActivity implements TermuxData.I
                 fileListDialog1.setOnOnDefClickListener(new FileListDialog.OnDefClickListener() {
                     @Override
                     public void onDefClickListener(String file) {
-                        //默认
                         fileListDialog1.dismiss();
 
                         EditTextDialog editTextDialog = new EditTextDialog(RunWindowActivity.this);
@@ -961,7 +955,6 @@ public class RunWindowActivity extends AppCompatActivity implements TermuxData.I
 
     }
 
-    //写出文件
     private void writerFile(File mFile) {
 
         try {
@@ -998,7 +991,6 @@ public class RunWindowActivity extends AppCompatActivity implements TermuxData.I
 
         ab.setTitle(UUtils.getString(R.string.获取镜像));
 
-        //链接: https://pan.baidu.com/s/17l6_bJ3EQN41I7Axs0USvQ 提取码: bxht
 
         ab.setMessage(UUtils.getString(R.string.是否前往下载系统));
 
@@ -1070,7 +1062,6 @@ public class RunWindowActivity extends AppCompatActivity implements TermuxData.I
 
 
                     TermuxData.IsQemuSul isQemuSul = TermuxData.getInstall().getmIsQemuSul();
-                  //  UUtils.showMsg("收到广播ffffffffffffffffffffff" + isQemuSul);
                     isError = true;
 
                 }

@@ -19,7 +19,6 @@ class ZTOnlineServerActivity : AppCompatActivity() {
         initUrlData()
     }
 
-    // 拉取本地数据
     private fun initUrlData() {
         val ztUserBean = UserSetManage.Companion.get().getZTUserBean()
         var serverJsonString = ztUserBean.serverJsonString

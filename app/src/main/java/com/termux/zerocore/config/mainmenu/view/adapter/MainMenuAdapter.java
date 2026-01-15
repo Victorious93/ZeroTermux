@@ -50,13 +50,11 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuViewHolder> {
 
     public void release() {
         mContext = null;
-        // 释放所有引用的 context 防止造成内存泄漏
         for (Map.Entry<Integer, MainMenuItemAdapter> entry : mainMenuItemAdapters.entrySet()) {
             entry.getValue().release();
         }
         mainMenuItemAdapters.clear();
 
-        // 调用并且释放 Config 里边的release
         for (int i = 0; i < mMainMenuCategoryData.size(); i++) {
             MainMenuCategoryData mainMenuCategoryData = mMainMenuCategoryData.get(i);
             for (int j = 0; j < mainMenuCategoryData.mClickArrayList.size(); j++) {

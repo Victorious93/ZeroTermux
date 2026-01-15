@@ -51,7 +51,6 @@ public class SSHAdapter extends RecyclerView.Adapter<SSHAdapter.SSHViewHolder> {
         LogUtils.d(TAG, "content ssh:" + detail);
         holder.tvDetail.setText(detail);
 
-        //连接
         holder.itemRoot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,7 +60,6 @@ public class SSHAdapter extends RecyclerView.Adapter<SSHAdapter.SSHViewHolder> {
             }
         });
 
-        //删除
         holder.itemRoot.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
@@ -72,7 +70,6 @@ public class SSHAdapter extends RecyclerView.Adapter<SSHAdapter.SSHViewHolder> {
             }
         });
 
-        //拖拽
         if (holder.dragHandle != null) {
             holder.dragHandle.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -94,7 +91,6 @@ public class SSHAdapter extends RecyclerView.Adapter<SSHAdapter.SSHViewHolder> {
             });
         }
 
-        //编辑
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

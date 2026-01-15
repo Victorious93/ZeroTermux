@@ -61,7 +61,6 @@ class SYFunBoomDialog : BaseDialogDown, View.OnClickListener {
 
                 val rootBeer = RootBeer(context)
                 if (rootBeer.isRooted) {
-                    //有ROOT
                     runRootAdbHttp()
                 } else {
 
@@ -75,7 +74,6 @@ class SYFunBoomDialog : BaseDialogDown, View.OnClickListener {
 
                     }
 
-                    //没有ROOT
                 }
 
 
@@ -86,7 +84,6 @@ class SYFunBoomDialog : BaseDialogDown, View.OnClickListener {
 
                 val rootBeer = RootBeer(context)
                 if (rootBeer.isRooted) {
-                    //有ROOT
                     runRootAdbHttpClose()
                 } else {
 
@@ -100,7 +97,6 @@ class SYFunBoomDialog : BaseDialogDown, View.OnClickListener {
 
                     }
 
-                    //没有ROOT
                 }
 
 
@@ -130,11 +126,9 @@ class SYFunBoomDialog : BaseDialogDown, View.OnClickListener {
 
                 val stringOther = SaveData.getStringOther("new_old")
                 if (stringOther == null || stringOther.isEmpty() || stringOther == "def") {
-                    //旧启动器
                     SaveData.saveStringOther("new_old","true")
                     text_new_old?.text = UUtils.getString(R.string.启动器旧)
                 } else {
-                    //新启动器
                     SaveData.saveStringOther("new_old","def")
                     text_new_old?.text = UUtils.getString(R.string.启动器新)
                 }
@@ -148,7 +142,6 @@ class SYFunBoomDialog : BaseDialogDown, View.OnClickListener {
         }
     }
 
-    //执行关闭ROOT ADB
     private fun runRootAdbHttpClose(){
 
 
@@ -193,7 +186,6 @@ class SYFunBoomDialog : BaseDialogDown, View.OnClickListener {
 
     }
 
-    //执行ROOT ADB
     private fun runRootAdbHttp(){
 
 

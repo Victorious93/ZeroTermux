@@ -1,6 +1,6 @@
 #!/system/bin/sh
 #################ZeroTermux###########
-#    ZeroTermux Shell 增加会话脚本     #
+#    ZeroTermux Shell Add Session     #
 ######################################
 pid=$$
 shell_ZeroTermux() {

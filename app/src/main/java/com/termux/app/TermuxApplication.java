@@ -140,11 +140,10 @@ public class TermuxApplication extends XHApplication {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("error", collectExceptionInfo((Exception) e));
                 TermuxApplication.this.startActivity(intent);
-                System.exit(1);//关闭已奔溃的app进程
+                System.exit(1); // Close the crashed app process
 
             }
         });
-        //初始化定时器
         LibSuManage.getInstall().initTimer();
         MainMenuConfig.init(this);
         new ClipBoardUtil().registerClipEvents();

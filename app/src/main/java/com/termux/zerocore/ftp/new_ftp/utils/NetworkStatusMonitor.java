@@ -23,12 +23,10 @@ public class NetworkStatusMonitor {
             if ("android.net.wifi.WIFI_AP_STATE_CHANGED".equalsIgnoreCase(intent.getAction())) {
                 int state = intent.getIntExtra(WifiManager.EXTRA_WIFI_STATE, 0);
                 if (state == 11) {//AP关闭
-                    //Log.e("111","热点关闭");
                     sendStatusChangedToCallbacks();
                     sendToCallbacks(false, NetworkType.AP);
                 }
                 if (state == 13) {//AP打开
-                    //Log.e("111","热点打开");
                     sendStatusChangedToCallbacks();
                     sendToCallbacks(true, NetworkType.AP);
                 }
@@ -51,18 +49,15 @@ public class NetworkStatusMonitor {
                 if (networkInfo == null) {
                     if (wifi) {
                         wifi = false;
-                        //Log.e("111","Wifi断开");
                         sendToCallbacks(false, NetworkType.WIFI);
 
                     }
                     if (ethernet) {
                         ethernet = false;
-                        //Log.e("111","有线网络断开");
                         sendToCallbacks(false, NetworkType.ETHERNET);
                     }
                     if (cell) {
                         cell = false;
-                        //Log.e("111","蜂窝网断开");
                         sendToCallbacks(false, NetworkType.CELLULAR);
                     }
                     return;
@@ -89,7 +84,6 @@ public class NetworkStatusMonitor {
                         cell = false;
                         sendToCallbacks(false, NetworkType.CELLULAR);
                     }
-                    //Log.e("111","Wifi连接");
                     sendToCallbacks(true, NetworkType.WIFI);
                 }
                 if (networkInfo.getType() == ConnectivityManager.TYPE_MOBILE) {
@@ -102,7 +96,6 @@ public class NetworkStatusMonitor {
                         ethernet = false;
                         sendToCallbacks(false, NetworkType.ETHERNET);
                     }
-                    //Log.e("111","蜂窝网连接");
                     sendToCallbacks(true, NetworkType.CELLULAR);
                 }
             }
@@ -165,17 +158,14 @@ public class NetworkStatusMonitor {
             if(networkCapabilities==null)return;
             if(networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)){
                 wifi=true;
-                //Log.e("111","WiFI已连接");
                 sendToCallbacks(true,NetworkType.WIFI);
             }
             if(networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)){
                 ethernet=true;
-                //Log.e("111","有线网已连接");
                 sendToCallbacks(true,NetworkType.ETHERNET);
             }
             if(networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)){
                 cell=true;
-                //Log.e("111","蜂窝网已连接");
                 sendToCallbacks(true,NetworkType.CELLULAR);
             }
         }
@@ -189,34 +179,28 @@ public class NetworkStatusMonitor {
             if(networkCapabilities==null){
                 if(wifi){
                     wifi=false;
-                    //Log.e("111","WiFI已断开");
                     sendToCallbacks(false,NetworkType.WIFI);
                 }
                 if(ethernet){
                     ethernet=false;
-                    //Log.e("111","有线已断开");
                     sendToCallbacks(false,NetworkType.ETHERNET);
                 }
                 if(cell){
                     cell=false;
-                    //Log.e("111","蜂窝网已断开");
                     sendToCallbacks(false,NetworkType.CELLULAR);
                 }
                 return;
             }
             if(!networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)&&wifi){
                 wifi=false;
-                //Log.e("111","WiFI已断开");
                 sendToCallbacks(false,NetworkType.WIFI);
             }
             if(!networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)&&ethernet){
                 ethernet=false;
-                //Log.e("111","有线网已断开");
                 sendToCallbacks(false,NetworkType.ETHERNET);
             }
             if(!networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)&&cell){
                 cell=false;
-                //Log.e("111","蜂窝网已断开");
                 sendToCallbacks(false,NetworkType.ETHERNET);
             }
         }

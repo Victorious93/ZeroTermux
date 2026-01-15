@@ -29,7 +29,6 @@ class LoadingDialog : BaseDialogCentre {
         setCancelable(false)
     }
 
-    //动画
     private fun setAnim() {
 
         var index = 0
@@ -44,15 +43,12 @@ class LoadingDialog : BaseDialogCentre {
             while (isStart) {
 
 
-                //  UUtils.showLog("倒计时:${isTime}")
                 if(isTime > -1){
 
                     isTime--
 
-                    //  UUtils.showLog("倒计时:${isTime}")
 
                 }else{
-                    //  UUtils.showLog("倒计时:${isTime > 0}")
                     if(isTime <= -1) {
 
                         UUtils.runOnUIThread(Runnable {

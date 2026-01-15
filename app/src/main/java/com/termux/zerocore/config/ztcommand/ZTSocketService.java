@@ -47,18 +47,15 @@ public class ZTSocketService extends Service {
     }
 
 
-    // 接收来自 Activity 的消息
     private BroadcastReceiver messageReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             String message = intent.getStringExtra("message");
-            // 处理来自 Activity 的消息
         }
     };
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        // 注册接收器
         IntentFilter filter = new IntentFilter(ZT_COMMAND_SERVICES_ACTION);
         localBroadcastManager.registerReceiver(messageReceiver, filter);
 
@@ -144,7 +141,6 @@ public class ZTSocketService extends Service {
                  mOut.println(result);
                  mOut.flush();
                  Log.i(TAG, "发送对话框响应: " + result);
-                 // 发送完成后可以关闭连接
                  waitingForDialog = false;
                  try {
                      mClientSocket.close();
@@ -162,12 +158,9 @@ public class ZTSocketService extends Service {
 
         private String processCommand(String command) {
             try {
-                // 如果什么命令都没有则返回帮助
                 if (TextUtils.isEmpty(command)) {
                     return new HelpConfig().getCommand(getApplicationContext(), command);
                 }
-                // 判断是否是 多段命令
-                // 示例： xxx yyy 例如: toast hello
                 String[] commands = command.trim().split(" ");
                 if (commands.length >= 2) {
                     String result = askConfig(command, commands[0]);
@@ -176,7 +169,6 @@ public class ZTSocketService extends Service {
                     }
                     return result;
                 }
-                // 转发到termux页面
                 if (isForWard(command, null)) {
                     sendMessageToActivity(command);
                     return getOkJson();
@@ -211,7 +203,6 @@ public class ZTSocketService extends Service {
         return ZTCommandConfigStore.getConfig(TextUtils.isEmpty(commandID) ? command : commandID);
     }
 
-    // 是否需要转发到 TermuxActivity 页面
     private boolean isForWard(String command, String commandID) {
         return ZTCommandConfigStore.getConfig(TextUtils.isEmpty(commandID) ? command : commandID).isForWard();
     }

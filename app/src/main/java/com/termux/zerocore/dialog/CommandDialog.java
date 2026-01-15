@@ -98,7 +98,6 @@ public class CommandDialog extends BaseDialogCentre {
         return R.layout.dialog_command;
     }
 
-    //初始化数据
     private void initData(){
         cmdList.clear();
         AssetManager assetManager = mContext.getAssets();
@@ -138,11 +137,9 @@ public class CommandDialog extends BaseDialogCentre {
                     @Override
                     public void run() {
                         if(s.toString().isEmpty()){
-                            //为空
                             cmdListTemp.clear();
                             cmdListTemp.addAll(cmdList);
                         }else{
-                            //不为空
                             cmdListTemp.clear();
                             for (int i = 0; i < cmdList.size(); i++) {
 

@@ -29,7 +29,6 @@ public class SmsUtils {
                 "body", "date", "type", };
             Cursor cur = UUtils.getContext().getContentResolver().query(uri, projection, null,
                 null, "date desc"); // 获取手机内部短信
-            // 获取短信中最新的未读短信
             // Cursor cur = getContentResolver().query(uri, projection,
             // "read = ?", new String[]{"0"}, "date desc");
             if (cur.moveToFirst()) {

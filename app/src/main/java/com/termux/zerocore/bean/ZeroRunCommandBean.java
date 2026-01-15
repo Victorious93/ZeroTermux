@@ -3,27 +3,16 @@ package com.termux.zerocore.bean;
 public class ZeroRunCommandBean {
 
 
-    //0标题 1内容
     private int type;
-    //标题
     private String title;
-    //选项内容
     private String msg;
-    //写入到文件名称
     private String fileName;
-    //作者地址
     private String address;
-    //资源名称
     private String assetsName;
-    //显示文字
     private String name;
-    //运行的命令
     private String runCommand;
-    //是否显示
     private boolean isShow = true;
-    //是否是网络命令
     private boolean isHttpCommand = false;
-    //自定义事件
     private RunCommit mRunCommit;
 
     public RunCommit getRunCommit() {

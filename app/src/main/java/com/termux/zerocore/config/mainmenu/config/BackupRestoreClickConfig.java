@@ -10,7 +10,6 @@ import com.termux.zerocore.back.BackRestoreDialog;
 import com.termux.zerocore.back.listener.CreateConversationListener;
 import com.termux.zerocore.config.mainmenu.MainMenuConfig;
 
-// 备份/ 恢复
 public class BackupRestoreClickConfig extends BaseMenuClickConfig {
     @Override
     public int getType() {

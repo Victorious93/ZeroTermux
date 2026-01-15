@@ -50,7 +50,6 @@ class SocketBaseActivity : AppCompatActivity() {
         finish()
     }
 
-    // 请求权限
     private fun requestCamera() {
         XXPermissions.with(this)
             .permission(Permission.CAMERA)

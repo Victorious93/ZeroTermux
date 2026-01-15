@@ -60,7 +60,6 @@ class AdbWindowsDialog  {
         val systemService = mActivity.getSystemService(Context.WINDOW_SERVICE)
 
         var layoutParam = WindowManager.LayoutParams().apply {
-            //设置大小 自适应
             width = MATCH_PARENT
             height = WRAP_CONTENT
             type = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -139,7 +138,6 @@ class AdbWindowsDialog  {
                         x += movedX
                         y += movedY
                     }
-                    //更新悬浮球控件位置
                     windowManager?.updateViewLayout(view, wl)
                 }
                 else -> {

@@ -188,7 +188,6 @@ class WebStartPopuWindow : BasePuPuWindow {
                     override fun onDenied(permissions: List<String>, never: Boolean) {
                         if (never) {
                             UUtils.showMsg("无权限")
-                            // 如果是被永久拒绝就跳转到应用权限系统设置页面
                             XXPermissions.startPermissionActivity(mContext, permissions)
                         } else {
                             UUtils.showMsg("无权限")

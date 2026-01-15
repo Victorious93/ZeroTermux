@@ -368,7 +368,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 return;
             }
             switch (message) {
-                // 调用本页面 VIEW 不可写到 Config 当中，否则可能造成内存泄漏
                 case ZTKeyConstants.ZT_COMMAND_LEFT:
                 case ZTKeyConstants.ZT_COMMAND_LEFT_1:
                     getDrawer().close();
@@ -505,7 +504,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         }
         startService(new Intent(this, ZTSocketService.class));
         localBroadcastManager = LocalBroadcastManager.getInstance(this);
-        // 注册接收器
         IntentFilter filter = new IntentFilter(ZT_COMMAND_ACTIVITY_ACTION);
         localBroadcastManager.registerReceiver(messageReceiver, filter);
         // @}
@@ -787,7 +785,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
 
         setSummaryVisible();
         if (FileIOUtils.INSTANCE.isPathVideo()) {
-            //有视频
             String pathVideo = FileIOUtils.INSTANCE.getPathVideo();
             if (!TextUtils.isEmpty(pathVideo)) {
                 File file = new File(pathVideo);
@@ -799,7 +796,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 }
             }
         } else {
-            //没有视频
             File file = new File(FileUrl.INSTANCE.getMainConfigImg() + "/back.jpg");
             if (file.exists()) {
                 Glide.with(TermuxActivity.this).load(file).diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true).into(back_img);
@@ -844,7 +840,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     @Override
     public void onResume() {
         super.onResume();
-        //初始化ZeroTermux 引擎
         Logger.logVerbose(LOG_TAG, "onResume");
         // ZeroTermux add {@
         VideoUtils.getInstance().onResume();
@@ -1450,7 +1445,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         if (requestCode == PermissionUtils.REQUEST_GRANT_STORAGE_PERMISSION) {
             requestStoragePermission(true);
         }
-        //导入SSH密钥
         if (requestCode == com.termux.zerocore.view.BoomWindow.REQUEST_CODE_IMPORT_KEY && resultCode == RESULT_OK && data != null) {
             Uri uri = data.getData();
             if (uri != null) {
@@ -1703,7 +1697,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         // will be called again. Extra keys input text, terminal sessions and transcripts will be preserved.
         if (recreateActivity) {
             Logger.logDebug(LOG_TAG, "Recreating activity");
-            // ZeroTermux TODO 目前重新创建当前activity会导致页面被finish掉，暂时注掉此处，后续版本分析详细原因
             // {@
             // TermuxActivity.this.recreate();
             // @}
@@ -1722,7 +1715,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     }
 
     /***************************************** START ******************************************/
-    // 以下是ZeroTermux 新增内容
 
     // ZeroTermux add {@
     private MainMenuAdapter mMainMenuAdapter;
@@ -2005,7 +1997,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
 
 
             //API
-            //中文
 
         }
 
@@ -2083,7 +2074,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         });
     }
 
-    //判断短消息是否正在读取
     private boolean isPhoneRun = false;
 
     private void resBroadcastReceiever(String msg) {
@@ -2103,7 +2093,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                         @Override
                         public void onGranted(List<String> permissions, boolean all) {
                             if (all) {
-                                // UUtils.showMsg("获取录音和日历权限成功");
                                 String smsInPhone = SmsUtils.getSmsInPhone();
                                 UUtils.setFileString(new File(FileUrl.INSTANCE.getSmsUrlFile()), smsInPhone);
                                 UUtils.sleepSetRunMm(new Runnable() {
@@ -2114,7 +2103,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                                 }, 100);
 
                             } else {
-                                // UUtils.showMsg(("获取部分权限成功，但部分权限未正常授予"));
                                 TermuxActivity.mTerminalView.sendTextToTerminal("echo " + UUtils.getString(R.string.无权限读取) + "! \n");
                             }
                         }
@@ -2123,7 +2111,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                         public void onDenied(List<String> permissions, boolean never) {
                             if (never) {
                                 TermuxActivity.mTerminalView.sendTextToTerminal("echo " + UUtils.getString(R.string.无权限读取) + "! \n");
-                                // 如果是被永久拒绝就跳转到应用权限系统设置页面
                                 XXPermissions.startPermissionActivity(TermuxActivity.this, permissions);
                             } else {
                                 TermuxActivity.mTerminalView.sendTextToTerminal("echo " + UUtils.getString(R.string.无权限读取) + "! \n");
@@ -2133,7 +2120,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             }
         }
 
-        //联系人
         if (msg.equals("contactperson")) {
             if (!isPhoneRun) {
                 synchronized (TermuxActivity.class) {
@@ -2163,7 +2149,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
 
                                     } else {
                                         isPhoneRun = false;
-                                        // UUtils.showMsg(("获取部分权限成功，但部分权限未正常授予"));
                                         TermuxActivity.mTerminalView.sendTextToTerminal("echo " + UUtils.getString(R.string.无权限读取) + "! \n");
                                     }
                                 }
@@ -2173,7 +2158,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                                     isPhoneRun = false;
                                     if (never) {
                                         TermuxActivity.mTerminalView.sendTextToTerminal("echo " + UUtils.getString(R.string.无权限读取) + "! \n");
-                                        // 如果是被永久拒绝就跳转到应用权限系统设置页面
                                         XXPermissions.startPermissionActivity(TermuxActivity.this, permissions);
                                     } else {
                                         TermuxActivity.mTerminalView.sendTextToTerminal("echo " + UUtils.getString(R.string.无权限读取) + "! \n");
@@ -2196,7 +2180,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         }
     }
 
-    //创建目录
     private void createFiles() {
 
         if (!FileUrl.INSTANCE.getZeroTermuxHome().exists()) {
@@ -2279,7 +2262,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                             public void onDenied(List<String> permissions, boolean never) {
                                 if (never) {
                                     UUtils.showMsg("无权限");
-                                    // 如果是被永久拒绝就跳转到应用权限系统设置页面
                                     XXPermissions.startPermissionActivity(TermuxActivity.this, permissions);
                                 } else {
                                     UUtils.showMsg("无权限");
@@ -2400,7 +2382,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 public void onDenied(List<String> permissions, boolean never) {
                     if (never) {
                         UUtils.showMsg(UUtils.getString(R.string.没有权限));
-                        // 如果是被永久拒绝就跳转到应用权限系统设置页面
                         XXPermissions.startPermissionActivity(TermuxActivity.this, permissions);
                     } else {
                         UUtils.showMsg(UUtils.getString(R.string.没有权限));
@@ -2466,7 +2447,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         }
     };
 
-    //监听菜单键
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         Log.i(TAG, "handleKey xxxxxxmain: ");
@@ -2520,7 +2500,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         localReceiver = new LocalReceiver();
         localBroadcastManager.registerReceiver(localReceiver,intentFilter);
     }
-    // 发送消息到 Service
     private void sendMessageToService(String message) {
         Intent intent = new Intent(ZT_COMMAND_SERVICES_ACTION);
         intent.putExtra("message", message);
@@ -2532,7 +2511,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         mMainMenuList.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         mMainMenuList.setAdapter(mMainMenuAdapter);
     }
-    // 美化设置
     public void beautifySettings() {
         if (UserSetManage.Companion.get().getZTUserBean().isStyleTriggerOff()) {
             getDrawer().smoothClose();

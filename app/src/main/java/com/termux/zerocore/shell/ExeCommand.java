@@ -12,20 +12,14 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 public class ExeCommand {
 
 
-    //shell进程
     private Process process;
-    //对应进程的3个流
     private BufferedReader successResult;
     private BufferedReader errorResult;
     private DataOutputStream os;
-    //是否同步，true：run会一直阻塞至完成或超时。false：run会立刻返回
     private boolean bSynchronous;
-    //表示shell进程是否还在运行
     private boolean bRunning = false;
-    //同步锁
     ReadWriteLock lock = new ReentrantReadWriteLock();
 
-    //保存执行结果
     private StringBuffer result = new StringBuffer();
 
     /**
@@ -102,14 +96,11 @@ public class ExeCommand {
         os = new DataOutputStream(process.getOutputStream());
 
         try {
-            //向sh写入要执行的命令
             os.write(command.getBytes());
             os.writeBytes("\n");
             os.flush();
             os.close();
-            //如果等待时间设置为非正，就不开启超时关闭功能
             if (maxTime > 0) {
-                //超时就关闭进程
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -128,7 +119,6 @@ public class ExeCommand {
                 }).start();
             }
 
-            //开一个线程来处理input流
             final Thread t1 = new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -167,7 +157,6 @@ public class ExeCommand {
             });
             t1.start();
 
-            //开一个线程来处理error流
             final Thread t2 = new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -198,7 +187,6 @@ public class ExeCommand {
                 @Override
                 public void run() {
                     try {
-                        //等待执行完毕
                         t1.join();
                         t2.join();
                         process.waitFor();

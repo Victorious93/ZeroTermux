@@ -102,7 +102,6 @@ object BusyBoxManager : StartTarGzListener{
     private fun shellExec(command: String) {
         val mRuntime = Runtime.getRuntime()
         try {
-            //Process中封装了返回的结果和执行错误的结果
             val mProcess = mRuntime.exec(command)
             LogUtils.d(TAG, "shellExec in: $command")
             val mReader = BufferedReader(InputStreamReader(mProcess.inputStream))

@@ -37,13 +37,10 @@ public class VNCClickConfig extends BaseMenuClickConfig implements MenuLeftPopuL
     @Override
     public void onClick(View view, Context context) {
         ArrayList<MenuLeftPopuListWindow.MenuLeftPopuListData> menuLeftPopuListDatavnc = new ArrayList<>();
-        //快速vnc
         MenuLeftPopuListWindow.MenuLeftPopuListData ksvnc = new MenuLeftPopuListWindow.MenuLeftPopuListData(R.mipmap.dsk, UUtils.getString(R.string.快速VNC), 10);
         menuLeftPopuListDatavnc.add(ksvnc);
-        //自定vnc
         MenuLeftPopuListWindow.MenuLeftPopuListData zdvnc = new MenuLeftPopuListWindow.MenuLeftPopuListData(R.mipmap.dsk, UUtils.getString(R.string.自定VNC), 11);
         menuLeftPopuListDatavnc.add(zdvnc);
-        //高级vnc
         MenuLeftPopuListWindow.MenuLeftPopuListData gjvnc = new MenuLeftPopuListWindow.MenuLeftPopuListData(R.mipmap.dsk, UUtils.getString(R.string.高级VNC), 12);
         menuLeftPopuListDatavnc.add(gjvnc);
 
@@ -61,7 +58,6 @@ public class VNCClickConfig extends BaseMenuClickConfig implements MenuLeftPopuL
     public void itemClick(int id, int index, @Nullable MenuLeftPopuListWindow mMenuLeftPopuListWindow) {
         TermuxActivity termuxActivity = (TermuxActivity) mContext;
         switch (id) {
-            //快速
             case 10:
                 UUtils.showLog("插件:快速");
                 try {
@@ -79,7 +75,6 @@ public class VNCClickConfig extends BaseMenuClickConfig implements MenuLeftPopuL
                     termuxActivity.startHttp1(HTTPIP.IP);
                 }
                 break;
-            //自定
             case 11:
                 VNCConnectionDialog vncConnectionDialog = new VNCConnectionDialog(mContext);
                 vncConnectionDialog.show();
@@ -101,7 +96,6 @@ public class VNCClickConfig extends BaseMenuClickConfig implements MenuLeftPopuL
                     }
                 });
                 break;
-            //高级
             case 12:
                 try {
                     Intent intent = new Intent();

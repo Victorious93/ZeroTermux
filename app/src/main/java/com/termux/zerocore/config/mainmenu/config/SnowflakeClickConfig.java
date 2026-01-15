@@ -73,10 +73,8 @@ public class SnowflakeClickConfig extends BaseMenuClickConfig {
         TermuxActivity termuxActivity = (TermuxActivity) context;
         boolean snowflakeShow = UserSetManage.Companion.get().getZTUserBean().isSnowflakeShow();
         if (!snowflakeShow) {
-            //xue_hua_start.setText(UUtils.getString(R.string.雪花关));
             termuxActivity.xue_fragment.removeAllViews();
         } else {
-            //xue_hua_start.setText(UUtils.getString(R.string.雪花开));
             SnowView snowView = new SnowView(termuxActivity);
             termuxActivity.xue_fragment.removeAllViews();
             termuxActivity.xue_fragment.addView(snowView);

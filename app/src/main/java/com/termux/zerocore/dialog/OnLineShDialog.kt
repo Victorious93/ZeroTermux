@@ -45,7 +45,6 @@ class OnLineShDialog : BaseDialogDown {
         downloadHttpData()
     }
 
-    //下载数据
     private fun downloadHttpData(){
         Logger.logDebug(LOG_TAG, "downloadHttpData start on url: ${HTTPIP.IP}/on_line_sh/main.json")
         BaseHttpUtils().getUrl("${HTTPIP.IP}/on_line_sh/main.json",object :HttpResponseListenerBase{

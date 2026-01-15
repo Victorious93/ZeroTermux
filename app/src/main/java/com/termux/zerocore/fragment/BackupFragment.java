@@ -258,7 +258,6 @@ public class BackupFragment extends BaseFragment implements View.OnClickListener
                                                     getActivity().finish();
                                                 }
                                             });
-                                            //Toast.makeText(getContext(), "备份完成!", Toast.LENGTH_SHORT).show();
                                             title.setText(UUtils.getString(R.string.按钮一开始启动您的备份));
                                             ab.show();
                                         }
@@ -290,7 +289,6 @@ public class BackupFragment extends BaseFragment implements View.OnClickListener
 
 
 
-    //写出文件
     private void writerFile(String name, File mFile) {
 
         try {

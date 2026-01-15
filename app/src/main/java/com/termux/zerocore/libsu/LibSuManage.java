@@ -243,7 +243,6 @@ public class LibSuManage {
             if (mTimerListener != null) {
                 mTimerListener.onAddElement(s);
             }
-            //输出LOG到指定目录
             if (mShellLogRunnable != null) {
                 mShellLogRunnable.writerString(s);
             }

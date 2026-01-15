@@ -104,13 +104,11 @@ public class BoomWindow {
             @Override
             public void onClick(View v) {
                 popupWindow.dismiss();
-                //命令
                 CommandDialog commandDialog = new CommandDialog(termuxActivity);
                 commandDialog.show();
                 commandDialog.setCancelable(false);
             }
         });
-        //SSH按钮点击事件
         if (popu_windows_ssh != null) {
             popu_windows_ssh.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -266,7 +264,6 @@ public class BoomWindow {
                 }
             }
         }else{
-            //自动
         }
     }
 
@@ -299,7 +296,6 @@ public class BoomWindow {
 
         return list;
     }
-    //快捷ssh
     private void showSSHList(BoomMinLAdapter.CloseLiftListener closeLiftListener) {
         String json = SaveData.getData(KEY_SSH_LIST);
         List<SSHDeviceBean> sshList = new ArrayList<>();
@@ -373,7 +369,6 @@ public class BoomWindow {
         });
 
         sshAdapter.setOnSSHItemClickListener(new SSHAdapter.OnSSHItemClickListener() {
-            //连接
             @Override
             public void onConnect(SSHDeviceBean bean) {
                 String finalCmd = bean.generateConnectCommand();
@@ -383,7 +378,6 @@ public class BoomWindow {
                 }
                 String runCmd = " clear && " + finalCmd;
                 com.zp.z_file.util.LogUtils.d(TAG, "content click ssh:" + runCmd);
-                //屏蔽Connection refused用String runCmd = " clear && " + finalCmd + " 2>/dev/null || echo 'err'";
 
                 TermuxActivity.mTerminalView.sendTextToTerminal(runCmd + "\n");
 
@@ -391,7 +385,6 @@ public class BoomWindow {
                     mPopupWindow.dismiss();
                 }
             }
-            //删除
             @Override
             public void onDelete(int position, SSHDeviceBean bean) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(mTermuxActivity, android.R.style.Theme_DeviceDefault_Dialog);
@@ -413,7 +406,6 @@ public class BoomWindow {
                 dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(android.graphics.Color.parseColor("#FF5252"));
                 dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(android.graphics.Color.LTGRAY);
             }
-            //编辑
             @Override
             public void onEdit(int position, SSHDeviceBean bean) {
                 showSSHDialog(closeLiftListener, bean, position);
@@ -422,8 +414,6 @@ public class BoomWindow {
         recyclerView.setAdapter(sshAdapter);
         //content_command_list
     }
-    //添加设备的对话框
-    //添加/编辑设备的对话框 (合并)
     private void showSSHDialog(BoomMinLAdapter.CloseLiftListener closeLiftListener, final SSHDeviceBean editBean, final int editPosition) {
         final boolean isEditMode = (editBean != null);
         AlertDialog.Builder builder = new AlertDialog.Builder(mTermuxActivity, android.R.style.Theme_DeviceDefault_Dialog);
@@ -507,7 +497,6 @@ public class BoomWindow {
         passwordLayout.addView(eyeIcon);
         layout.addView(passwordLayout);
 
-        //密钥处理
         final LinearLayout keyLayout = new LinearLayout(mTermuxActivity);
         keyLayout.setOrientation(LinearLayout.HORIZONTAL);
         keyLayout.setPadding(0, 20, 0, 0);
@@ -535,7 +524,6 @@ public class BoomWindow {
         keyLayout.addView(btnViewPub);
         layout.addView(keyLayout);
 
-        // 初始视图状态
         if (cbUseKey.isChecked()) {
             passwordLayout.setVisibility(View.GONE);
             keyLayout.setVisibility(View.VISIBLE);
@@ -613,7 +601,6 @@ public class BoomWindow {
                 }
             }
         });
-        //导入密钥
         btnImportKey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -704,7 +691,6 @@ public class BoomWindow {
             }
         });
     }
-    //校验别名
     private boolean isAliasExist(String alias, int excludePosition) {
         String json = SaveData.getData(KEY_SSH_LIST);
         if (TextUtils.isEmpty(json) || json.equals("def")) return false;
@@ -749,7 +735,6 @@ public class BoomWindow {
         }
         if (position >= 0 && position < list.size()) {
             SSHDeviceBean oldBean = list.get(position);
-            // 别名已改，重命名
             if (!oldBean.getAlias().equals(newBean.getAlias())) {
                 File oldKey = SSHKeyUtils.getKeyFile(oldBean.getAlias());
                 File oldPub = new File(oldKey.getAbsolutePath() + ".pub");

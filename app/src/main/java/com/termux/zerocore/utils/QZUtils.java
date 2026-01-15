@@ -46,7 +46,6 @@ public class QZUtils {
                     }
                 });
 
-                //搜索系统
 
 
                 try {
@@ -88,7 +87,6 @@ public class QZUtils {
                     return;
                 }
 
-                //创建新的系统盘
                 createSystem(systemName);
 
                 if (createFile == null) {
@@ -161,7 +159,6 @@ public class QZUtils {
                         TermuxActivity.mTerminalView.sendTextToTerminal("echo \"----手动恢复开始----\" \n");
 
                         TermuxActivity.mTerminalView.sendTextToTerminal("cd ~ && cd ~ && tar -xzvf ./storage/shared/xinhao/data/" + tarFle.getName().replace(" ","") + "  -C ../../" + createFile.getName() + " && mv ../../" + createFile.getName() + "/data/data/com.termux/files/home ../../" + createFile.getName() +" && "+ "mv ../../" + createFile.getName() + "/data/data/com.termux/files/usr ../../" + createFile.getName()+" && rm -rf ../../"+createFile.getName()+"/data && echo \"系统恢复完成,请在切换系统，切换您的系统\" \n");
-                        //TermuxActivity.mTerminalView.sendTextToTerminal("tar -xzvf./storage/shared/xinhao/data/" + tarFle.getName() + "  -C ../../" + createFile.getName() + " && mv ../../" + createFile.getName() + "/data/data/com.termux/files/home ../../" + createFile.getName() +" && "+ "mv ../../" + createFile.getName() + "/data/data/com.termux/files/usr ../../" + createFile.getName()+" && rm -rf ../../"+createFile.getName()+"/data && echo \"系统恢复完成,请在切换系统，切换您的系统\" \n");
 
                         try {
                             restoreFragment.getActivity().finish();
@@ -177,14 +174,10 @@ public class QZUtils {
     }
 
 
-    //创建
     private void createSystem(String name) {
-        //先扫描有多少文件
         File[] files = mFile.listFiles();
 
         if (files.length == 1) {
-            //默认只有一个系统
-            //直接创建
             createFile = new File(mFile, "files1");
             createFile.mkdirs();
             CreateSystemBean createSystemBean = new CreateSystemBean();
@@ -218,7 +211,6 @@ public class QZUtils {
 
 
         } else {
-            //有多个系统
 
             ArrayList<Integer> arrayList = new ArrayList<>();
 
@@ -245,7 +237,6 @@ public class QZUtils {
             Log.e("XINHAO_HAN", "最大值: " + max);
 
 
-            //直接创建
             createFile = new File(mFile, "files" + (max + 1));
             createFile.mkdirs();
             CreateSystemBean createSystemBean = new CreateSystemBean();
@@ -282,7 +273,6 @@ public class QZUtils {
     }
 
 
-    //比大小
     private int getMax(ArrayList<Integer> number) {
 
         int temp = number.get(0);

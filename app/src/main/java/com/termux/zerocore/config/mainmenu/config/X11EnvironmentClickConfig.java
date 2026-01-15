@@ -28,7 +28,6 @@ public class X11EnvironmentClickConfig extends BaseMenuClickConfig {
     @Override
     public void onClick(View view, Context context) {
         TermuxActivity termuxActivity = (TermuxActivity) context;
-        // 复制环境
         // am start -a android.intent.action.zt.termux.x11
         TermuxActivity.mTerminalView.sendTextToTerminal("pkg install x11-repo " +
             "&& pkg install termux-x11-nightly " +

@@ -89,7 +89,6 @@ public class BackNewActivity extends AppCompatActivity implements View.OnClickLi
             Toast.makeText(this, UUtils.getString(R.string.有任务正在进行), Toast.LENGTH_SHORT).show();
             return true;
         } else {
-            // Toast.makeText(this, "返回键被阻拦了，您可以按home键退出再进来", Toast.LENGTH_SHORT).show();
             finish();
             return false;
         }

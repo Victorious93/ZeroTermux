@@ -52,13 +52,10 @@ public class MainMenuConfig implements BaseConfig {
     public static final int CODE_ONLINE_FEATURES = 3;
     public static final int CODE_ZT_FEATURES = 4;
 
-    // 主页分类
     private static ArrayList<MainMenuCategoryData> MAIN_MENU_CATEGORY_DATAS = new ArrayList<>();
 
     public static void init(Context context) {
-        // 常用功能
         ArrayList<MainMenuClickConfig> commonClicks = new ArrayList<>();
-        // 切换源
         commonClicks.add(new SwitchSourceClickConfig());
         commonClicks.add(new ContainerSwitchClickConfig());
         commonClicks.add(new BackupRestoreClickConfig());
@@ -69,7 +66,6 @@ public class MainMenuConfig implements BaseConfig {
         commonClicks.add(new ZTSettingsClickConfig());
         MAIN_MENU_CATEGORY_DATAS.add(new MainMenuCategoryData(context.getString(R.string.common_functions), CODE_COMMON_FUNCTIONS, commonClicks));
 
-        // x11功能
         ArrayList<MainMenuClickConfig> x11Clicks = new ArrayList<>();
         x11Clicks.add(new X11SettingsClickConfig());
         x11Clicks.add(new ShowCommandClickConfig());
@@ -81,7 +77,6 @@ public class MainMenuConfig implements BaseConfig {
         x11Clicks.add(new HideX11KeyboardClickConfig());
         MAIN_MENU_CATEGORY_DATAS.add(new MainMenuCategoryData(context.getString(R.string.x11_features), CODE_X11_FEATURES, x11Clicks));
 
-        // 美化/UI 功能
         ArrayList<MainMenuClickConfig> beautificationClicks = new ArrayList<>();
         beautificationClicks.add(new FloatWindowsClickConfig());
         beautificationClicks.add(new BeautificationSettingsClickConfig());
@@ -92,7 +87,6 @@ public class MainMenuConfig implements BaseConfig {
         beautificationClicks.add(new ParticleClickConfig());
         MAIN_MENU_CATEGORY_DATAS.add(new MainMenuCategoryData(context.getString(R.string.beautification_function), CODE_BEAUTIFICATION_FUNCTION, beautificationClicks));
 
-        // 线上功能
         ArrayList<MainMenuClickConfig> onlineClicks = new ArrayList<>();
         onlineClicks.add(new OnLineCommandClickConfig());
         onlineClicks.add(new ZeroBBsClickConfig());
@@ -100,7 +94,6 @@ public class MainMenuConfig implements BaseConfig {
         onlineClicks.add(new PublicWarehouseClickConfig());
         MAIN_MENU_CATEGORY_DATAS.add(new MainMenuCategoryData(context.getString(R.string.online_features), CODE_ONLINE_FEATURES, onlineClicks));
 
-        // ZT功能
         ArrayList<MainMenuClickConfig> ztFeaturesClicks = new ArrayList<>();
         ztFeaturesClicks.add(new ZeroFunctionClickConfig());
         ztFeaturesClicks.add(new VNCClickConfig());
