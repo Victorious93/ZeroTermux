@@ -156,7 +156,7 @@ ZeroTermux incorporates functionality from the following open-source projects:
 - [tsl0922/ttyd](https://github.com/tsl0922/ttyd)
 - [filebrowser/filebrowser](https://github.com/filebrowser/filebrowser)
 - [Alibaba Iconfont](https://www.iconfont.cn/)
-- [ppareit/swiftp](https://github.com/pparert/swiftp)
+- [ppareit/swiftp](https://github.com/ppareit/swiftp)
 - [gyf-dev/ImmersionBar](https://github.com/gyf-dev/ImmersionBar)
 - [570622566/FNetServer](https://github.com/570622566/FNetServer)
 - [testica/codeeditor](https://github.com/testica/codeeditor)
