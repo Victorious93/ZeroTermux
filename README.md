@@ -14,6 +14,7 @@ ZeroTermux is a non-profit software developed based on [Termux](https://termux.d
 - [Default Sources](#default-sources)
 - [Language Support](#language-support)
 - [Recommendation](#recommendation)
+- [Links](#links)
 - [Statement and License](#statement-and-license)
 - [Projects Referenced](#projects-referenced)
 - [Acknowledgments](#acknowledgments)
