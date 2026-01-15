@@ -623,8 +623,8 @@ Terminal margin auto-adjustment will be disabled</string>
     <string name="termux_api_preferences_summary">Preferences for &TERMUX_API_APP_NAME; app</string>
     <!-- TermuxService -->
     <string name="error_display_over_other_apps_permission_not_granted">&TERMUX_APP_NAME;
-        需要“在其他应用上显示”权限才能从 Android >= 10 的后台启动终端会话。从“设置”->“应用”-> 授予它 &TERMUX_APP_NAME;
-        -> 选中</string>
+        requires "Display over other apps" permission to start terminal sessions from background on Android >= 10.
+        Grant it from Settings -> Apps -> &TERMUX_APP_NAME; -> Advanced</string>
     <string name="选择方式">Select method</string>
     <string name="要获取最新版本">To get the latest version, you need to download online. For older versions, you can select local scripts</string>
     <string name="获取线上">Get online</string>
