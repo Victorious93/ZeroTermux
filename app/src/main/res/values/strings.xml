@@ -536,17 +536,17 @@ All functions of ZeroTermux can only be used for personal learning and communica
     <string name="QEMU执行">Execute QEMU</string>
     <string name="填充默认命令">Fill default command</string>
     <string name="提示dsfsdfmmm">
-        可能会影响性能,或进入不了系统!!\n
-        可能会影响性能,或进入不了系统!\n
-        如果开启慢，请删除掉\n
+        May affect performance or prevent system boot!!\n
+        May affect performance or prevent system boot!\n
+        If slow to start, please remove\n
         -drive file=fat:rw:/home/storage/shared/xinhao/share\n
-        与虚拟机交互文件放入【内部存储/xinhao/share】目录下\n
-        复制新的文件必须重启虚拟机才能看见文件!!\n
-        复制新的文件必须重启虚拟机才能看见文件!!\n
-        提示:如需要共享文件(虚拟机交互文件)默认已加入\n
-        请在 -vnc前边加入:\n
+        Place VM interaction files in [Internal storage/xinhao/share] directory\n
+        Must restart VM to see newly copied files!!\n
+        Must restart VM to see newly copied files!!\n
+        Note: For shared files (VM interaction files) already added by default\n
+        Add before -vnc:\n
         -drive file=fat:rw:/sdcard/xinhao/share\n
-        命令,长按可复制该指令
+        Command, long press to copy this instruction
     </string>
     <string name="正在疏通所需要的环境">Setting up required environment</string>
     <string name="请输入回车键继续">Press Enter to continue</string>
@@ -600,9 +600,9 @@ Terminal margin auto-adjustment will be disabled</string>
     <string name="下次提示">Prompt next time</string>
     <string name="如果下次想继续使用OTG设备">To continue using OTG device next time, please exit and restart the app, this prompt will appear again</string>
     <string name="OTG设备异常">
-        OTG设备异常\n
-        无法读取到USB(OTG)可用的目录\n
-        目录结构为空!
+        OTG device error\n
+        Unable to read available USB (OTG) directory\n
+        Directory structure is empty!
     </string>
     <string name="无联系人">No contacts or no permission</string>
     <string name="姓名">Name</string>
@@ -630,7 +630,7 @@ Terminal margin auto-adjustment will be disabled</string>
     <string name="获取线上">Get online</string>
     <string name="线上脚本">Online script</string>
     <string name="本地脚本">Local script</string>
-    <string name="请双击命令窗口试试">ZeroTermux\n双击命令窗口打开快捷栏\n双击最左(音量+按键)\n右(音量-按键)打开菜单/会话栏\n双指单击打开 工具箱\n右侧菜单打开内置文件浏览器</string>
+    <string name="请双击命令窗口试试">ZeroTermux\nDouble-click command window to open quick access\nDouble-click far left (Volume+ key)\nRight (Volume- key) to open menu/session panel\nTwo-finger tap to open toolbox\nRight menu opens built-in file browser</string>
     <string name="ZeroTermux论坛">ZeroTermux forum</string>
     <string name="Zero论坛">Zero forum</string>
 
@@ -730,7 +730,7 @@ Terminal margin auto-adjustment will be disabled</string>
 
     <string name="move_file_to_zt">Move file to Zero Termux</string>
 
-    <string name="file_name_copy">文件信息:{file}\n\n大小:{size}\n\n路径:{path}\n\n后戳名(文件类型):{suffix}\n\n复制路径:~</string>
+    <string name="file_name_copy">File info: {file}\n\nSize: {size}\n\nPath: {path}\n\nExtension (file type): {suffix}\n\nCopy path: ~</string>
 
     <string name="copy_file_to_zt">Copy complete, copied to path: "~"</string>
 
@@ -745,7 +745,7 @@ Terminal margin auto-adjustment will be disabled</string>
     <string name="ftp_title">Description</string>
     <string name="ftp_port_msg">Port out of range!</string>
 
-    <string name="ftp_msg">核心根据apache改进而来，默认目录为本Linux目录\n此版本为2.0，修复了FTP连接异常问题，更换了核心,确保此功能稳定!</string>
+    <string name="ftp_msg">Core improved based on Apache, default directory is Linux directory\nThis version is 2.0, fixed FTP connection issues, replaced core to ensure stability!</string>
 
     <string name="ftp_error">File not loaded or read failed, please load and open or retry</string>
 
@@ -776,7 +776,7 @@ Terminal margin auto-adjustment will be disabled</string>
     <string name="unrecognized_compression_format">Unrecognized data package!</string>
     <string name="create_xinhao_path_fail">Failed to create ~/xinhaoLink folder, please create manually!</string>
     <string name="commonly_used_soft_links">Common shortcuts</string>
-    <string name="create_soft_links">将创建以下快捷方式:\n内部存储 微信、QQ、下载目录\n内部链接:~/xinhaoLink,由于Android 11+ 限制/内部存储/Android/data/ 目录访问将不能创建 /内部存储/Android/data/ 目录,但是程序还是会强制创建</string>
+    <string name="create_soft_links">Will create the following shortcuts:\nInternal storage - WeChat, QQ, Download directories\nInternal link: ~/xinhaoLink, due to Android 11+ restrictions, /Internal storage/Android/data/ directory access will not be available, but the program will still force creation</string>
     <string name="create_soft_links_fail">Creation failed, please try again or manually create ~/xinhaoLink</string>
     <string name="my_commonly_used_soft_links">Custom shortcuts</string>
     <string name="my_commonly_used_soft_links_path">Enter directory to link</string>
@@ -784,181 +784,181 @@ Terminal margin auto-adjustment will be disabled</string>
     <string name="action_share_selected_text">Share selected text</string>
     <string name="data_message">Data package description:</string>
     <string name="create_data_message">Create data package info</string>
-    <string name="data_message_hint">创建你的数据包信息，对数据包使用进行说明，设置后数据包相关信息会显示在主菜单的最右侧</string>
+    <string name="data_message_hint">Create your data package information, describe the package usage. After setting, data package info will display on the far right of main menu</string>
     <string name="data_message_empty">Data package description cannot be empty</string>
     <string name="zero_uninstall">Uninstall</string>
     <string name="install_module">Install module</string>
     <string name="install_module_download">Install module (download module)</string>
-    <string name="install_module_message">注意:安装后不能卸载,只对当前容器生效(如果路径已经放入模块包但是不显示，请检查SD卡权限)</string>
+    <string name="install_module_message">Note: Cannot uninstall after installation, only effective for current container (if module package path is correct but not displayed, check SD card permissions)</string>
     <string name="install_empty">Internal storage/xinhao/module, no module packages</string>
     <string name="install_message">Console:\nStarting module installation</string>
     <string name="delete_module_data">Delete this module package</string>
     <string name="data_module_name">Module package name:</string>
     <string name="data_module_size">Module package size:</string>
     <string name="data_module_path">Module package path:</string>
-    <string name="file_module_msg">确定要永久删除此模块包？删除之后可没有办法恢复噢。</string>
-    <string name="install_module_msg1">正在准备安装模块</string>
-    <string name="install_module_msg2">正在展开安装模块</string>
-    <string name="install_module_msg3">展开模块错误！</string>
-    <string name="install_module_msg4">模块展开完成,开始安装</string>
-    <string name="install_module_msg5">无效模块安装包,安装文件[INSTALL.txt]无法找到</string>
-    <string name="install_module_msg6">安装脚本错误,无法找到[目标文件][目标位置][权限]3个参数</string>
-    <string name="install_module_msg7">目标文件存在！选择覆盖此文件</string>
-    <string name="install_module_msg8">目标文件存在！选择覆盖此文件错误</string>
-    <string name="install_module_msg9">权限设置错误, 设置默认0700</string>
-    <string name="install_module_msg10">模块安装完成!有些功能需要重启后生效</string>
-    <string name="install_module_msg11">检测到权限为空,将跳过设置文件权限</string>
-    <string name="install_def_bash">默认启动文件</string>
-    <string name="install_def_bash_msg_ok">默认启动文件恢复成功</string>
-    <string name="install_def_bash_msg_error">默认启动文件恢复错误!!</string>
-    <string name="install_def_bash_is_writer">确定要恢复到默认的系统启动脚本(bash.bashrc)? 操作无法更改!</string>
-    <string name="install_module_switch">您确定要安装此模块包?</string>
-    <string name="install_module_clear_tempmodule">清空临时文件夹出现异常,请手动删除~/tempmodule文件夹!</string>
-    <string name="edit_save">保存</string>
-    <string name="edit_cancel">取消</string>
-    <string name="changed_bash">编辑启动文件</string>
-    <string name="save_error_">保存失败</string>
-    <string name="save_ok_">保存成功,有些文件需要重启APP生效</string>
-    <string name="start_msg">修改欢迎语</string>
-    <string name="create_folder">创建文件夹</string>
-    <string name="rohibit_toolbox_msg">在你调整字体大小或三指截图的时候，可以选择禁止显示工具箱\n启用工具箱:[长按终端->启用工具箱]</string>
-    <string name="rohibit_toolbox_select">禁用显示</string>
-    <string name="rohibit_toolbox_ok_">已禁用显示,如要开启请:[长按终端->启用工具箱]</string>
-    <string name="module_un7z_">模块展开中...</string>
-    <string name="module_install_pro">正在处理命令:</string>
-    <string name="file_manager">文件管理</string>
-    <string name="select_session">切换会话</string>
-    <string name="http_folder">文件夹</string>
-    <string name="http_file">文件</string>
-    <string name="no_http_msg">似乎没有链接网络?请手动在浏览器打开本机IP:19956</string>
-    <string name="open_ttyd_http">网络终端(ttyd)</string>
-    <string name="open_file_http">网络文件</string>
-    <string name="buffer_size_key">缓冲大小</string>
-    <string name="auto_shell_key">自动终端</string>
-    <string name="startup_command_key">启动命令</string>
-    <string name="adb_command">输入配对码</string>
-    <string name="adb_tool">输入端口号</string>
+    <string name="file_module_msg">Confirm permanent deletion of this module package? There is no way to recover after deletion.</string>
+    <string name="install_module_msg1">Preparing to install module</string>
+    <string name="install_module_msg2">Extracting installation module</string>
+    <string name="install_module_msg3">Module extraction error!</string>
+    <string name="install_module_msg4">Module extraction complete, starting installation</string>
+    <string name="install_module_msg5">Invalid module package, installation file [INSTALL.txt] not found</string>
+    <string name="install_module_msg6">Installation script error, cannot find [target file][target location][permissions] 3 parameters</string>
+    <string name="install_module_msg7">Target file exists! Choose to overwrite this file</string>
+    <string name="install_module_msg8">Target file exists! Error overwriting this file</string>
+    <string name="install_module_msg9">Permission setting error, setting default 0700</string>
+    <string name="install_module_msg10">Module installation complete! Some features require restart to take effect</string>
+    <string name="install_module_msg11">Detected empty permissions, will skip setting file permissions</string>
+    <string name="install_def_bash">Default startup file</string>
+    <string name="install_def_bash_msg_ok">Default startup file restored successfully</string>
+    <string name="install_def_bash_msg_error">Default startup file restoration error!!</string>
+    <string name="install_def_bash_is_writer">Confirm restore to default system startup script (bash.bashrc)? Operation cannot be changed!</string>
+    <string name="install_module_switch">Are you sure you want to install this module package?</string>
+    <string name="install_module_clear_tempmodule">Error clearing temporary folder, please manually delete ~/tempmodule folder!</string>
+    <string name="edit_save">Save</string>
+    <string name="edit_cancel">Cancel</string>
+    <string name="changed_bash">Edit startup file</string>
+    <string name="save_error_">Save failed</string>
+    <string name="save_ok_">Save successful, some files require app restart to take effect</string>
+    <string name="start_msg">Modify welcome message</string>
+    <string name="create_folder">Create folder</string>
+    <string name="rohibit_toolbox_msg">When adjusting font size or taking three-finger screenshots, you can disable toolbox display\nEnable toolbox: [Long press terminal -> Enable toolbox]</string>
+    <string name="rohibit_toolbox_select">Disable display</string>
+    <string name="rohibit_toolbox_ok_">Display disabled. To enable: [Long press terminal -> Enable toolbox]</string>
+    <string name="module_un7z_">Extracting module...</string>
+    <string name="module_install_pro">Processing command:</string>
+    <string name="file_manager">File manager</string>
+    <string name="select_session">Switch session</string>
+    <string name="http_folder">Folder</string>
+    <string name="http_file">File</string>
+    <string name="no_http_msg">Network connection not available? Please manually open in browser: local IP:19956</string>
+    <string name="open_ttyd_http">Network terminal (ttyd)</string>
+    <string name="open_file_http">Network file</string>
+    <string name="buffer_size_key">Buffer size</string>
+    <string name="auto_shell_key">Auto terminal</string>
+    <string name="startup_command_key">Startup command</string>
+    <string name="adb_command">Enter pairing code</string>
+    <string name="adb_tool">Enter port number</string>
 
 
-    <string name="notification_channel_foreground_service">前台服务</string>
-    <string name="notification_channel_attention">提示</string>
-    <string name="notification_ftp_start_error_title">FTP服务无法启动</string>
-    <string name="notification_ftp_start_errer_message">FTP服务无法启动，请检查网络、权限、运行模式</string>
-    <string name="item_charset_gbk">GBK(简体中文)</string>
-    <string name="item_charset_utf">UTF-8(默认)</string>
-    <string name="permission_write_external">请授权存储读写权限</string>
-    <string name="snackbar_action_goto">前往设置</string>
-    <string name="attention_ftp_is_running">需要先关闭FTP服务才可以修改设置</string>
-    <string name="attention_no_user_account">请添加一个账户或者使用匿名模式来打开FTP服务</string>
-    <string name="ftp_status_not_running">FTP服务没有运行</string>
-    <string name="ftp_status_running_head">FTP服务运行于</string>
-    <string name="attention_opening_ftp">正在打开FTP服务&#8230;</string>
-    <string name="attention_closing_ftp">正在关闭FTP服务&#8230;</string>
-    <string name="word_stop">停止</string>
+    <string name="notification_channel_foreground_service">Foreground service</string>
+    <string name="notification_channel_attention">Notice</string>
+    <string name="notification_ftp_start_error_title">FTP service cannot start</string>
+    <string name="notification_ftp_start_errer_message">FTP service cannot start, please check network, permissions, and runtime mode</string>
+    <string name="item_charset_gbk">GBK (Simplified Chinese)</string>
+    <string name="item_charset_utf">UTF-8 (Default)</string>
+    <string name="permission_write_external">Please grant storage read/write permissions</string>
+    <string name="snackbar_action_goto">Go to settings</string>
+    <string name="attention_ftp_is_running">FTP service must be closed before modifying settings</string>
+    <string name="attention_no_user_account">Please add an account or use anonymous mode to open FTP service</string>
+    <string name="ftp_status_not_running">FTP service not running</string>
+    <string name="ftp_status_running_head">FTP service running at</string>
+    <string name="attention_opening_ftp">Opening FTP service&#8230;</string>
+    <string name="attention_closing_ftp">Closing FTP service&#8230;</string>
+    <string name="word_stop">Stop</string>
     <string name="ftp_title_no">ZeroTermux:FTP</string>
-    <string name="docker_check">Docker检查\n(ROOT)</string>
-    <string name="termux_copy_ll">复制文件到~</string>
-    <string name="termux_moudle_ll">安装模块包</string>
-    <string name="termux_targz_ll">安装恢复包</string>
-    <string name="termux_install_module_switch">确定要安装此模块?</string>
+    <string name="docker_check">Docker check\n(ROOT)</string>
+    <string name="termux_copy_ll">Copy file to ~</string>
+    <string name="termux_moudle_ll">Install module package</string>
+    <string name="termux_targz_ll">Install restore package</string>
+    <string name="termux_install_module_switch">Confirm install this module?</string>
 
-    <string name="label_server_ip">输入要被远程机器的IP</string>
-    <string name="label_video_resolution">分辨率</string>
-    <string name="label_video_bitrate">传输质量</string>
+    <string name="label_server_ip">Enter remote machine IP</string>
+    <string name="label_video_resolution">Resolution</string>
+    <string name="label_video_bitrate">Transfer quality</string>
     <string name="label_x">x</string>
-    <string name="action_start">启动</string>
+    <string name="action_start">Start</string>
     <string name="appswitch_button">=</string>
     <string name="home_button">o</string>
     <string name="back_button">v</string>
-    <string name="switch0">无控制（如果不需要远程设备控制，请选中此项）</string>
-    <string name="switch1">导航栏（如果远程设备没有屏幕导航栏，请选中此项）</string>
-    <string name="label_server_title">远程连接(BATE)</string>
+    <string name="switch0">No control (select this if remote device control not needed)</string>
+    <string name="switch1">Navigation bar (select this if remote device has no on-screen navigation bar)</string>
+    <string name="label_server_title">Remote connection (BETA)</string>
     <string name="ip_connect">0.0.0.0</string>
-    <string name="remote_connection">ADB远程连接(bate)</string>
-    <string name="press_again">再按一次退出</string>
-    <string name="adb_title_msg">正在连接...请勿多次点击\'启动\'！</string>
-    <string name="copy_uri_error">URI复制错误，请等待开发者修复...</string>
-    <string name="developer_activity">请在DEBUG模式下进入</string>
-    <string name="input_content_cannot_be_empty">输入内容不能为空</string>
-    <string name="common_functions">常用功能</string>
-    <string name="beautification_function">美化/UI功能</string>
-    <string name="online_features">线上功能</string>
-    <string name="zt_features">ZT功能</string>
-    <string name="zt_settings">ZeroTermux设置</string>
-    <string name="zt_settings1">ZT设置</string>
-    <string name="zt_settings_note">ZeroTermux 相关设置选项</string>
-    <string name="container_settings">容器设置</string>
-    <string name="container_settings_note">应用容器内应用程序，只针对当前容器设置</string>
-    <string name="about_zerotermux">关于ZeroTermux</string>
-    <string name="about_zerotermux_note">版本信息、鸣谢、GITHUB</string>
-    <string name="termux_settings">Termux原生设置</string>
-    <string name="termux_settings_note">进入Termux原生设置内容</string>
-    <string name="install_termux_software">安装/还原Termux官方软件</string>
-    <string name="install_termux_software_note">使用安装ZT相同签名的原生Termux、API、X11等</string>
-    <string name="zt_download_service">ZT下载服务器</string>
-    <string name="zt_download_service_note">默认端口为:19956</string>
-    <string name="zt_download_service_note1">请注意！此功能没有账号密码保护，默认即可打开下载。打开后请注意个人隐私外泄！</string>
-    <string name="zt_sidebar_closes_automatically">侧边栏自动关闭</string>
-    <string name="zt_sidebar_closes_automatically_note">调出输入法就自动关闭侧边栏(左、右)</string>
-    <string name="zt_landscaping_settings">点击“美化设置”关闭左侧栏</string>
-    <string name="zt_landscaping_settings_note">按照个人设置习惯使用打开还是关闭侧边栏</string>
-    <string name="toolbox_display_settings">禁止工具箱显示</string>
-    <string name="toolbox_display_settings_note">双指放大或缩小字体造成手势冲突，可在此\n临时关闭</string>
-    <string name="user_bottom_keyboard_settings">打开键盘规则模式</string>
-    <string name="user_bottom_keyboard_settings_note">强制使用ZT设置键盘规则,其它设置键盘\n规则一律无效</string>
-    <string name="bottom_keyboard_settings">设置键盘规则</string>
-    <string name="bottom_keyboard_settings_note">输入个性化的键盘规则,提高输入效率</string>
-    <string name="log_output">输出LOG到存储卡</string>
-    <string name="log_output_note">输出LOG文件到\n【/xinhao/ZeroTermuxLog/ZeroTermux.log】\n可能影响性能请谨慎开启!!!!</string>
-    <string name="zt_about">关于ZeroTermux</string>
+    <string name="remote_connection">ADB remote connection (beta)</string>
+    <string name="press_again">Press again to exit</string>
+    <string name="adb_title_msg">Connecting... Do not click \'Start\' multiple times!</string>
+    <string name="copy_uri_error">URI copy error, please wait for developer fix...</string>
+    <string name="developer_activity">Please enter in DEBUG mode</string>
+    <string name="input_content_cannot_be_empty">Input content cannot be empty</string>
+    <string name="common_functions">Common functions</string>
+    <string name="beautification_function">Beautification/UI functions</string>
+    <string name="online_features">Online features</string>
+    <string name="zt_features">ZT features</string>
+    <string name="zt_settings">ZeroTermux settings</string>
+    <string name="zt_settings1">ZT settings</string>
+    <string name="zt_settings_note">ZeroTermux related settings</string>
+    <string name="container_settings">Container settings</string>
+    <string name="container_settings_note">Application within container, settings only for current container</string>
+    <string name="about_zerotermux">About ZeroTermux</string>
+    <string name="about_zerotermux_note">Version info, acknowledgments, GITHUB</string>
+    <string name="termux_settings">Termux native settings</string>
+    <string name="termux_settings_note">Enter Termux native settings</string>
+    <string name="install_termux_software">Install/Restore Termux official software</string>
+    <string name="install_termux_software_note">Install native Termux, API, X11, etc. with same signature as ZT</string>
+    <string name="zt_download_service">ZT download server</string>
+    <string name="zt_download_service_note">Default port: 19956</string>
+    <string name="zt_download_service_note1">Warning! This feature has no username/password protection, downloads are open by default. Be careful of privacy leaks after enabling!</string>
+    <string name="zt_sidebar_closes_automatically">Auto-close sidebar</string>
+    <string name="zt_sidebar_closes_automatically_note">Automatically close sidebar (left/right) when keyboard appears</string>
+    <string name="zt_landscaping_settings">Click "Beautification settings" to close left sidebar</string>
+    <string name="zt_landscaping_settings_note">Choose whether to open or close sidebar based on personal preference</string>
+    <string name="toolbox_display_settings">Disable toolbox display</string>
+    <string name="toolbox_display_settings_note">Two-finger zoom causes gesture conflicts, can temporarily\ndisable here</string>
+    <string name="user_bottom_keyboard_settings">Enable keyboard rules mode</string>
+    <string name="user_bottom_keyboard_settings_note">Force use of ZT keyboard rules, other keyboard\nrule settings are invalid</string>
+    <string name="bottom_keyboard_settings">Set keyboard rules</string>
+    <string name="bottom_keyboard_settings_note">Enter custom keyboard rules to improve input efficiency</string>
+    <string name="log_output">Output LOG to storage card</string>
+    <string name="log_output_note">Output LOG file to\n[/xinhao/ZeroTermuxLog/ZeroTermux.log]\nMay affect performance, enable with caution!!!!</string>
+    <string name="zt_about">About ZeroTermux</string>
     <string name="zt_about_zerotermux">ZeroTermux GITHUB</string>
-    <string name="zt_about_zerotermux_note">跳转到ZeroTermux GITHUB页面</string>
-    <string name="zt_about_zerotermux_core_manage">ZeroCoreManage GITHUB(扩展引擎)</string>
-    <string name="zt_about_zerotermux_core_manage_note">跳转到ZeroTermux GITHUB页面\nZeroTermux的额外扩展引擎包</string>
+    <string name="zt_about_zerotermux_note">Jump to ZeroTermux GITHUB page</string>
+    <string name="zt_about_zerotermux_core_manage">ZeroCoreManage GITHUB (Extension Engine)</string>
+    <string name="zt_about_zerotermux_core_manage_note">Jump to ZeroTermux GITHUB page\nZeroTermux additional extension engine package</string>
     <string name="zt_about_card_title">ZeroTermux</string>
-    <string name="zt_about_card_title_note">ZeroTermux 是基于Termux二次开发，增加了\n相对于Termux没有的的辅助功能，方便快速上手\n此软件可相当于一个微型linux系统,可额外安装\n其他发行版本如：Ubuntu、CentOs等</string>
+    <string name="zt_about_card_title_note">ZeroTermux is based on Termux with secondary development, added\nassistance features not available in Termux for quick start\nThis software is equivalent to a mini Linux system, can additionally install\nother distributions such as: Ubuntu, CentOS, etc.</string>
     <string name="zeroCore_about_card_title">ZeroCoreManage</string>
-    <string name="zeroCore_about_card_title_note">ZeroCoreManage 是基于ZeroTermux的扩展包,对于\nZeroTermux功能的扩展,目的是为了减小ZeroTermux\n的软件包大小,不安装此扩展包ZeroTermux依旧可以正常运行\n引擎额外内容:\n\n1. 内置键盘\n2. WEB访问内存卡\n3. X86 Alpine</string>
-    <string name="zt_developer">开发/贡献</string>
-    <string name="zt_developer_note">Kevin Williams、狂吃不胖没办法、SharpIce 锐冰龙、WINLOG \n小潼(XiaoTong6666)、XINHAO_HAN、Xieansecn等(排名不分先后)</string>
-    <string name="zt_install">还原/扩展官方版本</string>
-    <string name="zt_install_float">没有安装此插件！请到【设置 -> 安装/还原Termux官方软件 -> Termux Float】安装插件</string>
-    <string name="zt_install_file">没有安装此插件！请到【设置 -> 安装/还原Termux官方软件 -> (Zero)Utermux File Plug】安装插件</string>
-    <string name="zt_timer">定时任务</string>
-    <string name="zt_timer_settings">定时任务设置(BATE)</string>
+    <string name="zeroCore_about_card_title_note">ZeroCoreManage is an extension package based on ZeroTermux,\nextends ZeroTermux functionality, purpose is to reduce ZeroTermux\npackage size. ZeroTermux can still run normally without this extension\nEngine additional content:\n\n1. Built-in keyboard\n2. WEB access to storage card\n3. X86 Alpine</string>
+    <string name="zt_developer">Developer/Contributor</string>
+    <string name="zt_developer_note">Kevin Williams, KuangChiBuPangMeiBanFa, SharpIce RuiBingLong, WINLOG\nXiaoTong (XiaoTong6666), XINHAO_HAN, Xieansecn, etc. (in no particular order)</string>
+    <string name="zt_install">Restore/Extend official version</string>
+    <string name="zt_install_float">Plugin not installed! Please go to [Settings -> Install/Restore Termux official software -> Termux Float] to install plugin</string>
+    <string name="zt_install_file">Plugin not installed! Please go to [Settings -> Install/Restore Termux official software -> (Zero)Utermux File Plug] to install plugin</string>
+    <string name="zt_timer">Scheduled tasks</string>
+    <string name="zt_timer_settings">Scheduled task settings (BETA)</string>
 
-    <string name="zt_timer_start">启动定时任务</string>
-    <string name="zt_timer_start_sum">启动定时任务到达时间会执行一次命令代码</string>
-    <string name="zt_timer_this_check">当前选择</string>
-    <string name="zt_timer_30_second">30秒</string>
-    <string name="zt_timer_1_minute">1分钟</string>
-    <string name="zt_timer_10_minute">10分钟</string>
-    <string name="zt_timer_30_minute">30分钟</string>
-    <string name="zt_timer_minute">分钟</string>
-    <string name="zt_timer_1_hour">1小时</string>
-    <string name="zt_timer_customize">自定义</string>
-    <string name="zt_timer_message">自定义单位为秒\n1 分钟 = 60 秒\n1 小时 = 60 分钟 * 60 秒 = 3600 秒 \n1 天 = 24 小时 * 60 分钟 * 60 秒 = 86400秒</string>
+    <string name="zt_timer_start">Start scheduled task</string>
+    <string name="zt_timer_start_sum">Start scheduled task will execute command code once when time reached</string>
+    <string name="zt_timer_this_check">Current selection</string>
+    <string name="zt_timer_30_second">30 seconds</string>
+    <string name="zt_timer_1_minute">1 minute</string>
+    <string name="zt_timer_10_minute">10 minutes</string>
+    <string name="zt_timer_30_minute">30 minutes</string>
+    <string name="zt_timer_minute">minute</string>
+    <string name="zt_timer_1_hour">1 hour</string>
+    <string name="zt_timer_customize">Custom</string>
+    <string name="zt_timer_message">Custom unit is seconds\n1 minute = 60 seconds\n1 hour = 60 minutes * 60 seconds = 3600 seconds\n1 day = 24 hours * 60 minutes * 60 seconds = 86400 seconds</string>
 
-    <string name="zt_timer_log">日志目录</string>
-    <string name="zt_timer_log_sum">LOG目录在:\n~/.timerdir/log/,请查看此处LOG运行情况.</string>
-    <string name="zt_timer_edit">脚本目录</string>
-    <string name="zt_timer_edit_sum">请手动修改Termux目录下：\nZT环境下：~/.timerdir/termux_timer.sh\nSHELL环境下：~/.timerdir/shell_timer.sh\n注意！注意！注意\n在ZeroTermux 环境下请不要授予APP ROOT权限，否则无法运行!</string>
+    <string name="zt_timer_log">Log directory</string>
+    <string name="zt_timer_log_sum">LOG directory at:\n~/.timerdir/log/, please check LOG execution status here.</string>
+    <string name="zt_timer_edit">Script directory</string>
+    <string name="zt_timer_edit_sum">Please manually modify in Termux directory:\nZT environment: ~/.timerdir/termux_timer.sh\nSHELL environment: ~/.timerdir/shell_timer.sh\nAttention! Attention! Attention!\nIn ZeroTermux environment, do not grant APP ROOT permission, otherwise it cannot run!</string>
 
-    <string name="zt_timer_environment">当前运行环境</string>
-    <string name="zt_timer_environment_sum">当前运行环境为:</string>
-    <string name="zt_timer_other_title_dialog">自定义时常(秒)</string>
-    <string name="zt_timer_other_input_numer_dialog">请输入数字或者输入数字大于long最大值(单位为秒)</string>
-    <string name="zt_timer_notification_timer_title">(ZT)定时任务当前正在运行</string>
-    <string name="zt_timer_notification_timer_sum">当前计划时间间隔:</string>
-    <string name="zt_timer_notification_timer_cunt">当前执行次数:</string>
-    <string name="zt_timer_notification_timer_kill">正在强制关闭当前任务！</string>
-    <string name="zt_env_shell_title">ADB Shell运行Termux</string>
-    <string name="zt_env_shell_sum">打开此选项输出sh脚本到指定目录\n关闭则取消此脚本输出</string>
-    <string name="zt_env_shell_sum_msg">打开adb shell 运行以下命令:\n1.adb shell\n2.</string>
-    <string name="zt_particle_animation">粒子动画</string>
-    <string name="zt_volume_function_title">还原音量+-键</string>
-    <string name="zt_volume_function_summary">禁用当前使用音量+-键进行弹出左/右面板</string>
-    <string name="zt_moe_remove">MOE目前作者已经不在维护，可能会出现ZeroTermux不可预知的错误结果。</string>
+    <string name="zt_timer_environment">Current runtime environment</string>
+    <string name="zt_timer_environment_sum">Current runtime environment:</string>
+    <string name="zt_timer_other_title_dialog">Custom duration (seconds)</string>
+    <string name="zt_timer_other_input_numer_dialog">Please enter number or enter number greater than long maximum value (unit: seconds)</string>
+    <string name="zt_timer_notification_timer_title">(ZT) Scheduled task currently running</string>
+    <string name="zt_timer_notification_timer_sum">Current scheduled interval:</string>
+    <string name="zt_timer_notification_timer_cunt">Current execution count:</string>
+    <string name="zt_timer_notification_timer_kill">Forcibly closing current task!</string>
+    <string name="zt_env_shell_title">ADB Shell run Termux</string>
+    <string name="zt_env_shell_sum">Enable this option to output sh script to specified directory\nDisable to cancel script output</string>
+    <string name="zt_env_shell_sum_msg">Open adb shell and run following command:\n1.adb shell\n2.</string>
+    <string name="zt_particle_animation">Particle animation</string>
+    <string name="zt_volume_function_title">Restore volume +- keys</string>
+    <string name="zt_volume_function_summary">Disable using volume +- keys to pop up left/right panels</string>
+    <string name="zt_moe_remove">MOE is no longer maintained by the author, may cause unpredictable errors in ZeroTermux.</string>
 
     <string-array name="options_resolution_keys">
         <item>1920x1080</item>
@@ -988,156 +988,156 @@ Terminal margin auto-adjustment will be disabled</string>
         <item>1024000</item>
     </integer-array>
 
-    <string name="x11_features">X11功能</string>
-    <string name="x11_features_settings">X11设置</string>
-    <string name="x11_features_settings_internal">内部通道X11设置</string>
-    <string name="x11_features_settings_summary">详细(原生)设置，分辨率、底部键盘显示等</string>
-    <string name="x11_display_terminal">显示终端</string>
-    <string name="x11_hide_terminal">隐藏终端</string>
-    <string name="x11_environment">X11环境</string>
-    <string name="x11_not_connect">X11没有任何连接,请连接会话后重试</string>
-    <string name="x11_msg_error">查询到终端显示异常,现已恢复</string>
-    <string name="x11_internal_passage">内部通道</string>
-    <string name="x11_external_channels">外部通道</string>
-    <string name="x11_external_summary">切换完成请重启APP生效\n\n内部通道：使用内部通道X11显示输出直接会在终端背景显示\n外部通道：外部通道X11显示输出会在Termux:X11 APK 显示\n内部通道可能会影响一定的性能\n\n注意：已知问题，如果在终端连续返回进入，内部通道可能会黑屏，再次按返回键退出，重新进入即可恢复\n\n操作：如果开启内部通道，音量上下(加减)键会被强制替换成打开左/右面板,如需需要使用Termux 原生上下键功能，请关闭内部通道</string>
-    <string name="x11_internal_passage_install_error">内部通道文件安装失败，请手动设置权限(/usr/libexec/termux-x11/loader.apk)为444\n或重新安装</string>
-    <string name="x11_error">没有安装基础环境，请在左侧栏点击 “ X11环境 ”</string>
-    <string name="x11_error_set_env">环境设置失败，只能强制使用内部通道!如果一直提示此错误，请联系开发者</string>
-    <string name="x11_environment_msg">安装日志：</string>
-    <string name="x11_environment_error">Loader.apk删除失败，请手动删除目录下：/usr/libexec/termux-x11/loader.apk</string>
-    <string name="x11_environment_error_x11">termux-x11删除失败，请手动删除目录下：/usr/bin/termux-x11</string>
-    <string name="x11_dialog_reset">切换成功，需要重启生效，现在需要重启吗？</string>
-    <string name="x11_so_install">修环境报错</string>
-    <string name="x11_so_install_ok">修复成功，请使用termux-x11重试</string>
-    <string name="x11_so_install_not">环境正常无需修复</string>
-    <string name="x11_so_install_error">修复失败，请在 左侧栏 -> X11设置 切换通道来显示详细信息</string>
-    <string name="x11_install_apk">安装X11</string>
-    <string name="x11_install_apk_not">没有安装X11，请先安装X11 APK</string>
-    <string name="x11_boom_keyboard_gone">隐藏键盘</string>
-    <string name="x11_boom_keyboard_visible">显示键盘</string>
-    <string name="update_online_sh">在线脚本服务器</string>
-    <string name="update_online_sh_summary">修改在线脚本服务器</string>
-    <string name="content_ssh_list">切换SSH</string>
-    <string name="content_command_list">切换命令</string>
-    <string name="content_ssh_list_summary">暂无SSH设备，请点击上方添加</string>
-    <string name="content_ssh_list_toast_hint">正在初始化中，请耐心等待...</string>
-    <string name="content_ssh_list_toast_ssh_hint">初次使用，正在初始化SSH环境...</string>
-    <string name="content_ssh_list_toast_ssh_wait">环境尚未就绪，请稍候...</string>
-    <string name="content_ssh_remove_device">删除设备</string>
-    <string name="content_ssh_remove_device_dialog">"确定要删除'%s'吗？\n(IP: '%s')"</string>
-    <string name="content_ssh_remove_ok">已删除</string>
-    <string name="content_ssh_add_device">添加SSH设备</string>
-    <string name="content_ssh_alias">别名</string>
-    <string name="content_ssh_host_name">主机名(IP/域名)</string>
-    <string name="content_ssh_host_post_def">端口(默认22)</string>
-    <string name="content_ssh_host_username_def">用户名(默认root)</string>
-    <string name="content_ssh_host_key_def">使用密钥登录(~/.ssh/别名.key)</string>
-    <string name="content_ssh_password">密码</string>
-    <string name="content_ssh_generate">生成</string>
-    <string name="content_ssh_import">导入</string>
-    <string name="content_ssh_copy_public_key">复制公钥</string>
-    <string name="content_ssh_alias_summary">请先填写别名，密钥文件将以别名命名</string>
-    <string name="content_ssh_generate_key">生成密钥</string>
-    <string name="content_ssh_rsa">"将生成新的RSA密钥对：\n~/.ssh/%s.key\n\n如果该文件已存在，将被覆盖"</string>
-    <string name="content_ssh_generate_keying">正在后台生成密钥...</string>
-    <string name="content_ssh_please_fill_alias_first">请先填写别名</string>
-    <string name="content_ssh_key_not_exets">"公钥文件不存在，请先点击生成密钥"</string>
-    <string name="content_ssh_key_copy_clipboard">"公钥已复制到剪贴板"</string>
-    <string name="content_ssh_key_read_failed">"读取失败"</string>
-    <string name="content_ssh_enter_alias">先填写别名，需要根据别名保存密钥文件</string>
-    <string name="content_ssh_alias_exist">别名已存在，无法导入，请修改别名</string>
-    <string name="content_ssh_equipment_alias">请输入设备别名</string>
-    <string name="content_ssh_host_address">请输入主机地址</string>
-    <string name="content_ssh_alias_exist_replace">"别名%s已存在，请更换"</string>
-    <string name="content_ssh_host_format_error">主机地址格式错误</string>
-    <string name="content_ssh_port_invalid">端口无效(1-65535)</string>
-    <string name="content_ssh_port_is_number">端口必须是数字</string>
-    <string name="content_ssh_edit_ssh_device">编辑SSH设备</string>
-    <string name="content_ssh_username">用户名</string>
-    <string name="content_ssh_alias_ip_not_empty">别名和IP不能为空</string>
-    <string name="content_ssh_add_new_ssh_device">+ 添加新SSH设备</string>
+    <string name="x11_features">X11 features</string>
+    <string name="x11_features_settings">X11 settings</string>
+    <string name="x11_features_settings_internal">Internal channel X11 settings</string>
+    <string name="x11_features_settings_summary">Detailed (native) settings, resolution, bottom keyboard display, etc.</string>
+    <string name="x11_display_terminal">Show terminal</string>
+    <string name="x11_hide_terminal">Hide terminal</string>
+    <string name="x11_environment">X11 environment</string>
+    <string name="x11_not_connect">X11 has no connection, please connect session and retry</string>
+    <string name="x11_msg_error">Terminal display error detected, now recovered</string>
+    <string name="x11_internal_passage">Internal channel</string>
+    <string name="x11_external_channels">External channel</string>
+    <string name="x11_external_summary">Restart APP after switching to take effect\n\nInternal channel: Using internal channel, X11 display output will show directly in terminal background\nExternal channel: External channel X11 display output will show in Termux:X11 APK\nInternal channel may affect performance\n\nNote: Known issue, if repeatedly entering terminal, internal channel may show black screen, press back key to exit and re-enter to recover\n\nOperation: If internal channel enabled, volume up/down (plus/minus) keys will be forced to open left/right panels. To use Termux native up/down key functions, please disable internal channel</string>
+    <string name="x11_internal_passage_install_error">Internal channel file installation failed, please manually set permissions (/usr/libexec/termux-x11/loader.apk) to 444\nor reinstall</string>
+    <string name="x11_error">Base environment not installed, please click "X11 environment" in left sidebar</string>
+    <string name="x11_error_set_env">Environment setup failed, can only force use internal channel! If this error persists, please contact developer</string>
+    <string name="x11_environment_msg">Installation log:</string>
+    <string name="x11_environment_error">Loader.apk deletion failed, please manually delete: /usr/libexec/termux-x11/loader.apk</string>
+    <string name="x11_environment_error_x11">termux-x11 deletion failed, please manually delete: /usr/bin/termux-x11</string>
+    <string name="x11_dialog_reset">Switched successfully, restart required to take effect. Restart now?</string>
+    <string name="x11_so_install">Fix environment error</string>
+    <string name="x11_so_install_ok">Fix successful, please retry using termux-x11</string>
+    <string name="x11_so_install_not">Environment normal, no fix needed</string>
+    <string name="x11_so_install_error">Fix failed, please go to left sidebar -> X11 settings to switch channel for detailed information</string>
+    <string name="x11_install_apk">Install X11</string>
+    <string name="x11_install_apk_not">X11 not installed, please install X11 APK first</string>
+    <string name="x11_boom_keyboard_gone">Hide keyboard</string>
+    <string name="x11_boom_keyboard_visible">Show keyboard</string>
+    <string name="update_online_sh">Online script server</string>
+    <string name="update_online_sh_summary">Modify online script server</string>
+    <string name="content_ssh_list">Switch SSH</string>
+    <string name="content_command_list">Switch command</string>
+    <string name="content_ssh_list_summary">No SSH devices, please click above to add</string>
+    <string name="content_ssh_list_toast_hint">Initializing, please wait patiently...</string>
+    <string name="content_ssh_list_toast_ssh_hint">First use, initializing SSH environment...</string>
+    <string name="content_ssh_list_toast_ssh_wait">Environment not ready yet, please wait...</string>
+    <string name="content_ssh_remove_device">Delete device</string>
+    <string name="content_ssh_remove_device_dialog">"Confirm delete \'%s\'?\n(IP: \'%s\')"</string>
+    <string name="content_ssh_remove_ok">Deleted</string>
+    <string name="content_ssh_add_device">Add SSH device</string>
+    <string name="content_ssh_alias">Alias</string>
+    <string name="content_ssh_host_name">Hostname (IP/domain)</string>
+    <string name="content_ssh_host_post_def">Port (default 22)</string>
+    <string name="content_ssh_host_username_def">Username (default root)</string>
+    <string name="content_ssh_host_key_def">Use key login (~/.ssh/alias.key)</string>
+    <string name="content_ssh_password">Password</string>
+    <string name="content_ssh_generate">Generate</string>
+    <string name="content_ssh_import">Import</string>
+    <string name="content_ssh_copy_public_key">Copy public key</string>
+    <string name="content_ssh_alias_summary">Please fill in alias first, key file will be named by alias</string>
+    <string name="content_ssh_generate_key">Generate key</string>
+    <string name="content_ssh_rsa">"Will generate new RSA key pair:\n~/.ssh/%s.key\n\nIf this file already exists, it will be overwritten"</string>
+    <string name="content_ssh_generate_keying">Generating key in background...</string>
+    <string name="content_ssh_please_fill_alias_first">Please fill in alias first</string>
+    <string name="content_ssh_key_not_exets">"Public key file does not exist, please click generate key first"</string>
+    <string name="content_ssh_key_copy_clipboard">"Public key copied to clipboard"</string>
+    <string name="content_ssh_key_read_failed">"Read failed"</string>
+    <string name="content_ssh_enter_alias">Fill in alias first, need to save key file by alias</string>
+    <string name="content_ssh_alias_exist">Alias already exists, cannot import, please change alias</string>
+    <string name="content_ssh_equipment_alias">Please enter device alias</string>
+    <string name="content_ssh_host_address">Please enter host address</string>
+    <string name="content_ssh_alias_exist_replace">"Alias %s already exists, please replace"</string>
+    <string name="content_ssh_host_format_error">Host address format error</string>
+    <string name="content_ssh_port_invalid">Port invalid (1-65535)</string>
+    <string name="content_ssh_port_is_number">Port must be a number</string>
+    <string name="content_ssh_edit_ssh_device">Edit SSH device</string>
+    <string name="content_ssh_username">Username</string>
+    <string name="content_ssh_alias_ip_not_empty">Alias and IP cannot be empty</string>
+    <string name="content_ssh_add_new_ssh_device">+ Add new SSH device</string>
 
-    <string name="zt_command_version">ZeroTermux-命令版本：0.2 (2025 ~ 2026)</string>
-    <string name="zt_command_error">不支持或ZT版本低不识别: \"</string>
+    <string name="zt_command_version">ZeroTermux-Command version: 0.2 (2025 ~ 2026)</string>
+    <string name="zt_command_error">Not supported or ZT version too low to recognize: \"</string>
     <string name="zt_command_help" tools:ignore="TypographyDashes">
-        可用命令:\n
-        ZeroTermux 终端命令解释 \n
-        版本 0.1 \n
+        Available commands:\n
+        ZeroTermux terminal command explanation\n
+        Version 0.1\n
         \n
         \n
-        --------0.1版本更新--------\n
+        --------Version 0.1 Updates--------\n
         \n
-        基础类：\n
+        Basic commands:\n
         \n
-        help - 显示帮助 \n
-        openleft(ol) - 打开左侧面板 \n
-        openright(or) - 打开右侧面板 \n
-        reboot(rb) - 重启termux \n
-        toast - 底部弹出信息，显示自定义消息 \n
-        toast[ \n
-        示例：zt toast hello \n
-        ] \n
-        version(v) - 查看当前版本信息 \n
-        \n
-        \n
-        图形连接相关:\n
-        \n
-        vnc - 连接vnc(zt vnc 地址_端口_用户名_密码) \n
-        vnc[ \n
-        示例: zt vnc 127.0.0.1_5900_admin_admin \n
-        用户名或密码为空则输入none \n
-        示例(密码为空)：zt vnc 127.0.0.1_5900_admin_none \n
-        示例(用户名为空)：zt vnc 127.0.0.1_5900_none_admin \n
-        示例(或都为空)：zt vnc 127.0.0.1_5900_none_none \n
-        注意 地址和端口不能为空！\n
-        ] \n
-        x11commandshow(x11xs) - 显示终端(x11需打开) \n
-        x11commandhide(x11xh) - 隐藏终端(x11需打开) \n
-        x11keyboardshow(x11kbs) -显示x11键盘 \n
-        x11keyboardhide(x11kbh) -隐藏x11键盘 \n
+        help - Show help\n
+        openleft(ol) - Open left panel\n
+        openright(or) - Open right panel\n
+        reboot(rb) - Restart termux\n
+        toast - Bottom pop-up message, display custom message\n
+        toast[\n
+        Example: zt toast hello\n
+        ]\n
+        version(v) - View current version information\n
         \n
         \n
-        创建软连接 \n
-        ln - 创建软连接 \n
-        ln[ \n
-        说明：当前目录 内部存储路径 \n
-        注意：两个路径都必须是全路径 \n
-        示例：ln /data/data/com.termux/files/home/自定义名称 /sdcard/ \n
-        示例(或指定一个目录)：ln /data/data/com.termux/files/home/自定义名称 /sdcard/自定义目录/ \n
-        ] \n
+        Graphical connection related:\n
+        \n
+        vnc - Connect vnc (zt vnc address_port_username_password)\n
+        vnc[\n
+        Example: zt vnc 127.0.0.1_5900_admin_admin\n
+        If username or password is empty, enter none\n
+        Example (password empty): zt vnc 127.0.0.1_5900_admin_none\n
+        Example (username empty): zt vnc 127.0.0.1_5900_none_admin\n
+        Example (both empty): zt vnc 127.0.0.1_5900_none_none\n
+        Note: Address and port cannot be empty!\n
+        ]\n
+        x11commandshow(x11xs) - Show terminal (x11 must be enabled)\n
+        x11commandhide(x11xh) - Hide terminal (x11 must be enabled)\n
+        x11keyboardshow(x11kbs) - Show x11 keyboard\n
+        x11keyboardhide(x11kbh) - Hide x11 keyboard\n
+        \n
+        \n
+        Create symbolic link\n
+        ln - Create symbolic link\n
+        ln[\n
+        Description: Current directory, internal storage path\n
+        Note: Both paths must be full paths\n
+        Example: ln /data/data/com.termux/files/home/custom_name /sdcard/\n
+        Example (specify a directory): ln /data/data/com.termux/files/home/custom_name /sdcard/custom_dir/\n
+        ]\n
              \n
         \n
-        --------0.2版本更新--------\n
-        zt dialog \n
+        --------Version 0.2 Updates--------\n
+        zt dialog\n
         dialog[\n
-        使用帮助：\n
-        -c 确定取消弹框(确定或者取消)，示例 zt dialog -c -t 标题 -m 消息内容 \n
-        -s 显示弹框 (只有一个确定)，示例 zt dialog -s -m 消息内容 \n
-        -e 显示编辑弹框，示例 zt dialog -e -t 标题 \n
+        Usage:\n
+        -c Confirm/cancel dialog (confirm or cancel), example: zt dialog -c -t title -m message_content\n
+        -s Show dialog (only confirm button), example: zt dialog -s -m message_content\n
+        -e Show edit dialog, example: zt dialog -e -t title\n
         ]\n
         \n
-        zt x11status 查询当前x11链接情况 (内部通道有用)\n
+        zt x11status - Query current x11 connection status (useful for internal channel)\n
         \n
-        zt backgroundimage(bgi) 图片路径(设置当前终端背景)\n
+        zt backgroundimage(bgi) image_path (set current terminal background)\n
         backgroundimage(bgi)[\n
-        使用帮助(必须全路径):\n
-        zt backgroundimage /data/data/com.termux/files/home/.img/back.jpg \n
-        zt bgi /data/data/com.termux/files/home/.img/back.jpg \n
+        Usage (must be full path):\n
+        zt backgroundimage /data/data/com.termux/files/home/.img/back.jpg\n
+        zt bgi /data/data/com.termux/files/home/.img/back.jpg\n
         ]\n
         \n
         \n
 
     </string>
 
-    <string name="zt_command_timeout">连接超时</string>
-    <string name="zt_command_dialog_windows_finish">窗口异常销毁</string>
-    <string name="zt_command_dialog_finish">弹窗被销毁</string>
+    <string name="zt_command_timeout">Connection timeout</string>
+    <string name="zt_command_dialog_windows_finish">Window destroyed abnormally</string>
+    <string name="zt_command_dialog_finish">Dialog destroyed</string>
     <string name="zt_command_dialog_help">
-        使用帮助：\n
-        -c 确定取消弹框(确定或者取消)，示例 zt dialog -c -t 标题 -m 消息内容 \n
-        -s 显示弹框 (只有一个确定)，示例 zt dialog -s -m 消息内容 \n
-        -e 显示编辑弹框，示例 zt dialog -e -t 标题 \n
+        Usage:\n
+        -c Confirm/cancel dialog (confirm or cancel), example: zt dialog -c -t title -m message_content\n
+        -s Show dialog (only confirm button), example: zt dialog -s -m message_content\n
+        -e Show edit dialog, example: zt dialog -e -t title\n
     </string>
-    <string name="zt_command_image_backgroup">输入的背景图片路径无效</string>
+    <string name="zt_command_image_backgroup">Entered background image path is invalid</string>
     <string name="no_permission">No permission</string>
 </resources>
