@@ -160,7 +160,6 @@ class EditDialog : BaseDialogCentre {
         })
     }
 
-    //获取
     private fun getList(text:String): ArrayList<EditPromptBean.EditPromptData>? {
 
 

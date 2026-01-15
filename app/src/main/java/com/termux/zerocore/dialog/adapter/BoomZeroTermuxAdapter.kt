@@ -40,7 +40,6 @@ class BoomZeroTermuxAdapter : RecyclerView.Adapter<BoomZeroTermuxViewHolder> {
         if(zeroRunCommandBean.type == 0){
 
             if(zeroRunCommandBean.isShow){
-                //标题
                 holder.msg_card!!.visibility = View.GONE
                 holder.title!!.visibility = View.VISIBLE
                 holder.title!!.text = zeroRunCommandBean.title
@@ -52,7 +51,6 @@ class BoomZeroTermuxAdapter : RecyclerView.Adapter<BoomZeroTermuxViewHolder> {
 
 
         }else{
-            //内容
 
             holder.msg_card!!.visibility = View.VISIBLE
             holder.title!!.visibility = View.GONE

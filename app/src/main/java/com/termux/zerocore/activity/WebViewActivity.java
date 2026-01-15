@@ -81,14 +81,8 @@ public class WebViewActivity extends BaseThemeActivity {
 
     @Override
     public void onBackPressed() {
-        // 完全由自己控制返回键逻辑，系统不再控制，但是有个前提是：
-        // 不要在Activity的onKeyDown或者OnKeyUp中拦截掉返回键
 
-        // 拦截：就是在OnKeyDown或者OnKeyUp中自己处理了返回键
-        //（这里处理之后return true.或者return false都会导致onBackPressed不会执行）
 
-        // 不拦截：在OnKeyDown和OnKeyUp中返回super对应的方法
-        //（如果两个方法都被覆写就分别都要返回super.onKeyDown,super.onKeyUp）
         if (!agentWeb.back()){
             finish();
         }
@@ -142,22 +136,18 @@ public class WebViewActivity extends BaseThemeActivity {
         @Override
         public void onProgressChanged(WebView view, int newProgress) {
         }
-        // 3.0以下版本
         public void openFileChooser(ValueCallback valueCallback) {
             mValueCallback = valueCallback;
             openImageActivity();
         }
-        //3.0以上版本
         public void openFileChooser(ValueCallback valueCallback, String acceptType) {
             mValueCallback = valueCallback;
             openImageActivity();
         }
-        //4.1以上版本
         public void openFileChooser(ValueCallback valueCallback, String acceptType,  String capture) {
             mValueCallback = valueCallback;
             openImageActivity();
         }
-        // 5.0以上版本  主要版本
         @Override
         public boolean onShowFileChooser(WebView webView, ValueCallback filePathCallback, FileChooserParams fileChooserParams) {
             mFilePathCallback = filePathCallback;
@@ -170,11 +160,9 @@ public class WebViewActivity extends BaseThemeActivity {
         Intent i = new Intent(Intent.ACTION_GET_CONTENT);
         i.addCategory(Intent.CATEGORY_OPENABLE);
         i.setType("image/*");
-        //调起手机图库
         startActivityForResult(Intent.createChooser(i, "Image Chooser"),RESULT_CODE);
     }
 
-    //处理手机返回的图片
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

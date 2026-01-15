@@ -217,17 +217,13 @@ public class CommonUtils {
     public static int[] calculatePopWindowPos(final View anchorView, final View contentView) {
         final int windowPos[] = new int[2];
         final int anchorLoc[] = new int[2];
-        // 获取锚点View在屏幕上的左上角坐标位置
         anchorView.getLocationOnScreen(anchorLoc);
         final int anchorHeight = anchorView.getHeight();
-        // 获取屏幕的高宽
         final int screenHeight = anchorView.getContext().getResources().getDisplayMetrics().heightPixels;//ScreenUtils.getScreenHeight(anchorView.getContext());
         final int screenWidth = anchorView.getResources().getDisplayMetrics().widthPixels;
         contentView.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
-        // 计算contentView的高宽
         final int windowHeight = contentView.getMeasuredHeight();
         final int windowWidth = contentView.getMeasuredWidth();
-        // 判断需要向上弹出还是向下弹出显示
         final boolean isNeedShowUp = (screenHeight - anchorLoc[1] - anchorHeight < windowHeight);
         if (isNeedShowUp) {
             windowPos[0] = screenWidth - windowWidth;
@@ -254,14 +250,9 @@ public class CommonUtils {
      * 更新上下文的资源Resources(更新语言)
      */
     public static void updateResourcesOfContext(@NonNull Context context) {
-        // 获得res资源对象
         Resources resources = context.getResources();
-        // 获得屏幕参数：主要是分辨率，像素等。
         DisplayMetrics metrics = resources.getDisplayMetrics();
-        // 获得配置对象
         Configuration config = resources.getConfiguration();
-        //区别17版本（其实在17以上版本通过 config.locale设置也是有效的，不知道为什么还要区别）
-        //在这里设置需要转换成的语言，也就是选择用哪个values目录下的strings.xml文件
         int value = CommonUtils.getSettingSharedPreferences(context).getInt(Constants.PreferenceConsts.LANGUAGE_SETTING, Constants.PreferenceConsts.LANGUAGE_FOLLOW_SYSTEM);
         Locale locale = null;
         switch (value) {

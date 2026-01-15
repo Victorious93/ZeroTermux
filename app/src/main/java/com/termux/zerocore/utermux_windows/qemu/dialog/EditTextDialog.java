@@ -122,19 +122,16 @@ public class EditTextDialog extends BaseDialogCentre {
         this.mStartCommand = mStartCommand;
     }
 
-    //恢复默认值
     public interface SystemSwitchListener{
 
         void switchEdit(EditText editText);
 
     }
-    //修改
     public interface EditStartCommand{
         void editCommand(String string);
 
     }
 
-    //启动
 
     public interface StartCommand{
         void startCommand(String string);

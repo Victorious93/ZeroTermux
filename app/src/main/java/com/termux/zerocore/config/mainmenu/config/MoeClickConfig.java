@@ -11,7 +11,6 @@ import com.termux.zerocore.code.CodeString;
 import com.termux.zerocore.config.mainmenu.MainMenuConfig;
 import com.termux.zerocore.dialog.SwitchDialog;
 
-// MOE全能
 public class MoeClickConfig extends BaseMenuClickConfig {
     @Override
     public int getType() {

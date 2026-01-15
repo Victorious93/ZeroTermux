@@ -15,19 +15,16 @@ public class NotificationUtils {
     public static void showNotification(Context context, int notificationId, String title, String message) {
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        // 创建通知渠道（仅适用于Android 8.0以上版本）
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
             notificationManager.createNotificationChannel(channel);
         }
 
-        // 创建通知
         Notification.Builder builder = new Notification.Builder(context)
             .setContentTitle(title)
             .setContentText(message)
             .setSmallIcon(R.drawable.ic_launcher);
 
-        // 发送通知
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             builder.setChannelId(CHANNEL_ID);
         }
@@ -42,14 +39,12 @@ public class NotificationUtils {
     public static void updateNotification(Context context, int notificationId, String updatedTitle, String updatedMessage) {
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        // 创建通知
         Notification.Builder builder = new Notification.Builder(context)
             .setContentTitle(updatedTitle)
             .setContentText(updatedMessage)
             .setSmallIcon(R.drawable.ic_launcher)
             .setSound(null);
 
-        // 更新通知
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             builder.setChannelId(CHANNEL_ID);
             builder.setOnlyAlertOnce(true);

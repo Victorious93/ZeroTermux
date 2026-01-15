@@ -44,8 +44,6 @@ object BashFileUtils {
                     end = i - 1
                 }
             }
-            //获取的所有文本 lines = arrayListLines
-            //获取ZT当前的  startCommand
            // startCommand.addAll(list)
             val arrayListLines = LinkedList<String>()
             arrayListLines.addAll(lines)

@@ -30,7 +30,6 @@ public class ZTCommandConfigStore {
     private static final SparseArray<ZTConfig> sparse_array_config = new SparseArray<>();
     private static final Map<String, Integer> map_array_command = new HashMap<>();
     static {
-        // 需要在此添加命令，否则找不到config
         map_array_command.put(ZTKeyConstants.ZT_COMMAND_TOAST, ZTKeyConstants.ZT_ID_TOAST);
         map_array_command.put(ZTKeyConstants.ZT_COMMAND_HELP, ZTKeyConstants.ZT_ID_HELP);
         map_array_command.put(ZTKeyConstants.ZT_COMMAND_KNOW, ZTKeyConstants.ZT_ID_KNOW);
@@ -70,7 +69,6 @@ public class ZTCommandConfigStore {
         map_array_command.put(ZTKeyConstants.ZT_COMMAND_BACKGROUND_IMAGE, ZTKeyConstants.ZT_ID_BACKGROUND_IMAGE);
         map_array_command.put(ZTKeyConstants.ZT_COMMAND_BACKGROUND_IMAGE_1, ZTKeyConstants.ZT_ID_BACKGROUND_IMAGE);
 
-        // 需要在此添加你的config，否则找不到config
         register(new ToastConfig());
         register(new HelpConfig());
         register(new KnowConfig());

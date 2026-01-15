@@ -29,16 +29,13 @@ object FileIOUtils {
     public const val CLIP_BOARD_KEY = "ClipBoardKey"
     public const val TAG = "FileIOUtils"
 
-    //环境
     public const val TERMUX_CHROOT = "/data/data/com.termux/files/usr/bin/termux-chroot"
     public const val TERMUX_WGET = "/data/data/com.termux/files/usr/bin/wget"
     public const val TERMUX_QEMU = "/data/data/com.termux/files/usr/bin/qemu-system-x86_64"
 
     public  val TERMUX_XINHAO_CONFIG = Environment.getExternalStorageDirectory().absolutePath + "/xinhao/config/"
-    //ROM信息文件地址
     public const val DATA_MESSAGE_PATH = "/ZtInfo/data.config"
     public const val DATA_MESSAGE_PATH_FOLDER = "/ZtInfo"
-    //网站默认地址
     public const val HTML_PATH = "/ztlink/html"
     public const val XINHAO_PATH = "/ztlink/xinhao"
     public const val HTML_ZT_LINK_PATH = "/ztlink"
@@ -490,7 +487,6 @@ object FileIOUtils {
         val dataMessagePathFile = getDataMessagePathFile()
         return UUtils.setFileString(dataMessagePathFile, msg)
     }
-    //获取模块包路径
     public fun getModuleFiles(): ArrayList<File>? {
         if (!FileUrl.zeroTermuxModule.exists()) {
             if (!FileUrl.zeroTermuxModule.mkdirs()) {

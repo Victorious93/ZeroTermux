@@ -103,7 +103,6 @@ public class RestoreFragment extends BaseFragment {
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-            //标记恢复处.....
 
 
             @Override
@@ -240,7 +239,6 @@ public class RestoreFragment extends BaseFragment {
 
 
 
-    //写出文件
     private void writerFile(String name, File mFile) {
 
         try {

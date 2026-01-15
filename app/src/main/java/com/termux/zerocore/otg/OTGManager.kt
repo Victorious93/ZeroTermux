@@ -52,9 +52,7 @@ class OTGManager {
         }
         LogUtils.d(TAG, "initOtg devices isNotEmpty:${devices.isNotEmpty()}")
         if (devices.isNotEmpty()) {
-            //获取管理者
             val usbManager = UUtils.getContext().getSystemService(Context.USB_SERVICE) as UsbManager
-            //枚举设备
             val storageDevices =
                 UsbMassStorageDevice.getMassStorageDevices(UUtils.getContext()) //获取存储设备
             val pendingIntent = PendingIntent.getBroadcast(
@@ -119,7 +117,6 @@ class OTGManager {
 
 
     }
-    //显示Dialog
     private fun showExceptionDialog(mLoadingDialog: LoadingDialog?) {
         if (mLoadingDialog != null && mLoadingDialog.isShowing) {
             try {

@@ -144,7 +144,6 @@ public class TermuxApplication extends XHApplication {
 
             }
         });
-        //初始化定时器
         LibSuManage.getInstall().initTimer();
         MainMenuConfig.init(this);
         new ClipBoardUtil().registerClipEvents();

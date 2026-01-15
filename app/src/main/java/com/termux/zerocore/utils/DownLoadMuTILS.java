@@ -38,7 +38,6 @@ public class DownLoadMuTILS {
 
     @Download.onTaskComplete
     public void taskComplete( DownloadTask task) {
-        //在这里处理任务完成的状态
         UUtils.showLog("任务状态(当前执行任务):完成");
         mDownLoadMuTILSListener.taskComplete(task);
     }

@@ -9,7 +9,6 @@ import com.termux.R;
 import com.termux.zerocore.activity.SwitchActivity;
 import com.termux.zerocore.config.mainmenu.MainMenuConfig;
 
-// 容器切换
 public class ContainerSwitchClickConfig extends BaseMenuClickConfig {
     @Override
     public int getType() {

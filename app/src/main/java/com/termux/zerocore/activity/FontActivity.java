@@ -189,7 +189,6 @@ public class FontActivity extends BaseThemeActivity {
     }
 
 
-    //写出文件
     private void writerFile(String name, File mFile) {
 
         try {
@@ -217,7 +216,6 @@ public class FontActivity extends BaseThemeActivity {
     }
 
 
-    //写出文件
     private void writerFileFont(File mFileSd) {
 
         try {

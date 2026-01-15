@@ -506,13 +506,11 @@ class ItemMenuAdapter :RecyclerView.Adapter<ItemMenuViewHolder> {
                 UUtils.showMsg(UUtils.getString(R.string.data_message_empty))
             } else {
                 mingLShowDialog.dismiss()
-                //在手动关闭和意外关闭都会自动保存，所以此显示信息只是增加保存按钮的一个反馈信息
                 UUtils.showMsg(UUtils.getString(R.string.保存成功))
             }
         }
         mingLShowDialog.setOnDismissListener {
             val text = mingLShowDialog.edit_text.text
-            //设置自动保存，关闭Dialog之后也会自动保存
             GlobalScope.launch {
                 withContext(Dispatchers.IO) {
                     if (!text.isNullOrEmpty()) {

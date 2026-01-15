@@ -17,7 +17,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.util.ArrayList;
-// 切换源
 public class SwitchSourceClickConfig extends BaseMenuClickConfig implements MenuLeftPopuListWindow.ItemClickPopuListener {
     @Override
     public int getType() {
@@ -43,13 +42,10 @@ public class SwitchSourceClickConfig extends BaseMenuClickConfig implements Menu
     public void onClick(View view, Context context) {
         ArrayList<MenuLeftPopuListWindow.MenuLeftPopuListData> menuLeftPopuListData = new ArrayList<>();
 
-        //清华
         MenuLeftPopuListWindow.MenuLeftPopuListData qinghua = new MenuLeftPopuListWindow.MenuLeftPopuListData(R.mipmap.qinghua_ico, UUtils.getString(R.string.清华源), 1);
         menuLeftPopuListData.add(qinghua);
-        //北京
         MenuLeftPopuListWindow.MenuLeftPopuListData beijing = new MenuLeftPopuListWindow.MenuLeftPopuListData(R.mipmap.beijing, UUtils.getString(R.string.北京源), 2);
         menuLeftPopuListData.add(beijing);
-        //官方
         MenuLeftPopuListWindow.MenuLeftPopuListData guanfang = new MenuLeftPopuListWindow.MenuLeftPopuListData(R.mipmap.guanfang, UUtils.getString(R.string.官方源), 3);
         menuLeftPopuListData.add(guanfang);
         //NJU
@@ -58,7 +54,6 @@ public class SwitchSourceClickConfig extends BaseMenuClickConfig implements Menu
         //ustc
         MenuLeftPopuListWindow.MenuLeftPopuListData ustc = new MenuLeftPopuListWindow.MenuLeftPopuListData(R.mipmap.mingl_ico, UUtils.getString(R.string.ustc), 4666);
         menuLeftPopuListData.add(ustc);
-        //哈尔滨
         MenuLeftPopuListWindow.MenuLeftPopuListData heb = new MenuLeftPopuListWindow.MenuLeftPopuListData(R.mipmap.mingl_ico, UUtils.getString(R.string.hit), 46667);
         menuLeftPopuListData.add(heb);
 
@@ -76,7 +71,6 @@ public class SwitchSourceClickConfig extends BaseMenuClickConfig implements Menu
     public void itemClick(int id, int index, @Nullable MenuLeftPopuListWindow mMenuLeftPopuListWindow) {
         mMenuLeftPopuListWindow.dismiss();
         switch (id) {
-            //清华
             case 1:
                 SwitchDialog switchDialog = switchDialogShow(UUtils.getString(R.string.警告), UUtils.getString(R.string.该操作会覆盖您的文件记录));
                 switchDialog.getCancel().setOnClickListener(v -> switchDialog.dismiss());
@@ -85,7 +79,6 @@ public class SwitchSourceClickConfig extends BaseMenuClickConfig implements Menu
                     TermuxActivity.mTerminalView.sendTextToTerminal(CodeString.INSTANCE.getQH());
                 });
                 break;
-            //北京
             case 2:
                 SwitchDialog switchDialog1 = switchDialogShow(UUtils.getString(R.string.警告), UUtils.getString(R.string.该操作会覆盖您的文件记录));
                 switchDialog1.getCancel().setOnClickListener(v -> switchDialog1.dismiss());
@@ -94,7 +87,6 @@ public class SwitchSourceClickConfig extends BaseMenuClickConfig implements Menu
                     TermuxActivity.mTerminalView.sendTextToTerminal(CodeString.INSTANCE.getBJ());
                 });
                 break;
-            //官方
             case 3:
                 SwitchDialog switchDialog2 = switchDialogShow(UUtils.getString(R.string.警告), UUtils.getString(R.string.该操作会覆盖您的文件记录));
                 switchDialog2.getCancel().setOnClickListener(v -> switchDialog2.dismiss());

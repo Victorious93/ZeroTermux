@@ -77,7 +77,6 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
     }
 
 
-    //判断默认系统
     private void isIofo() {
 
 
@@ -113,11 +112,9 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
 
     }
 
-    //点击事件
 
     private void clickList() {
 
-        // Toast.makeText(this, "执行了", Toast.LENGTH_SHORT).show();
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -128,7 +125,6 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
 
                 // Toast.makeText(SwitchActivity.this, "" + position, Toast.LENGTH_SHORT).show();
 
-                //当前系统
 
 
                 String[] strings = {UUtils.getString(R.string.删除), UUtils.getString(R.string.切换)};
@@ -136,11 +132,9 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
                 android.app.AlertDialog.Builder builder = new android.app.AlertDialog
                     .Builder(SwitchActivity.this);
                 builder.setTitle(UUtils.getString(R.string.删除完成_需要重进才能刷新));
-                // builder.setMessage("这是个滚动列表，往下滑");
                 builder.setItems(strings, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        // Toast.makeText(TermuxActivity.this, "选择了第" + which + "个", Toast.LENGTH_SHORT).show();
 
                         if (which == 0) {
 
@@ -271,7 +265,6 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
                             try {
 
 
-                                //本目录系统
                                 String temp;
 
                                 String tempStr = "";
@@ -281,17 +274,11 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
                                     tempStr += temp;
                                 }
 
-                                //要被替换的系统
                                 ReadSystemBean readSystemBean = mList.get(position);
-                                //本目录的系统
                                 CreateSystemBean readSystemBean1 = new Gson().fromJson(tempStr, CreateSystemBean.class);
 
-                                //要被替换的
                                 String path = readSystemBean.dir;
-                                //  Log.e("XINHAO_HAN", "要被替换的: " + path);
-                                //本目录的
                                 String pathThis = readSystemBean1.dir;
-                                // Log.e("XINHAO_HAN", "本目录的: " + pathThis);
 
 
                                 File filePath = new File(path);
@@ -334,7 +321,6 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
                                     readSystemBean1.systemName = readSystemBean.name;
                                     // readSystemBean1.systemName = readSystemBean.name;
                                     // readSystemBean1.systemName = readSystemBean1.systemName;
-                                    //  Log.e("XINHAO_HAN", "本目录的: " + pathThis);
 
                                     PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(new FileOutputStream(fileOutPath)));
 
@@ -410,7 +396,6 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
 
     }
 
-    //全部flase
 
     private void setAllFlase(List<ReadSystemBean> mList) {
 
@@ -424,10 +409,8 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
     }
 
 
-    //全部ture
 
 
-    //先读取
     private void readFile() {
 
         File[] files = mFile.listFiles();
@@ -464,7 +447,6 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
         setAdapter(arrayList);
     }
 
-    //开始设置
 
     private void setAdapter(ArrayList<ReadSystemBean> arrayList) {
 
@@ -474,11 +456,9 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
 
         setDefSystem(arrayList);
     }
-    //设置默认
 
     private void setDefSystem(ArrayList<ReadSystemBean> arrayList) {
 
-        //取本地的系统目录
         try {
             File file = new File("/data/data/com.termux/files/xinhao_system.infoJson");
 
@@ -530,7 +510,6 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
     }
 
 
-    //读取
     private String readInfo(String path) {
 
 
@@ -582,7 +561,6 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
     }
 
 
-    //创建新的系统
     private void createSystemDialog() {
 
         final EditText et = new EditText(this);
@@ -592,20 +570,15 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
             .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    //按下确定键后的事件
                     createSystem(et.getText().toString());
                 }
             }).setNegativeButton("取消", null).show();
     }
 
-    //创建
     private void createSystem(String name) {
-        //先扫描有多少文件
         File[] files = mFile.listFiles();
 
         if (files.length == 1) {
-            //默认只有一个系统
-            //直接创建
             File createFile = new File(mFile, "files1");
             createFile.mkdirs();
             CreateSystemBean createSystemBean = new CreateSystemBean();
@@ -639,7 +612,6 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
 
 
         } else {
-            //有多个系统
 
             ArrayList<Integer> arrayList = new ArrayList<>();
 
@@ -666,7 +638,6 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
             Log.e("XINHAO_HAN", "最大值: " + max);
 
 
-            //直接创建
             File createFile = new File(mFile, "files" + (max + 1));
             createFile.mkdirs();
             CreateSystemBean createSystemBean = new CreateSystemBean();
@@ -708,7 +679,6 @@ public class SwitchActivity extends AppCompatActivity  implements View.OnClickLi
 
     }
 
-    //比大小
     private int getMax(ArrayList<Integer> number) {
 
         int temp = number.get(0);

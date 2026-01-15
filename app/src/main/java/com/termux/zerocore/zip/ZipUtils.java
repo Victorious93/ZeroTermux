@@ -38,7 +38,6 @@ import java.util.zip.ZipOutputStream;
 public class ZipUtils {
 
 
-    //存放
     private static ArrayList<File> arrayList = new ArrayList<>();
 
     private static File mTempFile;
@@ -60,7 +59,6 @@ public class ZipUtils {
 
         long start = System.currentTimeMillis();
 
-        // 判断源文件是否存在
 
         if (!srcFile.exists()) {
 
@@ -69,7 +67,6 @@ public class ZipUtils {
             return;
         }
 
-        // 开始解压
 
         ZipFile zipFile = null;
 
@@ -87,9 +84,7 @@ public class ZipUtils {
 
             Enumeration<?> entries = zipFile.entries();
 
-            //文件总数量
             int size = zipFile.size();
-            //当前文件数量
             int sizeC = 0;
 
             while (entries.hasMoreElements()) {
@@ -100,7 +95,6 @@ public class ZipUtils {
                     sizeC++;
                     zipNameListener.progress(size, sizeC);
                     zipNameListener.zip(entry.getName(), size, sizeC);
-                    // 如果是文件夹，就创建个文件夹
 
 
                     if (entry.isDirectory()) {
@@ -108,9 +102,7 @@ public class ZipUtils {
                         File dir = new File(dirPath);
                         dir.mkdirs();
                     }  else {
-                        // 如果是文件，就先创建一个文件，然后用io流把内容copy过去
                         File targetFile = new File(destDirPath + "/" + entry.getName());
-                        // 保证这个文件的父文件夹必须要存在
                         if (!targetFile.getParentFile().exists()) {
                             targetFile.getParentFile().mkdirs();
                         }
@@ -122,7 +114,6 @@ public class ZipUtils {
                             }
                         }
                         targetFile.createNewFile();
-                        // 将压缩文件内容写入到这个文件中
                         InputStream is = zipFile.getInputStream(entry);
                         FileOutputStream fos = new FileOutputStream(targetFile);
                         int len;
@@ -130,7 +121,6 @@ public class ZipUtils {
                         while ((len = is.read(buf)) != -1) {
                             fos.write(buf, 0, len);
                         }
-                        // 关流顺序，先打开的后关闭
                         fos.close();
                         is.close();
                         String name = targetFile.getName();
@@ -325,34 +315,25 @@ public class ZipUtils {
     }
 
 
-    //递归获取目录文件
     public static void recursiveFilesDelete(String path, ZipNameListener zipNameListener) {
 
-        // 创建 File对象
         File file = new File(path);
 
-        // 取 文件/文件夹
         File files[] = file.listFiles();
 
-        // 对象为空 直接返回
         if (files == null) {
 
             return;
         }
 
-        // 目录下文件
         if (files.length == 0) {
             System.out.println(path + "该文件夹下没有文件");
         }
 
-        // 存在文件 遍历 判断
         for (File f : files) {
 
-            // 判断是否为 文件夹
             if (f.isDirectory()) {
-                // 为 文件夹继续遍历
                 recursiveFilesDelete(f.getAbsolutePath(), zipNameListener);
-                // 判断是否为 文件
             } else if (f.isFile()) {
 
                 Log.e("XINHAO_HAN", "recursiveFiles: " + f.getAbsolutePath());
@@ -374,8 +355,6 @@ public class ZipUtils {
     //----------------------------------------------------------------------
 
 
-    //删除文件夹
-//param folderPath 文件夹完整绝对路径
 
     public static void delFolder(String folderPath, ZipNameListener zipNameListener) {
         try {
@@ -396,8 +375,6 @@ public class ZipUtils {
 
     }
 
-    //删除指定文件夹下所有文件
-//param path 文件夹完整绝对路径
     public static boolean delAllFile(String path, ZipNameListener zipNameListener) {
 
         File file1 = new File(path);
@@ -460,7 +437,6 @@ public class ZipUtils {
             }
         }
 
-        // Log.e("删除", "delFolder: " + "删除完成!");
         zipNameListener.complete();
         return flag;
     }
@@ -469,30 +445,21 @@ public class ZipUtils {
     //----------------------------------------------------------------------
 
 
-    //递归获取目录文件
     public static void recursiveFiles(String path, ZipNameListener zipNameListener) {
-        // 创建 File对象
         File file = new File(path);
-        // 取 文件/文件夹
         File[] files = file.listFiles();
-        // 对象为空 直接返回
         if (files == null) {
             return;
         }
 
-        // 目录下文件
         if (files.length == 0) {
             System.out.println(path + "该文件夹下没有文件");
         }
 
-        // 存在文件 遍历 判断
         for (File f : files) {
-            // 判断是否为 文件夹
             if (f.isDirectory() &&
                 (isSymbolicLink(f) != SYMBOLIC_LINK_FILE && isSymbolicLink(f) != SYMBOLIC_LINK_FILE_ERROR)) {
-                // 为 文件夹继续遍历
                 recursiveFiles(f.getAbsolutePath(), zipNameListener);
-                // 判断是否为 文件
             } else if (f.isFile()) {
                 Log.e("XINHAO_HAN", "recursiveFiles: " + f.getAbsolutePath());
                 size++;
@@ -608,10 +575,8 @@ public class ZipUtils {
 
             if (sourceFile.isFile() && isSymbolicLink(sourceFile) != SYMBOLIC_LINK_FILE) {
                 fileThisSize += sourceFile.length();
-                // 向zip输出流中添加一个zip实体，构造器中name为zip实体的文件的名字
                 zipNameListener.zip(sourceFile.getAbsolutePath(), 0, 0);
                 zos.putNextEntry(new ZipEntry(name));
-                // copy文件到zip输出流中
                 int len;
                 FileInputStream in = new FileInputStream(sourceFile);
                 while ((len = in.read(buf)) != -1) {
@@ -624,19 +589,13 @@ public class ZipUtils {
                 != SYMBOLIC_LINK_FILE && isSymbolicLink(sourceFile) != SYMBOLIC_LINK_FILE_ERROR){
                 File[] listFiles = sourceFile.listFiles();
                 if (listFiles == null || listFiles.length == 0) {
-                    // 需要保留原来的文件结构时,需要对空文件夹进行处理
                     if (KeepDirStructure) {
-                        // 空文件夹的处理
                         zos.putNextEntry(new ZipEntry(name + "/"));
-                        // 没有文件，不需要文件的copy
                         zos.closeEntry();
                     }
                 } else {
                     for (File file : listFiles) {
-                        // 判断是否需要保留原来的文件结构
                         if (KeepDirStructure) {
-                            // 注意：file.getName()前面需要带上父文件夹的名字加一斜杠,
-                            // 不然最后压缩包中就不能保留原来的文件结构,即：所有文件都跑到压缩包根目录下了
                             compress(file, zos, name + "/" + file.getName(), KeepDirStructure, zipNameListener);
                         } else {
                             compress(file, zos, file.getName(), KeepDirStructure, zipNameListener);
@@ -647,10 +606,8 @@ public class ZipUtils {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     File file = workSymbolicLinkFile(sourceFile);
                     fileThisSize += file.length();
-                    // 向zip输出流中添加一个zip实体，构造器中name为zip实体的文件的名字
                     zipNameListener.zip(file.getAbsolutePath(), 0, 0);
                     zos.putNextEntry(new ZipEntry(name + "_zerotermux_link"));
-                    // copy文件到zip输出流中
                     int len;
                     FileInputStream in = new FileInputStream(file);
                     while ((len = in.read(buf)) != -1) {
@@ -700,9 +657,7 @@ public class ZipUtils {
 
         void complete();
 
-        //进度
         void progress(long size, long position);
-        //每个文件的进度
 
     }
 }

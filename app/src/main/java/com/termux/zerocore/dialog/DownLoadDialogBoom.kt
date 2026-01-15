@@ -52,7 +52,6 @@ class DownLoadDialogBoom : BaseDialogDown, DownLoadMuTILS.DownLoadMuTILSListener
     private var mDownLoadAdapter: DownLoadAdapter? = null
     private var mDownLoadMuTILS: DownLoadMuTILS? = null
     private var ip: String = ""
-    //当前点击的ID
     private var clickId = 0
     constructor(context: Context) : super(context)
     constructor(context: Context, themeResId: Int) : super(context, themeResId)
@@ -540,7 +539,6 @@ class DownLoadDialogBoom : BaseDialogDown, DownLoadMuTILS.DownLoadMuTILSListener
 
               //  mDownLoadDialogBoom!!.taskSynchronization()
               //  val taskList = Aria.download(mDownLoadDialogBoom).taskList;
-              //  UUtils.showLog("任务状态:${taskList}")
 
 
             }
@@ -697,7 +695,6 @@ class DownLoadDialogBoom : BaseDialogDown, DownLoadMuTILS.DownLoadMuTILSListener
         BaseHttpUtils().getUrl("$ip", object : HttpResponseListenerBase {
             override fun onSuccessful(msg: Message, mWhat: Int) {
                 pro?.visibility = View.GONE
-               // UUtils.showLog("连接成功:" + msg.obj)
                 try {
                     val serviceName = Gson().fromJson(msg.obj as String, ZDYDataBean::class.java)
 
@@ -726,7 +723,6 @@ class DownLoadDialogBoom : BaseDialogDown, DownLoadMuTILS.DownLoadMuTILSListener
         }, HashMap(), 5555)
     }
 
-    //处理任务同步状态
 
     public fun taskSynchronization(){
 
@@ -909,7 +905,6 @@ class DownLoadDialogBoom : BaseDialogDown, DownLoadMuTILS.DownLoadMuTILSListener
                     override fun onDenied(permissions: List<String>, never: Boolean) {
                         if (never) {
                             UUtils.showMsg("无权限")
-                            // 如果是被永久拒绝就跳转到应用权限系统设置页面
                             XXPermissions.startPermissionActivity(mContext, permissions)
                         } else {
                             UUtils.showMsg("无权限")

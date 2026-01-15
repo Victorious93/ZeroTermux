@@ -10,7 +10,6 @@ import android.view.View;
 import com.termux.R;
 import com.termux.zerocore.settings.TimerActivity;
 
-// 定时任务
 public class ScheduledTaskClickConfig extends BaseMenuClickConfig {
     @Override
     public int getType() {

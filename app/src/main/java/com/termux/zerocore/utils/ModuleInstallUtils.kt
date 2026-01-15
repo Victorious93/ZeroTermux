@@ -81,7 +81,6 @@ object ModuleInstallUtils {
                         arrayList.addAll(readLines)
                         BashFileUtils.setStartCommand(arrayList)
                     } else {
-                        //创建文件夹
                             if (tempModuleFile.isDirectory) {
                                // mInstallModuleMsg?.msg(UUtils.getString(R.string.create_folder) + ":${mainFile.absolutePath}", false, null)
                                 mainFile.mkdirs()

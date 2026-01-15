@@ -282,7 +282,6 @@ class CommonCommandsDialog : BaseDialogDown {
             mList.add(mRemoteConnection)
         } else {
             mList.forEach { data ->
-                // 禁止切换选项背景持续闪烁
                 data.isBackAnim = false
             }
         }

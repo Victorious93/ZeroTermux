@@ -21,17 +21,14 @@ class ZeroTermuxImageLoader :  ImageLoader{
        // .error(R.mipmap.icon_image_error)
 
     override fun loadImage(imageView: ImageView, imagePath: String?) {
-        //小图加载
         Glide.with(imageView.context).load(imagePath).apply(mOptions).into(imageView)
     }
 
     override fun loadPreImage(imageView: ImageView, imagePath: String?) {
-        //大图加载
         Glide.with(imageView.context).load(imagePath).apply(mPreOptions).into(imageView)
     }
 
     override fun clearMemoryCache() {
-        //清理缓存
         Glide.get(UUtils.getContext()).clearMemory()
     }
 }

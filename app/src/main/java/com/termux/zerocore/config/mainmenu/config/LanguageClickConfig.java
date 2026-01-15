@@ -56,14 +56,12 @@ public class LanguageClickConfig extends BaseMenuClickConfig implements MenuLeft
     @Override
     public void itemClick(int id, int index, @Nullable MenuLeftPopuListWindow mMenuLeftPopuListWindow) {
         switch (id) {
-            // 中文
             case 30:
                 //  Intent intent = new Intent(this, TermuxActivity.class);
                 LocaleHelper.Companion.getInstance()
                     .language(getLocale("2")).apply(mContext);
                 // startActivity(intent);
                 break;
-            // 英文
             case 31:
                 LocaleHelper.Companion.getInstance()
                     .language(getLocale("1")).apply(mContext);

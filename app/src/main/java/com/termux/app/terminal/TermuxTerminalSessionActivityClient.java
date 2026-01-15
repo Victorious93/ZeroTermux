@@ -522,7 +522,6 @@ public class TermuxTerminalSessionActivityClient extends TermuxTerminalSessionCl
 
     public void updateBackgroundColor() {
         // ZeroTermux.add {@
-        //造成新建会话底部按钮消失
        // if (!mActivity.isVisible() && mActivity.getDrawer().isOpened()) return;
        // TerminalSession session = mActivity.getCurrentSession();
        // if (session != null && session.getEmulator() != null) {

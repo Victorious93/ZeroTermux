@@ -100,13 +100,11 @@ public class ConfirmedDialogConfig extends BaseOkJsonConfig {
 
         String[] parts = command.split("\\s+", -1); // 保留空字符串
 
-        // 查找 -t 参数
         int tIndex = findParamIndex(parts, "-t");
         if (tIndex != -1) {
             result.put("t", extractParamValue(parts, tIndex));
         }
 
-        // 查找 -m 参数
         int mIndex = findParamIndex(parts, "-m");
         if (mIndex != -1) {
             result.put("m", extractParamValue(parts, mIndex));
@@ -132,7 +130,6 @@ public class ConfirmedDialogConfig extends BaseOkJsonConfig {
         StringBuilder value = new StringBuilder();
         for (int i = paramIndex + 1; i < parts.length; i++) {
             if (parts[i].startsWith("-")) {
-                // 遇到下一个参数，停止提取
                 break;
             }
             if (value.length() > 0) {

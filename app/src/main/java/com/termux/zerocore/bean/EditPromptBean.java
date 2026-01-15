@@ -19,7 +19,6 @@ public class EditPromptBean {
 
 
         private String ip;
-        //0 正在连接 1 已连接 2 未连接
         private int connection;
 
         public String getIp() {
