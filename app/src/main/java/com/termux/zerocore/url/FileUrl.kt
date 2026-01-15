@@ -7,13 +7,13 @@ import java.io.File
 
 /**
  *
- * 路径管理
+ * Path management
  *
  *
  */
 object FileUrl {
 
-    //主目录
+    // Main directory
     public val mainFilesUrl = TermuxConstants.TERMUX_FILES_DIR_PATH
     public val mainAppUrl = TermuxConstants.TERMUX_INTERNAL_PRIVATE_APP_DATA_DIR_PATH
     public val mainHomeUrl = TermuxConstants.TERMUX_FILES_DIR_PATH + "/home"
@@ -22,65 +22,65 @@ object FileUrl {
     public val mainConfigImg = TermuxConstants.TERMUX_FILES_DIR_PATH + "/home/.img/"
 
 
-    //主目录
+    // Main directory
     public val zeroTermuxHome = File(Environment.getExternalStorageDirectory(), "/xinhao/")
-    //恢复目录
+    // Restore directory
     public val zeroTermuxData = File(Environment.getExternalStorageDirectory(), "/xinhao/data/")
-    //APK目录
+    // APK directory
     public val zeroTermuxApk = File(Environment.getExternalStorageDirectory(), "/xinhao/apk/")
-    //windows目录
+    // Windows directory
     public val zeroTermuxWindows = File(Environment.getExternalStorageDirectory(), "/xinhao/windows/")
-   //命令目录
+   // Command directory
     public val zeroTermuxCommand = File(Environment.getExternalStorageDirectory(), "/xinhao/command/")
-   //字体目录
+   // Font directory
     public val zeroTermuxFont = File(Environment.getExternalStorageDirectory(), "/xinhao/font")
-   //iso目录
+   // ISO directory
     public val zeroTermuxIso = File(Environment.getExternalStorageDirectory(), "/xinhao/iso")
-   //mysql目录
+   // MySQL directory
     public val zeroTermuxMysql = File(Environment.getExternalStorageDirectory(), "/xinhao/mysql")
-    //online_system 目录
+    // online_system directory
     public val zeroTermuxOnlineSystem = File(Environment.getExternalStorageDirectory(), "/xinhao/online_system")
-   //qemu目录
+   // QEMU directory
     public val zeroTermuxQemu = File(Environment.getExternalStorageDirectory(), "/xinhao/qemu")
-   //server目录
+   // Server directory
     public val zeroTermuxServer = File(Environment.getExternalStorageDirectory(), "/xinhao/server")
-   //share目录
+   // Share directory
     public val zeroTermuxShare = File(Environment.getExternalStorageDirectory(), "/xinhao/share")
-    //system目录
+    // System directory
     public val zeroTermuxSystem = File(Environment.getExternalStorageDirectory(), "/xinhao/system")
-    //web_config
+    // web_config
     public val zeroTermuxWebConfig = File(Environment.getExternalStorageDirectory(), "/xinhao/web_config")
-    //模块包目录
+    // Module directory
     public val zeroTermuxModule = File(Environment.getExternalStorageDirectory(), "/xinhao/module")
      val zeroTermuxWindowsConfig = File(Environment.getExternalStorageDirectory(), "/xinhao/windows_config/")
 
-    //官方 sources 路径[源路径]
+    // Official sources path [source path]
     public val sourcesUrl = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/etc/apt/sources.list"
-    //官方 science 路径[源路径]
+    // Official science path [source path]
     public val scienceUrl = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/etc/apt/sources.list.d/science.list"
-    //官方 game 路径[源路径]
+    // Official game path [source path]
     public val gameUrl = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/etc/apt/sources.list.d/game.list"
-    //短信工具目录
+    // SMS tool directory
     public val smsUrl = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/bin/smsread"
-    //通讯录工具目录
+    // Contacts tool directory
     public val phoneUrl = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/bin/readcontacts"
 
-    //打开左边工具
+    // Open left tool
     public val openLeft = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/bin/openleftwindow"
-    //打开右边工具
+    // Open right tool
     public val openRight = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/bin/openrightwindow"
-    //zt通用工具
+    // ZT general tool
     public val zt = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/bin/zt"
-    //通道文件APK
+    // Channel file APK
     public val aislePathAPK = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/libexec/termux-x11/loader.apk"
     public val aislePathAPKPath = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/libexec/termux-x11"
-    //通道文件执行脚本
+    // Channel file execution script
     public val aislePathSh = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/bin/termux-x11"
-    //通道文件执行脚本
+    // Channel file execution script
     public val aislePreferencePathSh = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/bin/termux-x11-preference"
-    //通道二进制文
+    // Channel binary file
     public val aislePathSo = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/lib/libXlorie.so"
-    //定时器目录
+    // Timer directory
     public val timerTermuxDir = "${mainHomeUrl}/.timerdir"
     public val timerTermuxFile = "${mainHomeUrl}/.timerdir/termux_timer.sh"
 
@@ -91,16 +91,16 @@ object FileUrl {
     public val timerShellExecFile = "${mainFilesUrl}/execTermuxEnv.sh"
 
 
-    //获取短信的目录
+    // Get SMS directory
     public val smsUrlFile = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/home/sms.txt"
     public val phoneUrlFile = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/home/phone.txt"
-    //系统启动脚本目录
+    // System boot script directory
     ///data/data/com.termux/files/usr/etc/bash.bashrc  .xinhao_history
     public val smsBashrcFile = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/etc/bash.bashrc"
     public val smsMotdFile = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/usr/etc/motd"
-    //Zero系统脚本目录
+    // Zero system script directory
     public val smsZeroBashrcFileD = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/home/.xinhao_history"
-    //Zero系统脚本
+    // Zero system script
     public val smsZeroBashrcFile = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/home/.xinhao_history/start_command.sh"
 
 

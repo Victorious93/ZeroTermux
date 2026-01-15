@@ -3,7 +3,7 @@ package com.termux.zerocore.code
 
 /**
  *
- * 管理命令类
+ * Command management class
  *
  */
 
