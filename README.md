@@ -70,3 +70,31 @@ Acknowledgments
 ZeroTermux thanks all the authors whose work is referenced in this project. The project presentation may not be exhaustive; thank you for your understanding.
 
 If you find the project useful, please consider supporting it!
+
+## 📋 Upgrade & Security Documentation
+
+**Important**: This project requires security updates and modernization. Please review:
+
+- **[CRITICAL_FIXES.md](./CRITICAL_FIXES.md)** - 🔴 **Start here!** Quick guide to fix critical security vulnerabilities (45-60 mins)
+- **[SECURITY_AUDIT.md](./SECURITY_AUDIT.md)** - Complete security audit with 18 identified issues
+- **[UPGRADE_SUGGESTIONS.md](./UPGRADE_SUGGESTIONS.md)** - Comprehensive upgrade plan covering all aspects
+- **[UPGRADE_CHECKLIST.md](./UPGRADE_CHECKLIST.md)** - Quick reference checklist for tracking progress
+
+### Priority Actions
+
+1. **Immediate** (This Week): Fix critical security vulnerabilities
+   - Remove hardcoded signing credentials
+   - Update dependencies with known CVEs
+   - Remove deprecated JCenter repository
+   
+2. **High Priority** (Next 2-4 Weeks): Modernize build system
+   - Update target SDK from 28 to 34 (required for Google Play Store)
+   - Update Gradle and Kotlin versions
+   - Update AndroidX libraries
+
+3. **Ongoing**: Improve code quality and security
+   - Enable security scanning
+   - Add automated dependency updates
+   - Improve test coverage
+
+See the documentation files for detailed instructions and migration guides.
