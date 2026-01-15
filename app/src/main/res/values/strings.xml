@@ -376,154 +376,165 @@
     <string name="协议">Protocol</string>
 
 
-    <string name="许可证">法律声明:\n
+    <string name="许可证">Legal Statement:
 
 
 
 
-        ZeroTermux 是根据 Termux 二次开发的一个非盈利性的软件\n\n部分版权归ZeroTermux所属\n\n对任何法律问题及风险不承担任何责任，没有任何商业目的\n\n\n
-        切勿使用到违法用途！\n
-        \n
-        请遵纪守法，做一个良好公民,\n
-        \n
-        ZeroTermux 的初心是让你更快的走进linux世界,为以后建设社会贡献一份精神,出一份力\n
-        \n
+ZeroTermux is a non-profit software developed based on Termux
 
-        在使用一定程度之后,极力建议你过渡到官方termux[入门之后开始使用](推荐),\n
-        \n
+Partial copyright belongs to ZeroTermux
 
-        毕竟ZT能帮你一时，却帮不了你一世!\n
-        \n
+No responsibility for any legal issues and risks, no commercial purpose
 
 
-        注意:【切换系统】功能当中的【删除功能可能会清空您的SD卡】\n
-        \n
-        请关闭sd卡授权在执行该【删除】功能\n
-        \n
-        如果由你的操作(不局限于【切换系统】的【删除功能】,这里说明的是ZeroTermux的所有功能)失误导致你的SD卡包括:\n
-        \n
-        照片\n
-        视频\n
-        音频\n
-        以及其它所有数据,由你(ZeroTermux(简称ZT)的个人使用用户)自己承担\n
-        \n
+Do not use for illegal purposes!
 
 
-        公共仓库下载来源不可控,不属于ZeroTermux所能控制的,全部来源于第三方仓库,ZeroTermux以及作者不会对第三方仓库来源的所有东西负责!\n
-\n
-        \n
-        如果第三方仓库有属于一切违法的活动/文件,由提供第三方仓库的作者承担任何法律责任!ZeroTermux以及作者不承担任何法律/其它责任!
+Please comply with laws and be a good citizen,
 
-        \n
-        \n
-        授权许可:\n
-        \n
+ZeroTermux\'s original intention is to help you enter the Linux world faster and contribute to society in the future
 
-        ZeroTermux所有功能只能用于个人学习交流使用，不得用于商业用途!以及非法用途!\n
-        \n
-        ZeroTermux所有功能只能用于个人学习交流使用，不得用于商业用途!以及非法用途!\n\n
-        ZeroTermux所有功能只能用于个人学习交流使用，不得用于商业用途!以及非法用途!\n\n
 
-        1.本软件(ZeroTermux)为开源软件,你可以自由分发、复制、更改,但请遵循GPL协议!\n\n
-        2.软件遵循GPL协议(http://www.opensource.org/licenses/gpl-2.0.php)\n\n
-        3.本软件(ZeroTermux)的所有功能均为学习交流使用,切勿商用,如用户(使用ZeroTermux用户)的意外操作、有意操作、无意操作等由用户承担!\n
-        4.本软件(ZeroTermux)由第一条例一样为免费学习交流使用，软件内涉及的图标以及字体均来源于互联网。\n
-         4.1.字体为Android默认字体,如使用其他字体请用户(使用ZeroTermux用户)承担所有风险以及法律责任。\n
-         4.2.图标使用为阿里巴巴ICO公用图库，使用该图标的原则是学习与交流,并非商用,如有侵权立即删除。\n
-        5.在本软件(ZeroTermux)内使用的的恢复包、数据包、zip包等都有使用风险，切全部都来源于互联网，请用户酌情使用,如有造成无法挽回的损失,请用户承担风险。\n
-        6.所有恢复包、数据包、模块包、zip包ZeroTermux不能控制其内容,如有包内侵权本软件作者不承担任何责任，均由恢复包、数据包、zip包制作者承担(tar.gz备份功能法律声明)。\n
-        7.感谢所有该项目所应用到功能的作者。\n
-        8.使用ZeroTermux会有直接或间接的损害你的设备,如有造成无法挽回的损失由用户承担,本软件以及作者不承担任何法律等责任\n
+After using it to a certain extent, it is strongly recommended that you transition to the official termux [start using after getting started] (recommended),
+
+
+After all, ZT can help you for a while, but not forever!
+
+
+
+Note: The [Delete] function in the [Switch System] feature may clear your SD card
+
+Please disable SD card authorization before executing the [Delete] function
+
+If your SD card, including:
+
+Photos
+Videos
+Audio
+And all other data is lost due to your operation (not limited to the [Delete] function of [Switch System], this refers to all functions of ZeroTermux), you (the individual user of ZeroTermux, abbreviated as ZT) bear the responsibility
+
+
+
+Public repository download sources are uncontrollable and not under ZeroTermux\'s control. All come from third-party repositories. ZeroTermux and its authors are not responsible for anything from third-party repository sources!
+\
+
+
+If third-party repositories have any illegal activities/files, the authors providing the third-party repositories bear any legal responsibility! ZeroTermux and its authors do not bear any legal/other responsibilities!
+
+
+License:
+
+
+All functions of ZeroTermux can only be used for personal learning and communication, not for commercial purposes! and illegal uses!
+
+All functions of ZeroTermux can only be used for personal learning and communication, not for commercial purposes! and illegal uses!
+
+All functions of ZeroTermux can only be used for personal learning and communication, not for commercial purposes! and illegal uses!
+
+
+1. This software (ZeroTermux) is open source software. You can freely distribute, copy, and modify it, but please follow the GPL license!
+
+2. The software follows the GPL license (http://www.opensource.org/licenses/gpl-2.0.php)
+
+3. All functions of this software (ZeroTermux) are for learning and communication use. Do not use commercially. Users (users of ZeroTermux) bear responsibility for accidental, intentional, or unintentional operations!
+4. This software (ZeroTermux) is free for learning and communication use as in the first regulation. Icons and fonts in the software are from the internet.
+ 4.1. The font is the Android default font. If you use other fonts, users (users of ZeroTermux) bear all risks and legal responsibilities.
+ 4.2. Icons are from public icon libraries. The principle of using icons is for learning and communication, not commercial use. If there is any infringement, they will be deleted immediately.
+5. Recovery packages, data packages, zip packages used in this software (ZeroTermux) have usage risks and all come from the internet. Users should use them at their discretion. If any irreparable loss is caused, users bear the risk.
+6. ZeroTermux cannot control the content of all recovery packages, data packages, module packages, and zip packages. The author of this software does not bear any responsibility for any infringement in the packages. The creators of recovery packages, data packages, and zip packages bear the responsibility (tar.gz backup function legal statement).
+7. Thanks to all the authors whose functions have been applied to this project.
+8. Using ZeroTermux may directly or indirectly damage your device. If any irreparable loss is caused, the user bears the responsibility. This software and its authors do not bear any legal responsibility
 
 
     </string>
-    <string name="不同意">不同意</string>
-    <string name="同意">同意</string>
-    <string name="请认真阅读许可协议">请认真阅读许可协议以及责任划分</string>
-    <string name="无法创建">无法创建(内部存储/xinhao/data)文件夹,请手动创建!</string>
-    <string name="无法创建1">无法创建(内部存储/xinhao/apk)文件夹,请手动创建!</string>
-    <string name="已开始打印APP实时delog">已开始打印APP实时log</string>
-    <string name="暂未开放下载">暂未开放下载</string>
-    <string name="雪花关">雪花(关)</string>
-    <string name="雪花开">雪花(开)</string>
-    <string name="官方插件">官方插件</string>
+    <string name="不同意">Disagree</string>
+    <string name="同意">Agree</string>
+    <string name="请认真阅读许可协议">Please read the license agreement and responsibility division carefully</string>
+    <string name="无法创建">Unable to create (Internal storage/xinhao/data) folder, please create manually!</string>
+    <string name="无法创建1">Unable to create (Internal storage/xinhao/apk) folder, please create manually!</string>
+    <string name="已开始打印APP实时delog">Started printing APP real-time log</string>
+    <string name="暂未开放下载">Download not yet available</string>
+    <string name="雪花关">Snowflake (Off)</string>
+    <string name="雪花开">Snowflake (On)</string>
+    <string name="官方插件">Official plugins</string>
     <string name="TermuxApi">T…x:Api</string>
     <string name="TermuxTasker">T…x:Tasker</string>
     <string name="TermuxBoot">T…x:Boot</string>
     <string name="TermuxStyling">T…x:Styling</string>
-    <string name="全屏模式">全屏模式</string>
-    <string name="语言切换">语言切换</string>
-    <string name="中文">中文</string>
+    <string name="全屏模式">Fullscreen mode</string>
+    <string name="语言切换">Language switch</string>
+    <string name="中文">Chinese</string>
     <string name="English">English</string>
-    <string name="取消">取消</string>
+    <string name="取消">Cancel</string>
     <string name="termux_x11">termux-x11</string>
 
 
-    <string name="本机IP">本机IP</string>
+    <string name="本机IP">Local IP</string>
 
-    <string name="Zero功能">Zero功能</string>
-    <string name="ZeroTermux内置功能">ZeroTermux 脚本区域(长按打开作者地址)</string>
-    <string name="内置nginx">Nginx(内置)</string>
-    <string name="Nginx开关">Nginx开关</string>
-    <string name="访问linux目录">访问linux目录</string>
-    <string name="访问目录">访问目录(/)</string>
-    <string name="访问目录sd">访问目录(SD)</string>
-    <string name="WebStart开关">WebStart开关</string>
-    <string name="端口">端口</string>
-    <string name="路径">路径</string>
-    <string name="访问地址">访问地址</string>
-    <string name="原作者地址">原作者地址</string>
-    <string name="项目地址">项目地址</string>
-    <string name="所选的端口号范围超出65535最大值">所选的端口号范围超出65535最大值,将默认更改为7766端口</string>
-    <string name="开启成功">服务开启成功!</string>
+    <string name="Zero功能">Zero features</string>
+    <string name="ZeroTermux内置功能">ZeroTermux script area (long press to open author address)</string>
+    <string name="内置nginx">Nginx (built-in)</string>
+    <string name="Nginx开关">Nginx switch</string>
+    <string name="访问linux目录">Access Linux directory</string>
+    <string name="访问目录">Access directory (/)</string>
+    <string name="访问目录sd">Access directory (SD)</string>
+    <string name="WebStart开关">WebStart switch</string>
+    <string name="端口">Port</string>
+    <string name="路径">Path</string>
+    <string name="访问地址">Access address</string>
+    <string name="原作者地址">Original author address</string>
+    <string name="项目地址">Project address</string>
+    <string name="所选的端口号范围超出65535最大值">Selected port number exceeds maximum value 65535, will default to port 7766</string>
+    <string name="开启成功">Service started successfully!</string>
 
 
-    <string name="软件开发">软件开发分类</string>
+    <string name="软件开发">Software development category</string>
     <string name="MyServer">MyServer</string>
     <string name="Termux_ADB">Termux-ADB</string>
-    <string name="实验功能">实验功能</string>
-    <string name="ZeroTermux实验功能">ZeroTermux 实验功能</string>
-    <string name="网络ADB">网络ADB(ROOT)</string>
-    <string name="网络ADBNo">网络ADB(无ROOT)</string>
-    <string name="没有找到本机的ROOT权限">没有找到本机的ROOT权限,是否强制继续?</string>
-    <string name="运行完成">命令执行完成,请确保在Root下执行\n请使用:\n \n adb.exe connect</string>
-    <string name="网络ADBClose">关闭ADB(ROOT)</string>
-    <string name="关闭成功">ADB命令关闭成功</string>
+    <string name="实验功能">Experimental features</string>
+    <string name="ZeroTermux实验功能">ZeroTermux experimental features</string>
+    <string name="网络ADB">Network ADB (ROOT)</string>
+    <string name="网络ADBNo">Network ADB (No ROOT)</string>
+    <string name="没有找到本机的ROOT权限">ROOT permission not found on this device, force continue?</string>
+    <string name="运行完成">Command execution complete, please ensure execution under Root\nPlease use:\n \n adb.exe connect</string>
+    <string name="网络ADBClose">Close ADB (ROOT)</string>
+    <string name="关闭成功">ADB command closed successfully</string>
 
 
-    <string name="欢迎来到windows模拟器页面">欢迎来到windows模拟器页面</string>
-    <string name="环境">环境</string>
-    <string name="qamu环境">qemu环境</string>
-    <string name="qamu环境开">[已安装]</string>
-    <string name="qamu环境关">[未安装]</string>
-    <string name="点击安装">点击安装</string>
-    <string name="显示环境">显示环境</string>
-    <string name="显示环境开">[已安装]</string>
-    <string name="显示环境关">[未安装]</string>
-    <string name="ROOT运行">ROOT运行</string>
-    <string name="ROOT运行1">请在Termux输入tsu进入</string>
-    <string name="帮我安装">帮我安装</string>
-    <string name="快捷运行">快捷运行</string>
-    <string name="警告测dsfsdf">警告:如果出现【system call bad】请在终端执行【termux-chroot】后在进入!</string>
-    <string name="win10系统">win10系统</string>
-    <string name="win7系统">win7系统</string>
-    <string name="winXP系统">winXP系统</string>
-    <string name="替换官方版本">替换官方版本</string>
-    <string name="用官版的请点击">用官版的请点击</string>
-    <string name="MAC系统">MAC系统</string>
-    <string name="我自己的系统">我自己的系统</string>
-    <string name="打开当前VNC任务">打开当前VNC任务</string>
+    <string name="欢迎来到windows模拟器页面">Welcome to the Windows emulator page</string>
+    <string name="环境">Environment</string>
+    <string name="qamu环境">qemu environment</string>
+    <string name="qamu环境开">[Installed]</string>
+    <string name="qamu环境关">[Not installed]</string>
+    <string name="点击安装">Click to install</string>
+    <string name="显示环境">Display environment</string>
+    <string name="显示环境开">[Installed]</string>
+    <string name="显示环境关">[Not installed]</string>
+    <string name="ROOT运行">ROOT run</string>
+    <string name="ROOT运行1">Please enter tsu in Termux</string>
+    <string name="帮我安装">Help me install</string>
+    <string name="快捷运行">Quick run</string>
+    <string name="警告测dsfsdf">Warning: If [system call bad] appears, please execute [termux-chroot] in the terminal before entering!</string>
+    <string name="win10系统">Win10 system</string>
+    <string name="win7系统">Win7 system</string>
+    <string name="winXP系统">WinXP system</string>
+    <string name="替换官方版本">Replace official version</string>
+    <string name="用官版的请点击">Click here for official version</string>
+    <string name="MAC系统">MAC system</string>
+    <string name="我自己的系统">My own system</string>
+    <string name="打开当前VNC任务">Open current VNC task</string>
     <string name="Windows注意">注意:该镜像会被复制到UTermux的工作区域[/Home/UTWindow/]</string>
-    <string name="当前操作镜像">当前操作镜像:</string>
-    <string name="无">无</string>
-    <string name="打开操作镜像">打开操作镜像</string>
-    <string name="清空操作镜像">清空操作镜像</string>
-    <string name="请显示QEMU命令">请显示QEMU命令</string>
-    <string name="请输入QEMU命令">请输入QEMU命令</string>
-    <string name="清空命令行">清空命令行</string>
-    <string name="QEMU执行并打开显示器">QEMU执行并打开显示器</string>
-    <string name="QEMU执行">QEMU执行</string>
-    <string name="填充默认命令">填充默认命令</string>
+    <string name="当前操作镜像">Current operating image:</string>
+    <string name="无">None</string>
+    <string name="打开操作镜像">Open operating image</string>
+    <string name="清空操作镜像">Clear operating image</string>
+    <string name="请显示QEMU命令">Show QEMU command</string>
+    <string name="请输入QEMU命令">Enter QEMU command</string>
+    <string name="清空命令行">Clear command line</string>
+    <string name="QEMU执行并打开显示器">Execute QEMU and open display</string>
+    <string name="QEMU执行">Execute QEMU</string>
+    <string name="填充默认命令">Fill default command</string>
     <string name="提示dsfsdfmmm">
         可能会影响性能,或进入不了系统!!\n
         可能会影响性能,或进入不了系统!\n
@@ -537,31 +548,31 @@
         -drive file=fat:rw:/sdcard/xinhao/share\n
         命令,长按可复制该指令
     </string>
-    <string name="正在疏通所需要的环境">正在疏通所需要的环境</string>
-    <string name="请输入回车键继续">请输入回车键继续</string>
-    <string name="请选择一个镜像">请选择一个镜像</string>
-    <string name="请选择模拟器配置文件">请选择模拟器配置文件</string>
-    <string name="成功">成功</string>
+    <string name="正在疏通所需要的环境">Setting up required environment</string>
+    <string name="请输入回车键继续">Press Enter to continue</string>
+    <string name="请选择一个镜像">Select an image</string>
+    <string name="请选择模拟器配置文件">Select emulator configuration file</string>
+    <string name="成功">Success</string>
     <string name="qemu_x86_win">Win/linux/(x64_x86)</string>
     <string name="qemu_i386_win">Win/linux/(i386)</string>
     <string name="qemu_ppc_win">MAC(ppc)</string>
     <string name="请在下载站下载VNC插件">请在[下载站]下载VNC插件</string>
-    <string name="环境不达要求">环境不达要求</string>
+    <string name="环境不达要求">Environment does not meet requirements</string>
     <string name="你没有安装tyu65t6y5u">"你没有安装 wget 或者 proot \n是否立即安装"</string>
-    <string name="给我安装">给我安装</string>
-    <string name="不安装">不安装</string>
-    <string name="错误">错误</string>
+    <string name="给我安装">Install for me</string>
+    <string name="不安装">Don't install</string>
+    <string name="错误">Error</string>
     <string name="你没有安装相关环境qemuppp5555p">"你没有安装相关环境,请点击安装"</string>
-    <string name="在线安装">在线安装</string>
-    <string name="请等待安装完成在进入">请等待安装完成在进入</string>
-    <string name="稍后">稍后</string>
-    <string name="系统初始化失败">系统初始化失败</string>
-    <string name="请输入回车键继续55">请输入回车键继续</string>
-    <string name="获取镜像">提取码:6b7w</string>
-    <string name="是否前往下载系统">是否前往下载系统</string>
-    <string name="前往">前往</string>
-    <string name="Zero">Zero/UTermux模拟</string>
-    <string name="一键启动">一键启动</string>
+    <string name="在线安装">Online installation</string>
+    <string name="请等待安装完成在进入">Please wait for installation to complete before entering</string>
+    <string name="稍后">Later</string>
+    <string name="系统初始化失败">System initialization failed</string>
+    <string name="请输入回车键继续55">Press Enter to continue</string>
+    <string name="获取镜像">Extraction code: 6b7w</string>
+    <string name="是否前往下载系统">Go to download system?</string>
+    <string name="前往">Go</string>
+    <string name="Zero">Zero/UTermux emulation</string>
+    <string name="一键启动">One-click start</string>
     <string name="确定重置所有任务">确定重置并删除所有任务?\n如果您的下载状态错乱/不正确请应用此设置\n注意:已下载完成的不会被删除\n正在下载的会被删除</string>
     <string name="重置成功">重置成功</string>
 
