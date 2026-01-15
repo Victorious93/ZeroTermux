@@ -556,7 +556,7 @@ All functions of ZeroTermux can only be used for personal learning and communica
     <string name="qemu_x86_win">Win/linux/(x64_x86)</string>
     <string name="qemu_i386_win">Win/linux/(i386)</string>
     <string name="qemu_ppc_win">MAC(ppc)</string>
-    <string name="请在下载站下载VNC插件">请在[下载站]下载VNC插件</string>
+    <string name="请在下载站下载VNC插件">Please download VNC plugin from [download site]</string>
     <string name="环境不达要求">Environment does not meet requirements</string>
     <string name="你没有安装tyu65t6y5u">"你没有安装 wget 或者 proot \n是否立即安装"</string>
     <string name="给我安装">Install for me</string>
@@ -578,88 +578,88 @@ All functions of ZeroTermux can only be used for personal learning and communica
 
 
     <!-- Terminal View Preferences -->
-    <string name="termux_terminal_view_preferences_title">终端视图</string>
-    <string name="termux_terminal_view_preferences_summary">终端视图的首选项</string>
+    <string name="termux_terminal_view_preferences_title">Terminal view</string>
+    <string name="termux_terminal_view_preferences_summary">Preferences for terminal view</string>
 
     <!-- View Category -->
-    <string name="termux_terminal_view_view_header">视图</string>
+    <string name="termux_terminal_view_view_header">View</string>
 
     <!-- Terminal View Margin Adjustment -->
-    <string name="termux_terminal_view_terminal_margin_adjustment_title">终端距离自动调整</string>
+    <string name="termux_terminal_view_terminal_margin_adjustment_title">Terminal margin auto-adjustment</string>
     <string name="termux_terminal_view_terminal_margin_adjustment_off">
-终端距离自动调整将被禁用</string>
+Terminal margin auto-adjustment will be disabled</string>
     <string name="termux_terminal_view_terminal_margin_adjustment_on">将启用终端距离自动调整。应该启用它以尝试修复软键盘覆盖部分额外键/终端视图的问题。如果它导致设备上的屏幕闪烁，请禁用它。 （默认）</string>
     <string name="VSCODE">VSCODE</string>
     <string name="X86_Alpine">X86_Alpine</string>
-    <string name="请在下载站下载Alpine插件">请在下载站下载Alpine插件</string>
-    <string name="没有权限">没有内存权限,下载站无法打开!</string>
+    <string name="请在下载站下载Alpine插件">Please download Alpine plugin from download site</string>
+    <string name="没有权限">No storage permission, download site cannot be opened!</string>
 
 
     <string name="可能检测到OTG设备">可能检测到OTG设备,但是读取失败,请拔插设备再试,或者给予读取OTG权限!</string>
-    <string name="检测到OTG设备">检测到OTG设备,即将创建OTG映射目录\n~/home/xinhaoLink/</string>
-    <string name="下次提示">下次提示</string>
+    <string name="检测到OTG设备">OTG device detected, will create OTG mapping directory\n~/home/xinhaoLink/</string>
+    <string name="下次提示">Prompt next time</string>
     <string name="如果下次想继续使用OTG设备">如果下次想继续使用OTG设备,请退出APP重新进入,该提示会再次出现</string>
     <string name="OTG设备异常">
         OTG设备异常\n
         无法读取到USB(OTG)可用的目录\n
         目录结构为空!
     </string>
-    <string name="无联系人">无联系人或无权限</string>
-    <string name="姓名">姓名</string>
-    <string name="电话">电话</string>
-    <string name="备注">备注</string>
-    <string name="序号">序号</string>
-    <string name="无权限读取">无权限读取</string>
-    <string name="请等待">请等待</string>
+    <string name="无联系人">No contacts or no permission</string>
+    <string name="姓名">Name</string>
+    <string name="电话">Phone</string>
+    <string name="备注">Note</string>
+    <string name="序号">Number</string>
+    <string name="无权限读取">No permission to read</string>
+    <string name="请等待">Please wait</string>
     <string name="远程控制下请先安装vim">远程控制下请先安装vim,否则程序不会创建sms.txt以及phone.txt</string>
-    <string name="网络访问linux目录">网络linux目录</string>
+    <string name="网络访问linux目录">Network Linux directory</string>
     <string name="filebrowser已运行">filebrowser已运行,端口19951,账户:admin 密码:admin</string>
-    <string name="WinXp">Windows Xp</string>
-    <string name="Win7模拟">Win7模拟</string>
+    <string name="WinXp">Windows XP</string>
+    <string name="Win7模拟">Win7 emulation</string>
 
-    <string name="msg_add_termux_debug_info">添加 termux 调试信息以报告？</string>
+    <string name="msg_add_termux_debug_info">Add termux debug info to report?</string>
     <!-- Termux API App Preferences -->
     <string name="termux_api_preferences_title">&TERMUX_API_APP_NAME;</string>
-    <string name="termux_api_preferences_summary">偏好 &TERMUX_API_APP_NAME; 应用</string>
+    <string name="termux_api_preferences_summary">Preferences for &TERMUX_API_APP_NAME; app</string>
     <!-- TermuxService -->
     <string name="error_display_over_other_apps_permission_not_granted">&TERMUX_APP_NAME;
         需要“在其他应用上显示”权限才能从 Android >= 10 的后台启动终端会话。从“设置”->“应用”-> 授予它 &TERMUX_APP_NAME;
         -> 选中</string>
-    <string name="选择方式">选择方式</string>
+    <string name="选择方式">Select method</string>
     <string name="要获取最新版本">要获取最新版本，你需要在线下载，旧版本可以选择本地脚本</string>
-    <string name="获取线上">获取线上</string>
-    <string name="线上脚本">线上脚本</string>
-    <string name="本地脚本">本地脚本</string>
+    <string name="获取线上">Get online</string>
+    <string name="线上脚本">Online script</string>
+    <string name="本地脚本">Local script</string>
     <string name="请双击命令窗口试试">ZeroTermux\n双击命令窗口打开快捷栏\n双击最左(音量+按键)\n右(音量-按键)打开菜单/会话栏\n双指单击打开 工具箱\n右侧菜单打开内置文件浏览器</string>
-    <string name="ZeroTermux论坛">ZeroTermux论坛</string>
-    <string name="Zero论坛">Zero论坛</string>
+    <string name="ZeroTermux论坛">ZeroTermux forum</string>
+    <string name="Zero论坛">Zero forum</string>
 
 
-    <string name="在线脚本">在线脚本</string>
+    <string name="在线脚本">Online scripts</string>
     <string name="在线脚本服务器名称">Server Name</string>
-    <string name="数据载入中">数据载入中</string>
-    <string name="服务器已离线">服务器已离线</string>
+    <string name="数据载入中">Loading data</string>
+    <string name="服务器已离线">Server is offline</string>
     <string name="服务器在线但数据格式出错">服务器在线,但数据格式出错</string>
-    <string name="当前文件下载已被禁止">当前文件下载已被禁止</string>
+    <string name="当前文件下载已被禁止">Current file download is prohibited</string>
     <string name="此脚本数据错误">此脚本数据错误,请尝试联系管理员</string>
 
-    <string name="美化设置">美化设置</string>
-    <string name="字体颜色">字体颜色</string>
-    <string name="背景颜色">背景颜色</string>
-    <string name="字体颜色透明度">字体颜色透明度</string>
-    <string name="背景颜色透明度">背景颜色透明度</string>
+    <string name="美化设置">Beautification settings</string>
+    <string name="字体颜色">Font color</string>
+    <string name="背景颜色">Background color</string>
+    <string name="字体颜色透明度">Font color transparency</string>
+    <string name="背景颜色透明度">Background color transparency</string>
     <string name="背景颜色半透明">背景颜色半透明(可与背景图片叠加)</string>
-    <string name="背景图片">背景图片</string>
-    <string name="显示背景字体">显示背景字体</string>
-    <string name="重置">重置</string>
-    <string name="如果看到该页面">如果看到该页面，请按下返回键退出</string>
+    <string name="背景图片">Background image</string>
+    <string name="显示背景字体">Display background font</string>
+    <string name="重置">Reset</string>
+    <string name="如果看到该页面">If you see this page, please press back button to exit</string>
     <string name="nju">NJU</string>
     <string name="ustc">USTC</string>
     <string name="hit">HIT</string>
 
-    <string name="启动器新">启动器[新]</string>
-    <string name="启动器旧">启动器[旧]</string>
-    <string name="系统切换成功">启动器切换成功,重启之后生效</string>
+    <string name="启动器新">Launcher [New]</string>
+    <string name="启动器旧">Launcher [Old]</string>
+    <string name="系统切换成功">Launcher switched successfully, effective after restart</string>
     <!-- TermuxService -->
 
     <string name="error_termux_service_invalid_execution_command_runner">Invalid execution command runner to TermuxService: `%1$s`</string>
@@ -684,98 +684,98 @@ All functions of ZeroTermux can only be used for personal learning and communica
     <string name="title_share_selected_text_with">Send selected text to:</string>
     <string name="add_commend_msg_fail">"Can't add empty commands"</string>
     <string name="add_commend_msg_ok">"The addition is successful. For details, please set the \"Command Definition\" function"</string>
-    <string name="tool_cent">工具箱</string>
-    <string name="linux_commend">常用命令</string>
-    <string name="linux_clipboard">剪贴板</string>
-    <string name="font_name">字体名称:</string>
-    <string name="font_instance">字体示例:</string>
-    <string name="font_path">字体路径:</string>
-    <string name="instance_zero">ZeroTermux|中文字体</string>
+    <string name="tool_cent">Toolbox</string>
+    <string name="linux_commend">Common commands</string>
+    <string name="linux_clipboard">Clipboard</string>
+    <string name="font_name">Font name:</string>
+    <string name="font_instance">Font sample:</string>
+    <string name="font_path">Font path:</string>
+    <string name="instance_zero">ZeroTermux|Chinese font</string>
 
-    <string name="clipboard_text">注意：此剪贴板只会记录APP内的内容</string>
-    <string name="clipboard_title">剪贴板标题:</string>
-    <string name="clipboard_msg">剪贴板内容:</string>
-    <string name="clipboard_note">删除此记录</string>
-    <string name="clipboard_empty">剪贴板没有使用内容</string>
-    <string name="clipboard_empty_copy">复制内容不能为空噢</string>
+    <string name="clipboard_text">Note: This clipboard only records content within the app</string>
+    <string name="clipboard_title">Clipboard title:</string>
+    <string name="clipboard_msg">Clipboard content:</string>
+    <string name="clipboard_note">Delete this record</string>
+    <string name="clipboard_empty">Clipboard has no content</string>
+    <string name="clipboard_empty_copy">Copy content cannot be empty</string>
 
-    <string name="tool_other">其他选项</string>
+    <string name="tool_other">Other options</string>
 
-    <string name="vedio_select_name">视频背景</string>
-    <string name="keyboard_select_name">内置键盘</string>
+    <string name="vedio_select_name">Video background</string>
+    <string name="keyboard_select_name">Built-in keyboard</string>
 
-    <string name="image_size_error">文件过大</string>
+    <string name="image_size_error">File too large</string>
 
-    <string name="zero_eg_not_install">没有安装零引擎，请在下载站下载引擎 </string>
+    <string name="zero_eg_not_install">Zero engine not installed, please download from download site </string>
 
-    <string name="install_environment">安装所需环境?</string>
+    <string name="install_environment">Install required environment?</string>
 
     <string name="x86_alpine_run">X86 Alpine</string>
 
-    <string name="clear_style_dialog">清空美化</string>
+    <string name="clear_style_dialog">Clear beautification</string>
 
-    <string name="engine_vision">引擎</string>
+    <string name="engine_vision">Engine</string>
 
-    <string name="engine_not_install">未安装</string>
+    <string name="engine_not_install">Not installed</string>
 
-    <string name="web_linux">浏览器终端</string>
+    <string name="web_linux">Browser terminal</string>
 
     <string name="ttyd_install_complete">IP:0.0.0.0\n端口:7681</string>
 
-    <string name="qq_group">复制群号</string>
+    <string name="qq_group">Copy group number</string>
 
     <string name="telegram_group">Telegram</string>
 
-    <string name="opne_in_zerotermux">使用ZeroTermux打开</string>
+    <string name="opne_in_zerotermux">Open with ZeroTermux</string>
 
-    <string name="move_file_to_zt">移动文件到Zero Termux</string>
+    <string name="move_file_to_zt">Move file to Zero Termux</string>
 
     <string name="file_name_copy">文件信息:{file}\n\n大小:{size}\n\n路径:{path}\n\n后戳名(文件类型):{suffix}\n\n复制路径:~</string>
 
     <string name="copy_file_to_zt">复制完成，复制在路径在:"~"</string>
 
-    <string name="not_file_msg">文件错误，不能复制到ZeroTermux应用中!</string>
+    <string name="not_file_msg">File error, cannot copy to ZeroTermux app!</string>
 
     <string name="ttyd_install_msg">当前没有安装当前环境，请等待安装完成之后【再此点击此入口】!</string>
 
-    <string name="ftp">FTP服务</string>
+    <string name="ftp">FTP service</string>
 
-    <string name="storage_warning">警告：当前存储暂不可用，您可能需要取消挂载。</string>
+    <string name="storage_warning">Warning: Current storage is temporarily unavailable, you may need to unmount.</string>
 
-    <string name="ftp_title">说明</string>
-    <string name="ftp_port_msg">端口超出范围!</string>
+    <string name="ftp_title">Description</string>
+    <string name="ftp_port_msg">Port out of range!</string>
 
     <string name="ftp_msg">核心根据apache改进而来，默认目录为本Linux目录\n此版本为2.0，修复了FTP连接异常问题，更换了核心,确保此功能稳定!</string>
 
-    <string name="ftp_error">文件未被加载或读取失败, 请加载后打开或重试</string>
+    <string name="ftp_error">File not loaded or read failed, please load and open or retry</string>
 
-    <string name="ftp_start_window">跳转至FTP网页</string>
+    <string name="ftp_start_window">Jump to FTP webpage</string>
 
-    <string name="ftp_prot_error">当前所选端口被占用!</string>
+    <string name="ftp_prot_error">Currently selected port is occupied!</string>
 
-    <string name="container_management">容器管理</string>
+    <string name="container_management">Container management</string>
 
-    <string name="back_message">请选择以下备份格式,一般推荐"tar.gz"格式</string>
+    <string name="back_message">Please select backup format below, generally recommended "tar.gz" format</string>
 
     <string name="storage_error">"~/storage"目录在操作过程中目录丢失，请手动termux-setup-storage创建或重新打开"容器管理"让程序自动创建</string>
     <string name="backup_success">备份完成，备份文件在->内部存储/xinhao/data/|目录下</string>
     <string name="backup_msg_dialog">开始备份当前容器,系统需要新建一个会话来进行备份操作,点击确定继续</string>
-    <string name="delete_restore_data">删除此数据包</string>
-    <string name="data_file_name">数据包名称:</string>
-    <string name="data_file_size">数据包大小:</string>
-    <string name="data_file_path">数据包路径:</string>
+    <string name="delete_restore_data">Delete this data package</string>
+    <string name="data_file_name">Data package name:</string>
+    <string name="data_file_size">Data package size:</string>
+    <string name="data_file_path">Data package path:</string>
     <string name="file_delete_msg">确定要永久删除此数据包？删除之后可没有办法恢复噢。</string>
-    <string name="file_delete_fail">无法删除此文件，请在内部存储手动删除!</string>
+    <string name="file_delete_fail">Cannot delete this file, please delete manually in internal storage!</string>
     <string name="file_sd_msg">当前程序需要创建内存卡软链接,需要申请SD卡权限，如果拒绝则无法使用容器管理内所有内容!</string>
     <string name="file_sd_fail">拒绝了内存卡权限,此模块无法工作,退出。。。</string>
-    <string name="file_sd_success">权限获取成功</string>
-    <string name="system_create_container">创建恢复的系统容器</string>
-    <string name="system_create_container_empty">系统容器名称不能为空</string>
-    <string name="system_create_container_fail">系统创建失败!请重试</string>
-    <string name="system_restore_success">系统恢复完成,请在切换系统，切换您的系统</string>
-    <string name="unrecognized_compression_format">不能识别的数据包!</string>
+    <string name="file_sd_success">Permission acquired successfully</string>
+    <string name="system_create_container">Create restored system container</string>
+    <string name="system_create_container_empty">System container name cannot be empty</string>
+    <string name="system_create_container_fail">System creation failed! Please retry</string>
+    <string name="system_restore_success">System restore complete, please switch system to use your system</string>
+    <string name="unrecognized_compression_format">Unrecognized data package!</string>
     <string name="create_xinhao_path_fail">创建~/xinhaoLink文件夹失败，请手动创建!</string>
-    <string name="commonly_used_soft_links">常用快捷方式</string>
+    <string name="commonly_used_soft_links">Common shortcuts</string>
     <string name="create_soft_links">将创建以下快捷方式:\n内部存储 微信、QQ、下载目录\n内部链接:~/xinhaoLink,由于Android 11+ 限制/内部存储/Android/data/ 目录访问将不能创建 /内部存储/Android/data/ 目录,但是程序还是会强制创建</string>
     <string name="create_soft_links_fail">创建失败,请重新尝试一下也可以手动创建 ~/xinhaoLink</string>
     <string name="my_commonly_used_soft_links">自定快捷方式</string>
