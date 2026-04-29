@@ -2666,19 +2666,14 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     }
 
     public void restartActivity() {
-        // TODO 临时解决方案，此方案不是最优，后续版本需要考虑优化
         SingletonCommunicationUtils.isSingletonCommunicationListenerNull = false;
         if (!isFinishing()) {
             UUtils.showMsg(UUtils.getString(R.string.zt_recreate));
-            UUtils.getHandler().postDelayed((Runnable) () -> {
-                Intent intent = new Intent(this, TermuxActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-            }, 1000);
-            finish();
+            Intent intent = new Intent(this, TermuxActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
             overridePendingTransition(0, 0);
         }
-
     }
 
 
