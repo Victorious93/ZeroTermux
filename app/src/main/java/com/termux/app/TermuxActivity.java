@@ -431,6 +431,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             mTermuxTerminalViewClient.onResume();
 
         configureViewVisibility(R.id.terminal_monetbackground, mPreferences.isMonetBackgroundEnabled());
+        configureExtraKeysBackground();
 
         // Check if a crash happened on last run of the app or if a plugin crashed and show a
         // notification with the crash details if it did
@@ -697,6 +698,42 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             (mTermuxTerminalExtraKeys.getExtraKeysInfo() == null ? 0 : mTermuxTerminalExtraKeys.getExtraKeysInfo().getMatrix().length) *
             mProperties.getTerminalToolbarHeightScaleFactor());
         terminalToolbarViewPager.setLayoutParams(layoutParams);
+
+        View extraKeysBackgroundBlur = findViewById(R.id.extrakeys_backgroundblur);
+        if (extraKeysBackgroundBlur != null) {
+            ViewGroup.LayoutParams blurLayoutParams = extraKeysBackgroundBlur.getLayoutParams();
+            blurLayoutParams.height = layoutParams.height;
+            extraKeysBackgroundBlur.setLayoutParams(blurLayoutParams);
+        }
+        View extraKeysBackground = findViewById(R.id.extrakeys_background);
+        if (extraKeysBackground != null) {
+            ViewGroup.LayoutParams backgroundLayoutParams = extraKeysBackground.getLayoutParams();
+            backgroundLayoutParams.height = layoutParams.height;
+            extraKeysBackground.setLayoutParams(backgroundLayoutParams);
+        }
+    }
+
+    /** Show or hide the blur/background plate behind the extra keys toolbar based on the
+     * "Extra Keys Blur Background" style preference and whether the toolbar itself is shown. */
+    private void configureExtraKeysBackground() {
+        View extraKeysBackground = findViewById(R.id.extrakeys_background);
+        View extraKeysBackgroundBlur = findViewById(R.id.extrakeys_backgroundblur);
+        if (extraKeysBackground == null || extraKeysBackgroundBlur == null) return;
+
+        if (!mPreferences.shouldShowTerminalToolbar()) {
+            extraKeysBackgroundBlur.setVisibility(View.GONE);
+            extraKeysBackground.setVisibility(View.GONE);
+            return;
+        }
+
+        if (mPreferences.isExtraKeysBlurEnabled()) {
+            extraKeysBackgroundBlur.setVisibility(View.VISIBLE);
+            extraKeysBackground.setAlpha(0.80f);
+        } else {
+            extraKeysBackgroundBlur.setVisibility(View.GONE);
+            extraKeysBackground.setAlpha(1.0f);
+        }
+        extraKeysBackground.setVisibility(View.VISIBLE);
     }
 
     public void toggleTerminalToolbar() {
@@ -706,6 +743,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         final boolean showNow = mPreferences.toogleShowTerminalToolbar();
         Logger.showToast(this, (showNow ? getString(R.string.msg_enabling_terminal_toolbar) : getString(R.string.msg_disabling_terminal_toolbar)), true);
         terminalToolbarViewPager.setVisibility(showNow ? View.VISIBLE : View.GONE);
+        configureExtraKeysBackground();
         if (showNow && isTerminalToolbarTextInputViewSelected()) {
             // Focus the text input view if just revealed.
             findViewById(R.id.terminal_toolbar_text_input).requestFocus();

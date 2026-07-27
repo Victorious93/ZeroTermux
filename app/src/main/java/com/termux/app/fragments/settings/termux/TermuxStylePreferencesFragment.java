@@ -50,6 +50,8 @@ class TermuxStylePreferencesDataStore extends PreferenceDataStore {
             return;
         if ("monet_background_enabled".equals(key)) {
             mPreferences.setMonetBackgroundEnabled(value);
+        } else if ("extrakeys_blur_enabled".equals(key)) {
+            mPreferences.setExtraKeysBlurEnabled(value);
         }
     }
 
@@ -59,6 +61,8 @@ class TermuxStylePreferencesDataStore extends PreferenceDataStore {
             return defValue;
         if ("monet_background_enabled".equals(key)) {
             return mPreferences.isMonetBackgroundEnabled();
+        } else if ("extrakeys_blur_enabled".equals(key)) {
+            return mPreferences.isExtraKeysBlurEnabled();
         }
         return defValue;
     }

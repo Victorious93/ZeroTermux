@@ -602,6 +602,10 @@ Reset successfully</string>
     <string name="termux_monet_background_enabled_title">Monet Background (Unstable)</string>
     <string name="termux_monet_background_enabled_off">Terminal Monet background will be disabled (Default)</string>
     <string name="termux_monet_background_enabled_on">Terminal background will be tinted from the system wallpaper (requires Android 12+)</string>
+    <string name="termux_extrakeys_header">Extra Keys</string>
+    <string name="termux_extrakeys_blur_enabled_title">Extra Keys Blur Background</string>
+    <string name="termux_extrakeys_blur_enabled_off">Extra keys blur background will be disabled (Default)</string>
+    <string name="termux_extrakeys_blur_enabled_on">Extra keys background will show a realtime blur effect</string>
 
     <!-- View Category -->
     <string name="termux_terminal_view_view_header">View</string>
