@@ -24,6 +24,14 @@
                 android:id="@+id/rl_1"
                 android:layout_above="@+id/terminal_toolbar_view_pager"
                 android:layout_height="match_parent">
+                <!-- Monet: dynamic-color plate shown behind the terminal when the
+                     "Monet Background" style preference is enabled. Gone by default. -->
+                <View
+                    android:id="@+id/terminal_monetbackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:background="@color/background_accent"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:text="@string/请双击命令窗口试试"

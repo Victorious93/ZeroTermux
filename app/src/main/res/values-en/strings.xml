@@ -595,6 +595,14 @@ Reset successfully</string>
     <string name="termux_terminal_view_preferences_title">Terminal View</string>
     <string name="termux_terminal_view_preferences_summary">Preferences for terminal view</string>
 
+    <!-- Style Preferences -->
+    <string name="termux_style_preferences_title">Style (Monet)</string>
+    <string name="termux_style_preferences_summary">Monet dynamic-color background settings</string>
+    <string name="termux_background_header">Background</string>
+    <string name="termux_monet_background_enabled_title">Monet Background (Unstable)</string>
+    <string name="termux_monet_background_enabled_off">Terminal Monet background will be disabled (Default)</string>
+    <string name="termux_monet_background_enabled_on">Terminal background will be tinted from the system wallpaper (requires Android 12+)</string>
+
     <!-- View Category -->
     <string name="termux_terminal_view_view_header">View</string>
 
