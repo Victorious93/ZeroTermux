@@ -589,6 +589,14 @@
     <string name="termux_terminal_view_preferences_title">终端视图</string>
     <string name="termux_terminal_view_preferences_summary">终端视图的首选项</string>
 
+    <!-- Style Preferences -->
+    <string name="termux_style_preferences_title">外观 (Monet)</string>
+    <string name="termux_style_preferences_summary">Monet 动态取色背景设置</string>
+    <string name="termux_background_header">背景</string>
+    <string name="termux_monet_background_enabled_title">Monet 背景 (不稳定)</string>
+    <string name="termux_monet_background_enabled_off">终端 Monet 背景已禁用 (默认)</string>
+    <string name="termux_monet_background_enabled_on">终端背景将根据系统壁纸取色 (需要 Android 12+)</string>
+
     <!-- View Category -->
     <string name="termux_terminal_view_view_header">视图</string>
 

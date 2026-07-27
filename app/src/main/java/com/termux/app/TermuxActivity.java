@@ -430,6 +430,8 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         if (mTermuxTerminalViewClient != null)
             mTermuxTerminalViewClient.onResume();
 
+        configureViewVisibility(R.id.terminal_monetbackground, mPreferences.isMonetBackgroundEnabled());
+
         // Check if a crash happened on last run of the app or if a plugin crashed and show a
         // notification with the crash details if it did
         TermuxCrashUtils.notifyAppCrashFromCrashLogFile(this, LOG_TAG);
@@ -439,6 +441,13 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         onResumeInit();
 		// @}
 
+    }
+
+    /** Show or hide the view with the given id. Used for the Monet dynamic-color background toggle. */
+    private void configureViewVisibility(int viewId, boolean isVisible) {
+        View view = findViewById(viewId);
+        if (view != null)
+            view.setVisibility(isVisible ? View.VISIBLE : View.GONE);
     }
 
     @Override
