@@ -186,6 +186,12 @@ public final class TermuxPreferenceConstants {
         public static final String KEY_MONET_BACKGROUND_ENABLED = "monet_background_enabled";
         public static final boolean DEFAULT_VALUE_MONET_BACKGROUND_ENABLED = false;
 
+        /**
+         * Defines the key for whether the blur effect behind the extra keys toolbar is enabled or not.
+         */
+        public static final String KEY_EXTRAKEYS_BLUR_ENABLED = "extrakeys_blur_enabled";
+        public static final boolean DEFAULT_VALUE_EXTRAKEYS_BLUR_ENABLED = false;
+
     }
 
 
