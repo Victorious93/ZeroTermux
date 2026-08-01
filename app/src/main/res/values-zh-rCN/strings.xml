@@ -121,6 +121,11 @@
 
 
 
+    <!-- Miscellaneous -->
+    <string name="error_allow_external_apps_ungranted">%1$s requires `allow-external-apps`
+        property to be set to `true` in `%2$s` file.</string>
+
+
     <!-- Termux Settings -->
     <string name="title_activity_termux_settings">&TERMUX_APP_NAME; 设置</string>
 

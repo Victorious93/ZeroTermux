@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.gson.Gson;
 import com.termux.R;
 import com.termux.zerocore.deepseek.data.ChatDatabaseHelper;
+import com.termux.zerocore.deepseek.model.AiClient;
 import com.termux.zerocore.deepseek.model.Config;
 import com.termux.zerocore.deepseek.model.DeepSeekClient;
 import com.termux.zerocore.deepseek.model.RequestMessageItem;
@@ -24,7 +25,7 @@ public class TestActivity extends AppCompatActivity {
     private ChatDatabaseHelper dbHelper;
 
 
-    private DeepSeekClient deepSeekClient = new DeepSeekClient();
+    private AiClient aiClient = new AiClient();
     private List<RequestMessageItem> requestMessageItemList = new ArrayList<>();
 
     private TextView testText;
@@ -59,7 +60,7 @@ public class TestActivity extends AppCompatActivity {
     private void reqModel(String text){
         requestMessageItemList.add(new RequestMessageItem("user", text));
 
-        deepSeekClient.ask(requestMessageItemList, true, new DeepSeekClient.Lis() {
+        aiClient.ask(requestMessageItemList, true, new DeepSeekClient.Lis() {
             @Override
             public void error() {
                 System.out.println("\n处理失败（服务器响应超时）");
@@ -68,9 +69,9 @@ public class TestActivity extends AppCompatActivity {
 
             @Override
             public void msg(String msg, boolean isError) {
-                System.out.print(deepSeekClient.getMsg(msg));
+                System.out.print(aiClient.getMsg(msg));
                 runOnUiThread(()->{
-                    testText.append(deepSeekClient.getMsg(msg));
+                    testText.append(aiClient.getMsg(msg));
                 });
             }
 

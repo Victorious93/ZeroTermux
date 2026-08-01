@@ -29,6 +29,7 @@ import com.termux.zerocore.deepseek.data.ChatDatabaseHelper;
 import com.termux.zerocore.deepseek.data.ChatMessage;
 import com.termux.zerocore.deepseek.data.ChatMessageAdapter;
 import com.termux.zerocore.deepseek.data.ChatSession;
+import com.termux.zerocore.deepseek.model.AiClient;
 import com.termux.zerocore.deepseek.model.Config;
 import com.termux.zerocore.deepseek.model.DeepSeekClient;
 import com.termux.zerocore.deepseek.model.RequestMessageItem;
@@ -48,7 +49,7 @@ public class ChatFragment extends Fragment {
     private View mView;
     private Intent mIntent;
 
-    private DeepSeekClient deepSeekClient = new DeepSeekClient();
+    private AiClient aiClient = new AiClient();
     private List<RequestMessageItem> requestMessageItemList = new ArrayList<>();
     private static ChatFragment chatFragment;
 
@@ -193,7 +194,7 @@ public class ChatFragment extends Fragment {
         Log.i(TAG, "reqModelxxxxxxxxx: " + getPrompt());
         requestMessageItemList.add(new RequestMessageItem("system", getPrompt()));
 
-        deepSeekClient.ask(requestMessageItemList, true, new DeepSeekClient.Lis() {
+        aiClient.ask(requestMessageItemList, true, new DeepSeekClient.Lis() {
             @Override
             public void error() {
                 System.out.println("\n处理失败（服务器响应超时）");
@@ -202,7 +203,7 @@ public class ChatFragment extends Fragment {
 
             @Override
             public void msg(String msg, boolean isError) {
-                String mMsg = deepSeekClient.getMsg(msg);
+                String mMsg = aiClient.getMsg(msg);
                 LogUtils.e(TAG, "end insertMessage msg mMsg: " + mMsg);
                 mText.append(mMsg);
                 UUtils.runOnUIThread(() -> {

@@ -8,6 +8,8 @@ import com.example.xh_lib.utils.LogUtils;
 import com.example.xh_lib.utils.UUtils;
 import com.termux.zerocore.utils.FileIOUtils;
 
+import java.security.SecureRandom;
+
 public class SaveDataZeroEngine {
     public static int FTP_START_SUCCESS = 8000;
     public static int FTP_START_FAIL = 8001;
@@ -20,8 +22,20 @@ public class SaveDataZeroEngine {
     public static String FTP_PORT = "ftpPort";
     public static String FTP_CHROOT = "ftpChroot";
     public static String FTP_DEF_USER = "ftp";
-    public static String FTP_DEF_PWD = "ftp";
+    // Random per-install default password instead of a guessable "ftp"/"ftp" pair;
+    // shown pre-filled in the FTP settings dialog so the user can see/keep/change it.
+    public static String FTP_DEF_PWD = generateDefaultPassword();
     public static String FTP_DEF_PORT = "2121";
+
+    private static String generateDefaultPassword() {
+        String chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789";
+        SecureRandom random = new SecureRandom();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 10; i++) {
+            sb.append(chars.charAt(random.nextInt(chars.length())));
+        }
+        return sb.toString();
+    }
     public static String FTP_SDCARD_ROOT = FileIOUtils.INSTANCE.getSdcardPath();
     public static String FTP_ZERO_TERMUX_FILE = FileIOUtils.INSTANCE.getFilePath();
 
