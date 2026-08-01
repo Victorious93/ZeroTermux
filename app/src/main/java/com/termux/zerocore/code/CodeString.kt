@@ -35,5 +35,9 @@ public object CodeString {
     public var runDocker = "pkg update && pkg install tsu wget -y && cd ~ && chmod 777 check-config.sh && sed -i '1s_.*_#!/data/data/com.termux/files/usr/bin/bash_' check-config.sh && sudo ./check-config.sh\n"
     public val contentSSH = " { command -v ssh >/dev/null || pkg install openssh -y >/dev/null 2>&1; } && { command -v sshpass >/dev/null || pkg install sshpass -y >/dev/null 2>&1; } \n"
 
+    // Headscale / WireGuard tailnet client
+    public val runHeadscaleConnect: String = "bash ~/.headscale/connect.sh\n"
+    public val runHeadscaleDisconnect: String = "bash ~/.headscale/disconnect.sh\n"
+    public val runHeadscaleStatus: String = "bash ~/.headscale/status.sh\n"
 
 }

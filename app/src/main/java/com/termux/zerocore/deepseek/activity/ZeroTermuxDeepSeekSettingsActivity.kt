@@ -43,6 +43,9 @@ class ZeroTermuxDeepSeekSettingsActivity : AppCompatActivity() {
     private val mAiVisibleSwitch by lazy { findViewById<SwitchCompat>(R.id.ai_visible_switch) }
     private val mAiVisibleLayout by lazy { findViewById<LinearLayout>(R.id.ai_visible_layout) }
 
+    private val mAiProviderSwitch by lazy { findViewById<SwitchCompat>(R.id.ai_provider_switch) }
+    private val mClaudeKeyEdit by lazy { findViewById<EditText>(R.id.claude_key_edit) }
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -124,11 +127,35 @@ class ZeroTermuxDeepSeekSettingsActivity : AppCompatActivity() {
            }
        })
 
+        // 设置 Claude Key
+        val claudeApiKey = UserSetManage.get().getZTUserBean().claudeApiKey
+        if (!TextUtils.isEmpty(claudeApiKey)) {
+            mClaudeKeyEdit.setText(claudeApiKey)
+        }
+        mClaudeKeyEdit.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                val ztUserBean = UserSetManage.get().getZTUserBean()
+                ztUserBean.claudeApiKey = p0?.toString()
+                UserSetManage.get().setZTUserBean(ztUserBean)
+            }
+            override fun afterTextChanged(p0: Editable?) {
+            }
+        })
+
+        mAiProviderSwitch.setOnCheckedChangeListener { _, isChecked ->
+            val ztUserBean = UserSetManage.get().getZTUserBean()
+            ztUserBean.aiProvider = if (isChecked) "claude" else "deepseek"
+            UserSetManage.get().setZTUserBean(ztUserBean)
+        }
+
     }
 
     private fun initStatus() {
         val ztUserBean = UserSetManage.get().getZTUserBean()
         mAiVisibleSwitch.isChecked = ztUserBean.isIsDeepSeekVisibleTerminal
+        mAiProviderSwitch.isChecked = "claude".equals(ztUserBean.aiProvider, ignoreCase = true)
 
         mKeyClickSummary.text = getKeyClickText(UUtils.getString(R.string.deepseek_settings_recognition_edit_keyword),
             UUtils.getString(R.string.deepseek_settings_recognition_edit_info), object : ClickableSpan() {

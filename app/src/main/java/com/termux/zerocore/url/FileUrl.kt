@@ -103,6 +103,10 @@ object FileUrl {
     //Zero系统脚本
     public val smsZeroBashrcFile = "${TermuxConstants.TERMUX_FILES_DIR_PATH}/home/.xinhao_history/start_command.sh"
 
-
+    //Headscale / tailnet client directory and scripts
+    public val headscaleDir = "${mainHomeUrl}/.headscale"
+    public val headscaleConnectScript = "${headscaleDir}/connect.sh"
+    public val headscaleDisconnectScript = "${headscaleDir}/disconnect.sh"
+    public val headscaleStatusScript = "${headscaleDir}/status.sh"
 
 }

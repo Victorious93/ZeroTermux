@@ -41,6 +41,47 @@ public class ZTUserBean {
     // 是否显示引导页面
     private boolean isHideGuideLayout;
 
+    // AI provider used by the chat assistant: "deepseek" or "claude"
+    private String mAiProvider = "deepseek";
+    // Claude (Anthropic) api key
+    private String mClaudeApiKey;
+    // Claude (Anthropic) api url
+    private String mClaudeApiUrl;
+    // Claude model id
+    private String mClaudeModel;
+
+    public String getAiProvider() {
+        return mAiProvider == null ? "deepseek" : mAiProvider;
+    }
+
+    public void setAiProvider(String mAiProvider) {
+        this.mAiProvider = mAiProvider;
+    }
+
+    public String getClaudeApiKey() {
+        return mClaudeApiKey;
+    }
+
+    public void setClaudeApiKey(String mClaudeApiKey) {
+        this.mClaudeApiKey = mClaudeApiKey;
+    }
+
+    public String getClaudeApiUrl() {
+        return mClaudeApiUrl;
+    }
+
+    public void setClaudeApiUrl(String mClaudeApiUrl) {
+        this.mClaudeApiUrl = mClaudeApiUrl;
+    }
+
+    public String getClaudeModel() {
+        return mClaudeModel;
+    }
+
+    public void setClaudeModel(String mClaudeModel) {
+        this.mClaudeModel = mClaudeModel;
+    }
+
     public boolean isHideGuideLayout() {
         return isHideGuideLayout;
     }
